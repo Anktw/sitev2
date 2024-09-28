@@ -54,7 +54,6 @@ const Header = () => {
           className="relative w-8 h-8 md:hidden focus:outline-none z-50"
           onClick={toggleMenu}
         >
-          <span className="sr-only">Toggle menu</span>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-5">
             <span
               className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
@@ -77,7 +76,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-3/4 md:w-64 bg-glass backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64 bg-glass backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
