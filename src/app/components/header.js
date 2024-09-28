@@ -77,7 +77,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-full md:w-64 bg-glass backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-3/4 md:w-64 bg-glass backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
