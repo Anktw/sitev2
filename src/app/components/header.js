@@ -41,12 +41,11 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="/projects">Projects</Link>
-          <Link href="/resume">Resume</Link>
-          <Link href="/portfolio">Portfolio</Link>
-          <Link href="/blog">Blog</Link>
-          <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
+        <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Projects</Link>
+        <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Resume</Link>
+        <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Blog</Link>
+        <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">About</Link>
+        <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Contact</Link>
         </nav>
 
         {/* Burger Menu Button */}
@@ -76,7 +75,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64 bg-glass backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64  backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -90,22 +89,19 @@ const Header = () => {
 
         {/* Menu Links */}
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
-          <Link href="/projects" className="text-lg">
+        <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Projects
           </Link>
-          <Link href="/resume" className="text-lg">
+          <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Resume
           </Link>
-          <Link href="/portfolio" className="text-lg">
-            Portfolio
-          </Link>
-          <Link href="/blog" className="text-lg">
+          <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Blog
           </Link>
-          <Link href="/about" className="text-lg">
+          <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             About
           </Link>
-          <Link href="/contact" className="text-lg">
+          <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Contact
           </Link>
         </nav>
