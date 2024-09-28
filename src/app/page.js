@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Header from "./components/header";
-import BurgerMenu from "./components/BurgerMenu";
 export default function Home() {
   return ( 
     <div>
