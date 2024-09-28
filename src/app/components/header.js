@@ -89,7 +89,7 @@ const Header = () => {
         </button>
 
         {/* Menu Links */}
-        <nav className="flex flex-col items-start mt-20 px-8 space-y-4 text-white">
+        <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
           <Link href="/projects" className="text-lg">
             Projects
           </Link>
