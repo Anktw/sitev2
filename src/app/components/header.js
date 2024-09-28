@@ -1,12 +1,43 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isThemeOn, setIsThemeOn] = useState(false);
+
+  // Check localStorage on initial render
+  useEffect(() => {
+    const storedTheme = localStorage.getItem("lightmode");
+
+    if (storedTheme === "active") {
+      setIsThemeOn(true);
+      document.body.classList.add("lightmode");
+    }
+  }, []); // Runs once on component mount
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const enableLightMode = () => {
+    document.body.classList.add("lightmode");
+    localStorage.setItem("lightmode", "active");
+  };
+
+  const disableLightMode = () => {
+    document.body.classList.remove("lightmode");
+    localStorage.setItem("lightmode", "null");
+  };
+
+  const toggleTheme = () => {
+    if (isThemeOn) {
+      disableLightMode();
+    } else {
+      enableLightMode();
+    }
+    setIsThemeOn(!isThemeOn); // Update the state after toggling
   };
 
   const closeMenuOnScroll = () => {
@@ -32,7 +63,7 @@ const Header = () => {
   }, [isOpen]);
 
   return (
-    <header className="w-full shadow-md bg">
+    <header className="w-full shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="text-2xl font-bold">
@@ -40,12 +71,53 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6">
-        <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Projects</Link>
-        <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Resume</Link>
-        <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Blog</Link>
-        <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">About</Link>
-        <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">Contact</Link>
+        <nav className="hidden md:flex space-x-6 items-center">
+          <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+            Projects
+          </Link>
+          <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+            Resume
+          </Link>
+          <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+            Blog
+          </Link>
+          <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+            About
+          </Link>
+          <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+            Contact
+          </Link>
+
+          {/* Theme Toggle Button */}
+          <div
+            className={` w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
+              isThemeOn ? " border-foreground border-solid border-2" : "border-foreground border-solid border-2"
+            }`}
+            onClick={toggleTheme}
+          >
+            <div
+              className={`w-6 h-6 mx-1 rounded-full bg-foreground shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
+                isThemeOn ? "translate-x-7" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-4 w-4 text-background transition-opacity duration-300 ${
+                  isThemeOn ? "opacity-100" : "opacity-0"
+                }`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+              </svg>
+            </div>
+          </div>
         </nav>
 
         {/* Burger Menu Button */}
@@ -75,7 +147,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64  backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64 backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -89,7 +161,7 @@ const Header = () => {
 
         {/* Menu Links */}
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
-        <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Projects
           </Link>
           <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
@@ -104,6 +176,35 @@ const Header = () => {
           <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
             Contact
           </Link>
+          <div
+            className={` w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
+              isThemeOn ? " border-foreground border-solid border-2" : "border-foreground border-solid border-2"
+            }`}
+            onClick={toggleTheme}
+          >
+            <div
+              className={`w-6 h-6 mx-1 rounded-full bg-foreground shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
+                isThemeOn ? "translate-x-7" : ""
+              }`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className={`h-4 w-4 text-background transition-opacity duration-300 ${
+                  isThemeOn ? "opacity-100" : "opacity-0"
+                }`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                />
+              </svg>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

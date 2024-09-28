@@ -6,6 +6,10 @@
   --background: #000;
   --foreground: #fff;
 }
+.lightmode{
+  --background: #fff;
+  --foreground: #000;
+}
 body {
   color: var(--foreground);
   background-color: var(--background);
@@ -14,7 +18,7 @@ body {
 a{
   text-decoration: none;
 }
-.link:hover{
+a:hover{
   text-decoration: underline;
   transition: all .3s;
 }
