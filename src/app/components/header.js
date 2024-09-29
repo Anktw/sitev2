@@ -138,7 +138,7 @@ const Header = () => {
         </nav>
 
         {/* Social Icons Section */}
-        <div className="flex justify-center align-middle">
+        <div className="flex justify-center align-middle gap-4">
           <Link
             href="https://www.linkedin.com/in/unkit"
             target="_blank"
@@ -160,7 +160,7 @@ const Header = () => {
             aria-label="GitHub"
           >
             <Image
-              src="/components/icons/linkedin.svg"
+              src="icons/github.svg"
               alt="GitHub"
               width={24}
               height={24}
@@ -173,7 +173,7 @@ const Header = () => {
             rel="noopener noreferrer"
             aria-label="X"
           >
-            <Image src="" alt="X" width={24} height={24} />
+            <Image src="icons/twitter.svg" alt="X" width={24} height={24} />
           </Link>
         </div>
         {/* Burger Menu Button */}
