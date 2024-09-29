@@ -71,7 +71,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-6 items-center">
+        <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
           <Link
             href="/projects"
             className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
@@ -105,7 +105,7 @@ const Header = () => {
         </nav>
 
         {/* Social Icons Section */}
-        <div className="flex justify-center align-middle gap-4">
+        <div className="flex justify-center align-middle gap-4 animate-fadeInDown">
           <Link
             href="https://www.linkedin.com/in/unkit"
             target="_blank"
@@ -156,7 +156,7 @@ const Header = () => {
         </div>
         {/* Theme Toggle Button */}
         <div
-            className={`hidden md:block w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
+            className={`hidden md:block w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out animate-fadeInRight ${
               isThemeOn
                 ? " border-foreground border-solid border-2"
                 : "border-foreground border-solid border-2"
@@ -188,7 +188,7 @@ const Header = () => {
           </div>
         {/* Burger Menu Button */}
         <button
-          className="relative w-8 h-8 md:hidden z-50"
+          className="relative w-8 h-8 md:hidden z-50 animate-fadeInRight"
           onClick={(e) => {e.preventDefault();
             toggleMenu();
           }}
