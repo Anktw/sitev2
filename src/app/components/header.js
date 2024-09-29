@@ -2,12 +2,12 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isThemeOn, setIsThemeOn] = useState(false);
 
-  // Check localStorage on initial render
   useEffect(() => {
     const storedTheme = localStorage.getItem("lightmode");
 
@@ -15,7 +15,7 @@ const Header = () => {
       setIsThemeOn(true);
       document.body.classList.add("lightmode");
     }
-  }, []); // Runs once on component mount
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -37,7 +37,7 @@ const Header = () => {
     } else {
       enableLightMode();
     }
-    setIsThemeOn(!isThemeOn); // Update the state after toggling
+    setIsThemeOn(!isThemeOn);
   };
 
   const closeMenuOnScroll = () => {
@@ -72,26 +72,43 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center">
-          <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/projects"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Projects
           </Link>
-          <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/resume"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Resume
           </Link>
-          <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/blog"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Blog
           </Link>
-          <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/about"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             About
           </Link>
-          <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/contact"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Contact
           </Link>
 
           {/* Theme Toggle Button */}
           <div
             className={` w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
-              isThemeOn ? " border-foreground border-solid border-2" : "border-foreground border-solid border-2"
+              isThemeOn
+                ? " border-foreground border-solid border-2"
+                : "border-foreground border-solid border-2"
             }`}
             onClick={toggleTheme}
           >
@@ -120,6 +137,45 @@ const Header = () => {
           </div>
         </nav>
 
+        {/* Social Icons Section */}
+        <div className="flex justify-center align-middle">
+          <Link
+            href="https://www.linkedin.com/in/unkit"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
+            <Image
+              src="icons/linkedin.svg"
+              alt="LinkedIn"
+              width={24}
+              height={24}
+            />
+          </Link>
+
+          <Link
+            href="https://github.com/Anktw"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
+            <Image
+              src="/components/icons/linkedin.svg"
+              alt="GitHub"
+              width={24}
+              height={24}
+            />
+          </Link>
+
+          <Link
+            href="https://x.com/Unkittiwari"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="X"
+          >
+            <Image src="" alt="X" width={24} height={24} />
+          </Link>
+        </div>
         {/* Burger Menu Button */}
         <button
           className="relative w-8 h-8 md:hidden focus:outline-none z-50"
@@ -161,24 +217,41 @@ const Header = () => {
 
         {/* Menu Links */}
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
-          <Link href="/projects" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/projects"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Projects
           </Link>
-          <Link href="/resume" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/resume"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Resume
           </Link>
-          <Link href="/blog" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/blog"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Blog
           </Link>
-          <Link href="/about" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/about"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             About
           </Link>
-          <Link href="/contact" className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300">
+          <Link
+            href="/contact"
+            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+          >
             Contact
           </Link>
           <div
             className={` w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out ${
-              isThemeOn ? " border-foreground border-solid border-2" : "border-foreground border-solid border-2"
+              isThemeOn
+                ? " border-foreground border-solid border-2"
+                : "border-foreground border-solid border-2"
             }`}
             onClick={toggleTheme}
           >

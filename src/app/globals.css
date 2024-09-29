@@ -5,6 +5,7 @@
 :root {
   --background: #000;
   --foreground: #fff;
+  --bordercolor: #ECF0F1;
 }
 .lightmode{
   --background: #fff;
