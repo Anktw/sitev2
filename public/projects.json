@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Instagram MERN",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "description": "A social media platform using the MERN stack.",
+    "techStack": ["MERN", "JavaScript", "React"]
+  },
+  {
+    "id": 2,
+    "title": "Flipkart MERN",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "description": "E-commerce website built with MERN stack.",
+    "techStack": ["MERN", "Node.js", "MongoDB"]
+  },
+  {
+    "id": 3,
+    "title": "ResumeGen",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "description": "A resume generator built with JavaScript.",
+    "techStack": ["JavaScript", "HTML", "CSS"]
+  }
+]

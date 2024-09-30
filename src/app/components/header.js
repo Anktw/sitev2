@@ -64,7 +64,7 @@ const Header = () => {
 
   return (
     <header className="w-full shadow-md">
-        <div className="container mx-auto flex justify-between items-center p-4">
+      <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="text-2xl font-bold animate-fadeInLeft">
           <Link href="/">Ankit Tiwari</Link>
@@ -156,40 +156,41 @@ const Header = () => {
         </div>
         {/* Theme Toggle Button */}
         <div
-            className={`hidden md:block w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out animate-fadeInRight ${
-              isThemeOn
-                ? " border-foreground border-solid border-2"
-                : "border-foreground border-solid border-2"
+          className={`hidden md:block w-16 py-1 rounded-full cursor-pointer transition-colors duration-300 ease-in-out animate-fadeInRight ${
+            isThemeOn
+              ? " border-foreground border-solid border-2"
+              : "border-foreground border-solid border-2"
+          }`}
+          onClick={toggleTheme}
+        >
+          <div
+            className={`w-6 h-6 mx-1 rounded-full bg-foreground shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
+              isThemeOn ? "translate-x-7" : ""
             }`}
-            onClick={toggleTheme}
           >
-            <div
-              className={`w-6 h-6 mx-1 rounded-full bg-foreground shadow-md transform transition-transform duration-300 ease-in-out flex items-center justify-center ${
-                isThemeOn ? "translate-x-7" : ""
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className={`h-4 w-4 text-background transition-opacity duration-300 ${
+                isThemeOn ? "opacity-100" : "opacity-0"
               }`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className={`h-4 w-4 text-background transition-opacity duration-300 ${
-                  isThemeOn ? "opacity-100" : "opacity-0"
-                }`}
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-                />
-              </svg>
-            </div>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+              />
+            </svg>
           </div>
+        </div>
         {/* Burger Menu Button */}
         <button
           className="relative w-8 h-8 md:hidden z-50 animate-fadeInRight"
-          onClick={(e) => {e.preventDefault();
+          onClick={(e) => {
+            e.preventDefault();
             toggleMenu();
           }}
           aria-label="Menu"
