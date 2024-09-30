@@ -5,7 +5,7 @@ export default function Home() {
   return ( 
     <div>
       <Header />
-      <main className="p-5">
+      <main className="md:p-5 p-0">
         <Projects/>
       </main>
       <footer>
