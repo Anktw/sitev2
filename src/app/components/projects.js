@@ -61,7 +61,7 @@ export default function Projects() {
         {techList.map((tech) => (
           <button
             key={tech}
-            className={`px-4 py-2 m-2 border-2 border-foreground rounded-full ${
+            className={`px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full ${
               selectedTech === tech
                 ? "bg-foreground text-background"
                 : "border-foreground bg-background text-foreground"
