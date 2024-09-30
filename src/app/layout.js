@@ -1,3 +1,5 @@
+import HeaderComp from "./components/header";
+import ProjectsComp from "./components/projectsmain";
 import localFont from "next/font/local";
 import "./globals.css";
 
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HeaderComp/>
         {children}
       </body>
     </html>

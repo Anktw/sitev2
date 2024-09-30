@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-export default function Projects() {
+export default function ProjectsComp() {
   const [projects, setProjects] = useState([]);
   const [selectedTech, setSelectedTech] = useState("Recent");
   const [techList, setTechList] = useState([]);

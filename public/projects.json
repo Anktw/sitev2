@@ -19,5 +19,12 @@
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
     "description": "A resume generator built with JavaScript.",
     "techStack": ["JavaScript", "HTML", "CSS"]
+  },
+  {
+    "id": 4,
+    "title": "project 4",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "description": "title",
+    "techStack": ["JavaScript", "HTML", "CSS"]
   }
 ]

@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-const Header = () => {
+const HeaderComp = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isThemeOn, setIsThemeOn] = useState(false);
 
@@ -298,4 +298,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderComp;
