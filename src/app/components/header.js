@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const HeaderComp = () => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [isThemeOn, setIsThemeOn] = useState(false);
 
@@ -73,31 +75,31 @@ const HeaderComp = () => {
         <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
           <Link
             href="/projects"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline' : ''}`}
           >
             Projects
           </Link>
           <Link
             href="/resume"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline' : ''}`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline' : ''}`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline' : ''}`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline' : ''}`}
           >
             Contact
           </Link>
@@ -232,31 +234,31 @@ const HeaderComp = () => {
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
           <Link
             href="/projects"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline' : ''}`}
           >
             Projects
           </Link>
           <Link
             href="/resume"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline' : ''}`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline' : ''}`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline' : ''}`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className="text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300"
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline' : ''}`}
           >
             Contact
           </Link>
