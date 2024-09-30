@@ -10,18 +10,18 @@ export default function Projects() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/projects.json"); // Ensure this path is correct
+        const response = await fetch("/projects.json"); 
         if (response.ok) {
           const data = await response.json();
           setProjects(data);
 
-          // Extract unique technologies from projects
+         
           const techs = new Set();
           data.forEach((project) => {
             project.techStack.forEach((tech) => techs.add(tech));
           });
 
-          // Convert Set to Array and add "All" at the beginning
+          
           setTechList(["All", ...Array.from(techs)]);
         } else {
           console.error("Failed to load projects.");
@@ -56,7 +56,7 @@ export default function Projects() {
     <div className="px-6 lg:px-8">
       <h1 className="text-5xl md:text-6xl font-bold my-2">Projects</h1>
 
-      {/* Dynamically Generated Filter Buttons */}
+      {/*Filter Buttons */}
       <div>
         {techList.map((tech) => (
           <button
