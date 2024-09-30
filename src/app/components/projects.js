@@ -54,7 +54,7 @@ export default function Projects() {
 
   return (
     <div className="px-6 lg:px-8">
-      <h1 className="text-5xl md:text-6xl font-bold my-2">Projects</h1>
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold my-2">Projects</h1>
 
       {/*Filter Buttons */}
       <div>
