@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
-  const [selectedTech, setSelectedTech] = useState("All");
+  const [selectedTech, setSelectedTech] = useState("Recent");
   const [techList, setTechList] = useState([]);
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Projects() {
           });
 
           
-          setTechList(["All", ...Array.from(techs)]);
+          setTechList(["Recent", ...Array.from(techs)]);
         } else {
           console.error("Failed to load projects.");
         }
@@ -36,7 +36,7 @@ export default function Projects() {
 
   const filterProjects = (tech) => {
     setSelectedTech(tech);
-    if (tech === "All") {
+    if (tech === "Recent") {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => setProjects(data));
@@ -57,7 +57,7 @@ export default function Projects() {
       <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold my-2">Projects</h1>
 
       {/*Filter Buttons */}
-      <div>
+
         {techList.map((tech) => (
           <button
             key={tech}
@@ -71,7 +71,6 @@ export default function Projects() {
             {tech}
           </button>
         ))}
-      </div>
 
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
@@ -92,6 +91,8 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-end">
       </div>
     </div>
   );
