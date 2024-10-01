@@ -4,7 +4,7 @@ import Button1 from "./button1";
 export default function PortBtn(){
     const { isThemeOn } = useTheme();
     return(
-        <div className="group flex justify-center">
+        <div className="group inline">
         <Button1
           text="Go to my Portfolio"
           href="/portfolio"
