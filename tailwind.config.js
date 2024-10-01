@@ -12,6 +12,8 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        background2: "var(--background2)",
+        background3: "var(--background3)",
       },
       keyframes: {
         fadeInUp: {

@@ -1,12 +1,11 @@
-import HeadingMain from "./components/headingmain.jsx"
-import ProjectsComp from "./components/projectsmain";
-import HeadingHome from "./components/headinghome.jsx";
+import HeadingHome from "../components/headinghome";
+import ProjectsPort from "../components/projectsport.js";
 export default function Home() {
   return ( 
     <div>
       <main className="p-0 md:p-2 m-1 md:m-4 lg:p-4">
         <HeadingHome text="Projects"/>
-        <ProjectsComp/>
+        <ProjectsPort/>
         <HeadingHome text="Resume"/>
       </main>
       <footer p-4 m-4>

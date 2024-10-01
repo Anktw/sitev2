@@ -36,43 +36,43 @@ const HeaderComp = () => {
   }, [isOpen]);
 
   return (
-    <header className="w-full shadow-md">
-      <div className="container mx-auto flex justify-between items-center p-4">
+    <header className="fixed top-0 w-full shadow-md z-30">
+      <div className="backdrop-blur-xl  container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla">
           <Link href="/"
-          className={`${pathname === '/' ? 'protestGuerrilla' : ''}`}>Ankit Tiwari</Link>
+          className={`${pathname === '/' ? 'cursor-auto' : ''}`}>Ankit Tiwari</Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
           <Link
             href="/projects"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline cursor-auto' : ''}`}
           >
             Projects
           </Link>
           <Link
             href="/resume"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline cursor-auto' : ''}`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline cursor-auto' : ''}`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline cursor-auto' : ''}`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline cursor-auto' : ''}`}
           >
             Contact
           </Link>
@@ -191,7 +191,7 @@ const HeaderComp = () => {
 
       {/* Mobile Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-1/2 md:w-64 backdrop-blur-xl z-40 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top right-0 h-screen w-1/2 md:w-64 backdrop-blur-3xl z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

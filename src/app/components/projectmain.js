@@ -69,7 +69,8 @@ export default function ProjectsMain() {
           </div>
         ))}
       </div>
-      <div className="group flex justify-center">
+      <div className="flex justify-center">
+      <div className=" group inline-block">
         <Button1
           text="Go to Projects"
           href="/projects"
@@ -89,6 +90,7 @@ export default function ProjectsMain() {
             </svg>
           }
         />
+      </div>
       </div>
     </div>
   );
