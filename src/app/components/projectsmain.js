@@ -3,11 +3,13 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Button1 from "./button1";
+import { useTheme } from "../context/Themescontext";
 
 export default function ProjectsComp() {
   const [projects, setProjects] = useState([]);
   const [selectedTech, setSelectedTech] = useState("Recent");
   const [techList, setTechList] = useState([]);
+  const { isThemeOn } = useTheme(); 
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -107,9 +109,9 @@ export default function ProjectsComp() {
           </div>
         ))}
       </div>
-      <div className="flex  justify-center">
+      <div className="group flex  justify-center">
       <Button1 text="Go to Projects" href="/projects" icon={
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="foreground"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 h-6 w-6 ${isThemeOn ? "fill-black group-hover:fill-white" : "fill-white group-hover:fill-black"}`}><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
       } />
       </div>
     </div>
