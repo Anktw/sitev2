@@ -1,30 +1,30 @@
 [
   {
     "id": 1,
-    "title": "Instagram MERN",
+    "title": "Project 1",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "A social media platform using the MERN stack.",
+    "description": "Title 1",
     "techStack": ["MERN", "JavaScript", "React"]
   },
   {
     "id": 2,
-    "title": "Flipkart MERN",
+    "title": "Project 2",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "E-commerce website built with MERN stack.",
+    "description": "Title 2",
     "techStack": ["MERN", "Node.js", "MongoDB"]
   },
   {
     "id": 3,
-    "title": "ResumeGen",
+    "title": "Project 3",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "A resume generator built with JavaScript.",
+    "description": "Title 3",
     "techStack": ["JavaScript", "HTML", "CSS"]
   },
   {
     "id": 4,
     "title": "project 4",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "title",
+    "description": "title 4",
     "techStack": ["JavaScript", "HTML", "CSS"]
   }
 ]
