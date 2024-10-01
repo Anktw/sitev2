@@ -16,10 +16,3 @@ body {
   background-color: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
-a{
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-  transition: all .3s;
-}

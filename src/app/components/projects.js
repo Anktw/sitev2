@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import HeadingMain from "./headingmain";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -60,7 +61,7 @@ export default function Projects() {
 
   return (
     <div className="px-6 lg:px-8">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold my-2">Projects</h1>
+      <HeadingMain text="Projects"/>
 
       {/* Filter Buttons */}
       <div className="mb-4">

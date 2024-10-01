@@ -1,5 +1,5 @@
 "use client";
-
+import { useTheme } from "../context/Themescontext";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -7,38 +7,10 @@ import { usePathname } from "next/navigation";
 const HeaderComp = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const [isThemeOn, setIsThemeOn] = useState(false);
-
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("lightmode");
-
-    if (storedTheme === "active") {
-      setIsThemeOn(true);
-      document.body.classList.add("lightmode");
-    }
-  }, []);
+  const { isThemeOn, toggleTheme } = useTheme();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
-  };
-
-  const enableLightMode = () => {
-    document.body.classList.add("lightmode");
-    localStorage.setItem("lightmode", "active");
-  };
-
-  const disableLightMode = () => {
-    document.body.classList.remove("lightmode");
-    localStorage.setItem("lightmode", "null");
-  };
-
-  const toggleTheme = () => {
-    if (isThemeOn) {
-      disableLightMode();
-    } else {
-      enableLightMode();
-    }
-    setIsThemeOn(!isThemeOn);
   };
 
   const closeMenuOnScroll = () => {

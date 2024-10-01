@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Button1 from "./button1";
 
 export default function ProjectsComp() {
   const [projects, setProjects] = useState([]);
@@ -68,7 +69,6 @@ export default function ProjectsComp() {
 
   return (
     <div className="px-6 lg:px-8">
-      <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold my-2">Projects</h1>
 
       {/* Filter Buttons */}
       <div className="mb-4">
@@ -107,11 +107,10 @@ export default function ProjectsComp() {
           </div>
         ))}
       </div>
-
-      <div className="mb-8 flex justify-center">
-          <Link href="/projects">
-          Go to Projects
-          </Link>
+      <div className="flex  justify-center">
+      <Button1 text="Go to Projects" href="/projects" icon={
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="foreground"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
+      } />
       </div>
     </div>
   );
