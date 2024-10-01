@@ -1,5 +1,5 @@
 import HeadingHome from "../components/headinghome";
-import ProjectsPort from "../components/projectsport.js";
+import ProjectsPort from "../components/projectsport";
 export default function Home() {
   return ( 
     <div>
