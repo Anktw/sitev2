@@ -1,9 +1,8 @@
-import Header from "../components/header";
-import ProjectsComp from "../components/projectsmain";
+import Projects from "../components/projects";
 export default function ProjectPage() {
   return (
     <div>
-      <ProjectsComp />
+      <Projects />
     </div>
   );
 }
