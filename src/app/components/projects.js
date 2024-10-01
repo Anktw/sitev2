@@ -1,31 +1,30 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Link from "next/link";
 
-export default function ProjectsComp() {
+export default function Projects() {
   const [projects, setProjects] = useState([]);
-  const [selectedTech, setSelectedTech] = useState("Recent");
+  const [selectedTech, setSelectedTech] = useState("All");
   const [techList, setTechList] = useState([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/projects.json"); 
+        const response = await fetch("/projects.json");
         if (response.ok) {
           const data = await response.json();
-  
 
-          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3);
+
+          const sortedProjects = data.sort((a, b) => b.id - a.id);
           setProjects(sortedProjects);
-  
+
 
           const techs = new Set();
           data.forEach((project) => {
             project.techStack.forEach((tech) => techs.add(tech));
           });
-  
-          setTechList(["Recent", ...Array.from(techs)]);
+
+          setTechList(["All", ...Array.from(techs)]);
         } else {
           console.error("Failed to load projects.");
         }
@@ -33,28 +32,21 @@ export default function ProjectsComp() {
         console.error("Error fetching projects:", error);
       }
     };
-  
+
     fetchProjects();
   }, []);
 
   const filterProjects = (tech) => {
     setSelectedTech(tech);
 
-    if (tech === "Recent") {
+    if (tech === "All") {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
-
-          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3);
+          const sortedProjects = data.sort((a, b) => b.id - a.id); // Keep sorting for "All"
           setProjects(sortedProjects);
         });
-    } else if (tech === "All") {
-
-      fetch("/projects.json")
-        .then((response) => response.json())
-        .then((data) => setProjects(data));
     } else {
-
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
@@ -86,10 +78,14 @@ export default function ProjectsComp() {
           </button>
         ))}
       </div>
+
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
         {projects.map((project) => (
-          <div key={project.id} className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105">
+          <div
+            key={project.id}
+            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105"
+          >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image
                 className="w-full h-full object-cover"
@@ -106,12 +102,6 @@ export default function ProjectsComp() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mb-8 flex justify-center">
-          <Link href="/projects">
-          Go to Projects
-          </Link>
       </div>
     </div>
   );
