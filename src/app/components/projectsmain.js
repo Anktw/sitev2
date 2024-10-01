@@ -7,7 +7,7 @@ import { useTheme } from "../context/Themescontext";
 
 export default function ProjectsComp() {
   const [projects, setProjects] = useState([]);
-  const [selectedTech, setSelectedTech] = useState("Recent");
+  const [selectedTech, setSelectedTech] = useState("Recent","All");
   const [techList, setTechList] = useState([]);
   const { isThemeOn } = useTheme(); 
 
@@ -28,7 +28,7 @@ export default function ProjectsComp() {
             project.techStack.forEach((tech) => techs.add(tech));
           });
   
-          setTechList(["Recent", ...Array.from(techs)]);
+          setTechList(["Recent","All", ...Array.from(techs)]);
         } else {
           console.error("Failed to load projects.");
         }
@@ -55,7 +55,10 @@ export default function ProjectsComp() {
 
       fetch("/projects.json")
         .then((response) => response.json())
-        .then((data) => setProjects(data));
+        .then((data) =>{
+          const sortedProjects = data.sort((a, b) => b.id - a.id);
+          setProjects(data);
+        } )
     } else {
 
       fetch("/projects.json")

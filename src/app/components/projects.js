@@ -44,7 +44,7 @@ export default function Projects() {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
-          const sortedProjects = data.sort((a, b) => b.id - a.id); // Keep sorting for "All"
+          const sortedProjects = data.sort((a, b) => b.id - a.id);
           setProjects(sortedProjects);
         });
     } else {
