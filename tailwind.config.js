@@ -37,6 +37,9 @@ module.exports = {
         fadeInLeft: 'fadeInLeft 0.5s ease-out forwards',
         fadeInRight: 'fadeInRight 0.5s ease-out forwards',
       },
+      fontFamily:{
+        protestGuerrilla: ["var(--font-protestGuerrilla)"],
+      },
     },
   },
   plugins: [],

@@ -13,6 +13,10 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const protestGuerrilla = localFont({
+  src:"./fonts/ProtestGuerrilla.ttf",
+  variable: "--font-protestGuerrilla",
+});
 
 export const metadata = {
   title: "Ankit Tiwari's Portfolio",
@@ -20,7 +24,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={protestGuerrilla.variable}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

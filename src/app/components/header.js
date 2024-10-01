@@ -39,8 +39,9 @@ const HeaderComp = () => {
     <header className="w-full shadow-md">
       <div className="container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
-        <div className="text-2xl font-bold animate-fadeInLeft">
-          <Link href="/">Ankit Tiwari</Link>
+        <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla">
+          <Link href="/"
+          className={`${pathname === '/' ? 'protestGuerrilla' : ''}`}>Ankit Tiwari</Link>
         </div>
 
         {/* Desktop Navigation */}
