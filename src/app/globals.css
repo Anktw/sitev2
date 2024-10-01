@@ -3,9 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #000;
-  --foreground: #fff;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --bordercolor: #ECF0F1;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 .lightmode{
   --background: #fff;
