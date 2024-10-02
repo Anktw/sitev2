@@ -37,42 +37,54 @@ const HeaderComp = () => {
 
   return (
     <header className="fixed top-0 w-full shadow-md z-30">
-      <div className="backdrop-blur-xl  container mx-auto flex justify-between items-center p-4">
+      <div className="backdrop-blur-xl">
+      <div className="w-full  container mx-auto flex justify-between items-center p-4">
         {/* Logo */}
         <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla">
-          <Link href="/"
-          className={`${pathname === '/' ? 'cursor-auto' : ''}`}>Ankit Tiwari</Link>
+          <Link href="/" className={`${pathname === "/" ? "cursor-auto" : ""}`}>
+            Ankit Tiwari
+          </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
           <Link
             href="/projects"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline cursor-auto' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/projects" ? "underline cursor-auto" : ""
+            }`}
           >
             Projects
           </Link>
           <Link
             href="/resume"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline cursor-auto' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/resume" ? "underline cursor-auto" : ""
+            }`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline cursor-auto' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/blog" ? "underline cursor-auto" : ""
+            }`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline cursor-auto' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/about" ? "underline cursor-auto" : ""
+            }`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline cursor-auto' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/contact" ? "underline cursor-auto" : ""
+            }`}
           >
             Contact
           </Link>
@@ -188,6 +200,7 @@ const HeaderComp = () => {
           </div>
         </button>
       </div>
+      </div>
 
       {/* Mobile Navigation */}
       <div
@@ -207,31 +220,41 @@ const HeaderComp = () => {
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
           <Link
             href="/projects"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/projects' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/projects" ? "underline" : ""
+            }`}
           >
             Projects
           </Link>
           <Link
             href="/resume"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/resume' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/resume" ? "underline" : ""
+            }`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/blog' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/blog" ? "underline" : ""
+            }`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/about' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/about" ? "underline" : ""
+            }`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${pathname === '/contact' ? 'underline' : ''}`}
+            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/contact" ? "underline" : ""
+            }`}
           >
             Contact
           </Link>
