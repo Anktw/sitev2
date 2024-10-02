@@ -82,28 +82,34 @@ export default function Projects() {
 
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105"
-          >
-            <div className="aspect-w-16 aspect-h-9 ">
-              <Image
-                className="w-full h-full object-cover"
-                src={project.image}
-                alt={project.title}
-                width={1600}
-                height={900}
-                priority={true}
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="text-lg font-bold">{project.title}</h3>
-              <p className="text-sm mt-2">{project.description}</p>
-            </div>
-          </div>
-        ))}
+  {projects.map((project) => (
+    <div
+      key={project.id}
+      className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105"
+    >
+      <div className="flex flex-col">
+        {/* Image Section */}
+        <div className="w-full">
+          <Image
+            className="w-full h-auto object-cover"
+            src={project.image}
+            alt={project.title}
+            width={1600}
+            height={900}
+            priority={true}
+          />
+        </div>
+
+        {/* Content Section */}
+        <div className="p-4">
+          <h3 className="text-lg font-bold">{project.title}</h3>
+          <p className="text-sm mt-2">{project.description}</p>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
+
     </div>
   );
 }
