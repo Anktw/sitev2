@@ -72,7 +72,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Right Arrow */}
       {showRightArrow && (
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 z-10 hover:backdrop-blur-md backdrop-blur-sm bg-transparent"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 z-10 opacity-50 hover:backdrop-blur-md backdrop-blur-sm bg-opacity-80"
           onClick={scrollRight}
         >
           <svg
@@ -80,7 +80,7 @@ const HorizontalScroll = ({ children }) => {
             height="48px"
             viewBox="0 -960 960 960"
             width="48px"
-            className={`transform transition-transform duration-300 h-6 w-6 md:h-8 md:w-8 lg:h-12 lg:w-12 ${
+            className={`transform transition-transform duration-300  ${
               isThemeOn
                 ? "fill-black group-hover:fill-white"
                 : "fill-white group-hover:fill-black"
