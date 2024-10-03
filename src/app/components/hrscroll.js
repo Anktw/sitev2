@@ -42,7 +42,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Left Arrow */}
       {showLeftArrow && (
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10  hover:backdrop-blur-lg backdrop-blur-md bg-opacity-10"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-transparent"
           onClick={scrollLeft}
         >
           <svg
@@ -50,7 +50,7 @@ const HorizontalScroll = ({ children }) => {
             height="48px"
             viewBox="0 -960 960 960"
             width="48px"
-            className={`transform transition-transform duration-300 group-hover:scale-110  ${
+            className={`transform transition-transform duration-300 hover:opacity-80 bg-background ${
               isThemeOn
                 ? "fill-black group-hover:fill-white"
                 : "fill-white group-hover:fill-black"
@@ -72,7 +72,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Right Arrow */}
       {showRightArrow && (
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 hover:backdrop-blur-lg backdrop-blur-md bg-opacity-10"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
           onClick={scrollRight}
         >
           <svg
@@ -80,7 +80,7 @@ const HorizontalScroll = ({ children }) => {
             height="48px"
             viewBox="0 -960 960 960"
             width="48px"
-            className={`transform transition-transform duration-300  ${
+            className={`transform transition-transform duration-300 hover:opacity-80 bg-background  ${
               isThemeOn
                 ? "fill-black group-hover:fill-white"
                 : "fill-white group-hover:fill-black"

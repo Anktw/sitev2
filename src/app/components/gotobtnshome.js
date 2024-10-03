@@ -10,7 +10,7 @@ export default function GoToBtnHome(){
     return(
         <div>
             <HorizontalScroll>
-                <div className="flex gap-5 mx-4 md:mx-3">             
+                <div className="flex gap-5 mx-4 md:mx-3">
                 <ProjectsBtn/>
                 <ResumeBtn/>
                 <BlogBtn/>
