@@ -42,7 +42,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Left Arrow */}
       {showLeftArrow && (
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 p-2 z-10  bg-transparent backdrop-blur-sm hover:backdrop-blur-md"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10  hover:backdrop-blur-lg backdrop-blur-md bg-opacity-10"
           onClick={scrollLeft}
         >
           <svg
@@ -72,7 +72,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Right Arrow */}
       {showRightArrow && (
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 p-2 z-10 opacity-50 hover:backdrop-blur-md backdrop-blur-sm bg-opacity-80"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10 hover:backdrop-blur-lg backdrop-blur-md bg-opacity-10"
           onClick={scrollRight}
         >
           <svg

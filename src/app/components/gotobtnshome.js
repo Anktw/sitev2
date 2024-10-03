@@ -8,8 +8,9 @@ import HorizontalScroll from "./hrscroll";
 
 export default function GoToBtnHome(){
     return(
-        <div className="px-3">
+        <div>
             <HorizontalScroll>
+                <div className="flex gap-5 mx-4 md:mx-3">             
                 <ProjectsBtn/>
                 <ResumeBtn/>
                 <BlogBtn/>
@@ -17,6 +18,7 @@ export default function GoToBtnHome(){
                 <ContactBtn/>
                 <RsPaperBtn/>
 
+                </div> 
             </HorizontalScroll>
         </div>
     )
