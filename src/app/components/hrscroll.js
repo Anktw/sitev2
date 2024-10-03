@@ -80,7 +80,7 @@ const HorizontalScroll = ({ children }) => {
             height="48px"
             viewBox="0 -960 960 960"
             width="48px"
-            className={`transform transition-transform duration-300  ${
+            className={`transform transition-transform duration-300 h-3 w-3 md:h-6 md:w-6 lg:h-8 lg:w-8 ${
               isThemeOn
                 ? "fill-black group-hover:fill-white"
                 : "fill-white group-hover:fill-black"

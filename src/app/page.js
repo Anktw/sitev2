@@ -12,6 +12,7 @@ export default function Home() {
         <ProjectsMain/>
         <GoToBtnHome/>
         <HeadingHome text="Recent Blog"/>
+        
       </main>
       <footer>
       </footer>

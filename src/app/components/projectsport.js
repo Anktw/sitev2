@@ -69,26 +69,27 @@ export default function ProjectsPort() {
   };
 
   return (
-    <div className="px-6 lg:px-8">
+    <div>
       <HorizontalScroll>
-      {/* Filter Buttons */}
-      <div className=" flex mb-4">
-        {techList.map((tech) => (
-          <button
-            key={tech}
-            className={` px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full hover:bg-foreground hover:text-background ${
-              selectedTech === tech
-                ? "bg-foreground text-background  cursor-auto "
-                : "border-foreground bg-background text-foreground"
-            }`}
-            onClick={() => filterProjects(tech)}
-          >
-            {tech}
-          </button>
-        ))}
-      </div>
+        {/* Filter Buttons */}
+        <div className=" flex mb-4">
+          {techList.map((tech) => (
+            <button
+              key={tech}
+              className={` px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full hover:bg-foreground hover:text-background ${
+                selectedTech === tech
+                  ? "bg-foreground text-background  cursor-auto "
+                  : "border-foreground bg-background text-foreground"
+              }`}
+              onClick={() => filterProjects(tech)}
+            >
+              {tech}
+            </button>
+          ))}
+        </div>
       </HorizontalScroll>
-      {/* Projects Container */}
+      <div className="px-6 lg:px-8">
+        {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
         {projects.map((project) => (
           <div
@@ -97,7 +98,7 @@ export default function ProjectsPort() {
           >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-xl"
                 src={project.image}
                 alt={project.title}
                 width={1600}
@@ -112,26 +113,27 @@ export default function ProjectsPort() {
           </div>
         ))}
       </div>
-      <div className="group flex  justify-center">
-        <Button1
-          text="Go to Projects"
-          href="/projects"
-          icon={
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 ${
-                isThemeOn
-                  ? "fill-black group-hover:fill-white"
-                  : "fill-white group-hover:fill-black"
-              }`}
-            >
-              <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-            </svg>
-          }
-        />
+        <div className="group flex  justify-center">
+          <Button1
+            text="Go to Projects"
+            href="/projects"
+            icon={
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 ${
+                  isThemeOn
+                    ? "fill-black group-hover:fill-white"
+                    : "fill-white group-hover:fill-black"
+                }`}
+              >
+                <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+              </svg>
+            }
+          />
+        </div>
       </div>
     </div>
   );
