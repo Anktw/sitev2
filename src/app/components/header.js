@@ -53,48 +53,48 @@ const HeaderComp = () => {
           <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
             <Link
               href="/projects"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/projects" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+                pathname === "/projects" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               Projects
             </Link>
             <Link
               href="/portfolio"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 block ${
-                pathname === "/portfolio" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 block ${
+                pathname === "/portfolio" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               Portfolio
             </Link>
             <Link
               href="/resume"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/resume" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+                pathname === "/resume" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               Resume
             </Link>
             <Link
               href="/blog"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/blog" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+                pathname === "/blog" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               Blog
             </Link>
             <Link
               href="/about"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/about" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+                pathname === "/about" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/contact" ? "underline cursor-auto" : ""
+              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+                pathname === "/contact" ? "underline cursor-auto hover:scale-100" : ""
               }`}
             >
               Contact
@@ -231,48 +231,48 @@ const HeaderComp = () => {
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
           <Link
             href="/projects"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/projects" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/projects" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             Projects
           </Link>
           <Link
             href="/portfolio"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/portfolio" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/portfolio" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             Portfolio
           </Link>
           <Link
             href="/resume"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/resume" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/resume" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/blog" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/blog" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/about" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/about" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className={`text-lg hover:underline hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/contact" ? "underline cursor-auto" : ""
+            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
+              pathname === "/contact" ? "underline cursor-auto hover:scale-100" : ""
             }`}
           >
             Contact

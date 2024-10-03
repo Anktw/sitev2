@@ -1,16 +1,14 @@
 export default function ResumeFrame(){
     return(
-        <div className="flex justify-center">
-        <div className="w-1/2 justify-center px-2 border-2 border-foreground rounded-lg">
-            <div style={{width: '100%',height: '600px',}}>
+        <div className="flex justify-center h-screen">
+        <div className="relative overflow-hidden h-[400px] w-[600px] justify-center border border-foreground rounded-md">
+            
                 <iframe
                 src="/resume"
-                width="100%"
-                height="90%"
                 style={{border: 'none'}}
                 title="Resume"
+                className="absolute top-[-80px] left-[0px] h-[auto] w-[1000px]"
                 />
-            </div>
         </div>
         </div>
     )

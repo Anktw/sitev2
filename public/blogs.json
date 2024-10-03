@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "title": "Blog Title 1",
+        "description": "description 1",
+        "link": "/blog/blog1",
+        "date": "03-October-2024",
+        "categoryStack": ["Philosophy"]
+    },
+    {
+        "id": 2,
+        "title": "Blog Title 2",
+        "description": "description 2",
+        "link": "/blog/blog2",
+        "date": "03-October-2024",
+        "categoryStack": ["Philosophy","Technology"]
+    },
+    {
+        "id": 3,
+        "title": "Blog Title 3",
+        "description": "description 3",
+        "link": "/blog/blog3",
+        "date": "03-October-2024",
+        "categoryStack": ["Technology"]
+    },
+    {
+        "id": 4,
+        "title": "Blog Title 4",
+        "description": "description 4",
+        "link": "/blog/blog3",
+        "date": "03-October-2024",
+        "categoryStack": ["Philosophy"]
+    },
+    {
+        "id": 5,
+        "title": "Blog Title 5",
+        "description": "description 3",
+        "link": "/blog/blog3",
+        "date": "03-October-2024",
+        "categoryStack": ["Philosophy","Technology"]
+    }
+]

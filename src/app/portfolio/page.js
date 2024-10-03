@@ -1,5 +1,6 @@
 import HeadingHome from "../components/headings/headinghome";
 import ProjectsPort from "../components/projectsport";
+import ResumeFrame from "../components/resumeframe";
 export default function Home() {
   return ( 
     <div>
@@ -7,6 +8,7 @@ export default function Home() {
         <HeadingHome text="Projects"/>
         <ProjectsPort/>
         <HeadingHome text="Resume"/>
+        <ResumeFrame/>
       </main>
       <footer>
   
