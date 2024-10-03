@@ -43,7 +43,7 @@ export default function ProjectsMain() {
   };
 
   return (
-    <div className="px-0 md:px-5 lg:px-8">
+    <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10">
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
         {projects.map((project) => (

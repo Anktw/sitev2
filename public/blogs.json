@@ -27,15 +27,23 @@
         "id": 4,
         "title": "Blog Title 4",
         "description": "description 4",
-        "link": "/blog/blog3",
+        "link": "/blog/blog4",
         "date": "03-October-2024",
         "categoryStack": ["Philosophy"]
     },
     {
         "id": 5,
         "title": "Blog Title 5",
-        "description": "description 3",
-        "link": "/blog/blog3",
+        "description": "description 5",
+        "link": "/blog/blog5",
+        "date": "03-October-2024",
+        "categoryStack": ["Philosophy","Technology"]
+    },
+    {
+        "id": 6,
+        "title": "Blog Title 6",
+        "description": "description 6",
+        "link": "/blog/blog6",
         "date": "03-October-2024",
         "categoryStack": ["Philosophy","Technology"]
     }
