@@ -1,4 +1,4 @@
-import HeadingHome from "../components/headinghome";
+import HeadingHome from "../components/headings/headinghome";
 import ProjectsPort from "../components/projectsport";
 export default function Home() {
   return ( 
@@ -8,7 +8,7 @@ export default function Home() {
         <ProjectsPort/>
         <HeadingHome text="Resume"/>
       </main>
-      <footer p-4 m-4>
+      <footer>
   
       </footer>
     </div>

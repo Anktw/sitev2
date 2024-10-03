@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import HeadingMain from "./headingmain";
+import HeadingMain from "./headings/headingmain";
 
 export default function Projects() {
   const [projects, setProjects] = useState([]);
@@ -89,7 +89,7 @@ export default function Projects() {
           >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover rounded-xl"
                 src={project.image}
                 alt={project.title}
                 width={1600}

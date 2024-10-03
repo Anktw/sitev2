@@ -2,6 +2,7 @@ import HeaderComp from "./components/header";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./context/Themescontext";
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

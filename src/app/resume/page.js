@@ -1,7 +1,10 @@
+import HeadingMain from "../components/headings/headingmain";
+
 export default function Resume() {
   return (
     <div>
-      <h1>Resume</h1>
+      <HeadingMain text="Resume"/>
+      <p>L resume</p>
     </div>
   );
 }

@@ -2,8 +2,9 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Button1 from "./button1";
+import Button1 from "./buttons/button1";
 import { useTheme } from "../context/Themescontext";
+import HorizontalScroll from "./hrscroll";
 
 export default function ProjectsPort() {
   const [projects, setProjects] = useState([]);
@@ -69,12 +70,13 @@ export default function ProjectsPort() {
 
   return (
     <div className="px-6 lg:px-8">
+      <HorizontalScroll>
       {/* Filter Buttons */}
-      <div className="mb-4">
+      <div className=" flex mb-4">
         {techList.map((tech) => (
           <button
             key={tech}
-            className={`px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full hover:bg-foreground hover:text-background ${
+            className={` px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full hover:bg-foreground hover:text-background ${
               selectedTech === tech
                 ? "bg-foreground text-background  cursor-auto "
                 : "border-foreground bg-background text-foreground"
@@ -85,6 +87,7 @@ export default function ProjectsPort() {
           </button>
         ))}
       </div>
+      </HorizontalScroll>
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
         {projects.map((project) => (
@@ -119,7 +122,7 @@ export default function ProjectsPort() {
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 h-6 w-6 ${
+              className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 ${
                 isThemeOn
                   ? "fill-black group-hover:fill-white"
                   : "fill-white group-hover:fill-black"
