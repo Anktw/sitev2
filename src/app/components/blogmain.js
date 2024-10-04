@@ -71,7 +71,7 @@ export default function BlogsMain() {
               <div className="inline mt-2 md:mt-4">
                 <Button1
                   text="Read"
-                  href={blog.link}
+                  href={`/blog/${blog.id}`}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

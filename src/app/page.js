@@ -1,7 +1,5 @@
 import ProjectsMain from "./components/projectmain";
 import HeadingHome from "./components/headings/headinghome";
-import PortBtn from "./components/buttons/portbtn";
-import HorizontalScroll from "./components/hrscroll";
 import GoToBtnHome from "./components/gotobtnshome";
 import BlogsMain from "./components/blogmain";
 import TopBtnsHome from "./components/hometopbtn";
