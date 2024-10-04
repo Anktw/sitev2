@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <main className="px-0 md:px-3 lg:px-5 m-1 md:m-4 ">
         <TopBtnsHome/>
-        <HeadingHome text="Projects"/>
+        <HeadingHome text="Recent Projects"/>
         <ProjectsMain />
         <GoToBtnHome />
         <HeadingHome text="Recent Blogs" />

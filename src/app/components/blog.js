@@ -61,11 +61,11 @@ export default function Blogs() {
       <HeadingMain text="Blogs" />
       {/* Filter Buttons */}
       <HorizontalScroll>
-        <div className="mx-5 md:mx-10 lg:mx-20">
+        <div className="mx-5 md:mx-8 lg:mx-12">
           {CategoryList.map((category) => (
             <button
               key={category}
-              className={`px-4 py-2 m-1 md:m-2 lg:m-3 border-2 border-foreground rounded-full ${
+              className={`px-4 py-2 m-1 md:m-1.5 lg:m-2 border-2 border-foreground rounded-full ${
                 selectedCategory === category
                   ? "bg-foreground text-background"
                   : "border-foreground bg-background text-foreground"
@@ -77,9 +77,9 @@ export default function Blogs() {
           ))}
         </div>
       </HorizontalScroll>
-      <div className="container mx-auto flex-row p-4 border border-foreground rounded-lg md:rounded-md animate-fadeInDown">
+      <div className="container mx-auto p-4 border border-foreground rounded-lg md:rounded-md animate-fadeInDown">
         {blogs.length > 0 && (
-          <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-8">
+          <div className="relative grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6">
             {/* First blog */}
             <div className="hidden md:block absolute top-0 left-auto">
               {blogs[(1, 3)].categoryStack.map((category, index) => (
@@ -91,25 +91,25 @@ export default function Blogs() {
                 </span>
               ))}
             </div>
-            <div className="lg:col-span-2 p-5 md:p-10 flex-col justify-center animate-fadeInLeft">
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold my-2">
+            <div className="lg:col-span-2 p-4 md:p-8 flex-col justify-center animate-fadeInLeft">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold my-3">
                 {blogs[0].title}
               </h1>
-              <p className="text-xl md:text-2xl my-2 opacity-80 font-mono">
+              <p className="text-xl md:text-2xl opacity-80 font-mono my-2">
                 {blogs[0].description}
               </p>
-              <p className="text-sm mb-4 opacity-60 font-serif">{blogs[0].date}</p>
-              <div className="inline mt-2 md:mt-4">
+              <p className="text-sm opacity-60 font-serif my-2">{blogs[0].date}</p>
+              <div className="inline my-2">
                 <Button1
                   text="Read"
-                  href={`/blog/${blogs[0].title.replace(/\s+/g, '-').toLowerCase()}`}
+                  href={`/blog/${blogs[0].id}`}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="24px"
                       viewBox="0 -960 960 960"
                       width="24px"
-                      className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45 ${
+                      className={`transform transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-45  ${
                         isThemeOn
                           ? "fill-black group-hover:fill-white"
                           : "fill-white group-hover:fill-black"
@@ -122,32 +122,32 @@ export default function Blogs() {
               </div>
             </div>
 
-            {/* First right column */}
+            {/* Right column blogs */}
             <div className="grid grid-cols-1 gap-4 animate-fadeInRight">
               {blogs.slice(1, 3).map((blog) => (
                 <div
                   key={blog.id}
-                  className="relative flex flex-col p-5 md:p-10 "
+                  className="relative flex flex-col p-5 md:p-8 border border-foreground rounded-xl "
                 >
-                  <div className="absolute top-0 left-auto gap-2 hidden md:block">
+                  <div className="absolute top-0 left-0 gap-2 hidden md:block">
                     {blog.categoryStack.map((category, index) => (
                       <span
                         key={index}
-                        className="border border-foreground px-1 rounded mx-1"
+                        className="bg-foreground text-background px-1 rounded mx-1 opacity-50"
                       >
                         {category}
                       </span>
                     ))}
                   </div>
-                  <h2 className="text-xl font-bold my-1">{blog.title}</h2>
+                  <h2 className="text-xl font-bold my-2">{blog.title}</h2>
                   <p className="text-lg md:text-xl my-2 opacity-80 font-mono">
                     {blog.description}
                   </p>
                   <p className="text-sm mb-2 opacity-60 font-serif">{blog.date}</p>
-                  <div className="inline mt-2 md:mt-4">
+                  <div className="inline mt-2">
                     <Button1
                       text="Read"
-                      href={`/blog/${blog.title.replace(/\s+/g, '-').toLowerCase()}`}
+                      href={`/blog/${blog.id}`}
                       icon={
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -171,19 +171,19 @@ export default function Blogs() {
           </div>
         )}
 
-        {/* Additional smaller blogs below */}
+        {/* Additional blogs */}
         {blogs.length > 3 && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-6">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4">
             {blogs.slice(3).map((blog) => (
               <div
                 key={blog.id}
-                className=" relative flex flex-col p-5 md:p-10"
+                className="relative flex flex-col p-5 md:p-8 border border-foreground rounded-xl"
               >
-                <div className="absolute top-0 left-auto gap-2 hidden md:block">
+                <div className="absolute top-0 left-0 gap-2 hidden md:block">
                   {blog.categoryStack.map((category, index) => (
                     <span
                       key={index}
-                      className="border border-foreground px-1 rounded mx-1"
+                      className="bg-foreground text-background px-1 rounded mx-1 opacity-50"
                     >
                       {category}
                     </span>
@@ -194,10 +194,10 @@ export default function Blogs() {
                   {blog.description}
                 </p>
                 <p className="text-sm opacity-60 mb-2 font-serif">{blog.date}</p>
-                <div className="inline mt-2 md:mt-4">
+                <div className="inline mt-2">
                   <Button1
                     text="Read"
-                    href={`/blog/${blog.title.replace(/\s+/g, '-').toLowerCase()}`}
+                    href={`/blog/${blog.id}`}
                     icon={
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

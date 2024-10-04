@@ -113,9 +113,9 @@ export default function ProjectsPort() {
           </div>
         ))}
       </div>
-        <div className="group flex  justify-center">
+        <div className=" flex justify-center">
           <Button1
-            text="Go to Projects"
+            text="Go To All Projects"
             href="/projects"
             icon={
               <svg

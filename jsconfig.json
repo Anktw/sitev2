@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
+    "target": "ES6",             
+    "lib": ["ES6", "DOM"],      
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "moduleResolution": "node",     
+    "esModuleInterop": true,         
+    "strict": true   
   }
 }

@@ -8,6 +8,18 @@ const HeaderComp = () => {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const { isThemeOn, toggleTheme } = useTheme();
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = () => {
+    const currentScrollPos = window.pageYOffset;
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+    setPrevScrollPos(currentScrollPos);
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -36,11 +48,11 @@ const HeaderComp = () => {
   }, [isOpen]);
 
   return (
-    <header className="fixed top-0 w-full shadow-md z-30">
+    <header className={`fixed top-0 w-full shadow-md z-30 transition-transform duration-500 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
       <div className="backdrop-blur-xl">
-        <div className="w-full  container mx-auto flex justify-between items-center p-4">
+        <div className="w-full overflow-hidden container mx-auto flex justify-between items-center p-4">
           {/* Logo */}
-          <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla">
+          <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla left-0">
             <Link
               href="/"
               className={`${pathname === "/" ? "cursor-auto" : ""}`}
@@ -50,51 +62,63 @@ const HeaderComp = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-6 items-center animate-fadeInDown">
+          <nav className="hidden md:flex space-x-0 md:space-x-3 lg:space-x-6 items-center animate-fadeInDown">
             <Link
               href="/projects"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/projects" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 transition-all 300 ${
+                pathname === "/projects"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               Projects
             </Link>
             <Link
               href="/portfolio"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 block ${
-                pathname === "/portfolio" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 ${
+                pathname === "/portfolio"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               Portfolio
             </Link>
             <Link
               href="/resume"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/resume" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 ${
+                pathname === "/resume"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               Resume
             </Link>
             <Link
               href="/blog"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/blog" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 ${
+                pathname === "/blog"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               Blog
             </Link>
             <Link
               href="/about"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/about" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 ${
+                pathname === "/about"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-                pathname === "/contact" ? "underline cursor-auto hover:scale-100" : ""
+              className={`text-lg hover:opacity-80 ${
+                pathname === "/contact"
+                  ? "text-xl cursor-auto hover:opacity-100"
+                  : ""
               }`}
             >
               Contact
@@ -102,7 +126,7 @@ const HeaderComp = () => {
           </nav>
 
           {/* Social Icons Section */}
-          <div className="flex justify-center align-middle gap-4 animate-fadeInDown">
+          <div className="flex gap-3 md:gap-4 animate-fadeInDown">
             <Link
               href="https://www.linkedin.com/in/unkit"
               target="_blank"
@@ -231,48 +255,60 @@ const HeaderComp = () => {
         <nav className="flex flex-col items-center mt-20 px-8 space-y-4">
           <Link
             href="/projects"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/projects" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/projects"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             Projects
           </Link>
           <Link
             href="/portfolio"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/portfolio" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/portfolio"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             Portfolio
           </Link>
           <Link
             href="/resume"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/resume" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/resume"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             Resume
           </Link>
           <Link
             href="/blog"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/blog" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/blog"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             Blog
           </Link>
           <Link
             href="/about"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/about" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/about"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             About
           </Link>
           <Link
             href="/contact"
-            className={`text-lg   hover:scale-105 hover:transition-all hover:duration-300 ${
-              pathname === "/contact" ? "underline cursor-auto hover:scale-100" : ""
+            className={`text-lg hover:opacity-80 ${
+              pathname === "/contact"
+                ? "text-xl cursor-auto hover:opacity-100"
+                : ""
             }`}
           >
             Contact

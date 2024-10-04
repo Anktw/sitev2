@@ -2,12 +2,11 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Button1 from "./buttons/button1";
 import { useTheme } from "../context/Themescontext";
+import HeadingHome from "./headings/headinghome";
 
 export default function ProjectsMain() {
   const [projects, setProjects] = useState([]);
-  const [selectedTech, setSelectedTech] = useState("Recent");
   const { isThemeOn } = useTheme();
 
   const fetchProjects = async (tech = "Recent") => {
@@ -37,13 +36,10 @@ export default function ProjectsMain() {
     fetchProjects();
   }, []);
 
-  const filterProjects = (tech) => {
-    setSelectedTech(tech);
-    fetchProjects(tech);
-  };
 
   return (
     <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10">
+      
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
         {projects.map((project) => (
