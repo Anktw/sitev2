@@ -60,7 +60,7 @@ export default function Projects() {
   };
 
   return (
-    <div className="px-0 md:px-5 lg:px-8">
+    <div className="">
       <HeadingMain text="Projects"/>
 
       {/* Filter Buttons */}
@@ -85,7 +85,7 @@ export default function Projects() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105"
+            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105"
           >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image

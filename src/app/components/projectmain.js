@@ -45,7 +45,7 @@ export default function ProjectsMain() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-105"
+            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105"
           >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image

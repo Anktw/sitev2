@@ -5,7 +5,7 @@ export default function TopBtnsHome(){
     return(
         <div>
             <HorizontalScroll>
-                <div className="flex gap-5 mx-4 md:mx-3 animate-fadeInLeft">
+                <div className="flex gap-5 mx-4 md:mx-3 animate-fadeInLeft ">
                 <PortBtn/>
 
                 </div> 

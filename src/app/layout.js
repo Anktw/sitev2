@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={protestGuerrilla.variable}>
       <body
-        className={`mt-16 md:mt-28 lg:mt-24 ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`mt-16 md:mt-28 lg:mt-24 ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <ThemeProvider>
         <HeaderComp/>

@@ -2,9 +2,27 @@
   {
     "id": 1,
     "title": "Project 1",
+    "whyuse1": "It has aljfosdajfoisa",
+    "whyuse2": "It has aljfosdajfoisa",
+    "whyuse3": "It has aljfosdajfoisa",
+    "whyuse4": "It has aljfosdajfoisa",
+    "whyuse5": "It has aljfosdajfoisa",
+    "whyuse6": "It has aljfosdajfoisa",
+    "whyuse7": "It has aljfosdajfoisa",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "Title 1",
-    "techStack": ["MERN", "JavaScript", "React"]
+    "description": "description 1",
+    "download": "/",
+    "filetype": "Apk",
+    "techStack": [
+      "MERN",
+      "Javascript",
+      "React",
+      "Java",
+      "Tailwind",
+      "Vite"
+    ],
+    "livelink": "/",
+    "github": "/"
   },
   {
     "id": 2,

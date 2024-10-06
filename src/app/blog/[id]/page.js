@@ -80,7 +80,7 @@ export default function BlogPage({ params }) {
 
   return (
     <div className="flex justify-center items-center min-h-screen">
-  <div className="w-full max-w-4xl px-4 justify-center mt-6 md:mt-8">
+  <div className="w-full max-w-4xl px-1 md:px-4 justify-center mt-6 md:mt-8">
     <div className="text-center">
       <HeadingBiggest text={blog.title} />
     </div>
@@ -100,7 +100,7 @@ export default function BlogPage({ params }) {
     <p className="font-serif mb-8 opacity-60 animate-fadeInDown text-center">
       {blog.date}
     </p>
-    <div className="p-6 md:p-12">
+    <div className="p-3 md:p-10">
       {blog.content.split('\n\n').map((paragraph, index) => (
         <p key={index} className="text-balance animate-fadeInLeft text-justify my-6 font-sans">
         {paragraph}

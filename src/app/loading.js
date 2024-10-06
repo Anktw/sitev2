@@ -1,11 +1,8 @@
 import LoadingBar from "./components/loader";
-import ProjectLoader from "./projects/loading";
 export default function Loading() {
   return (
-    <div>
+    <div className="flex items-center justify-center h-screen">
       <LoadingBar />
-      <ProjectLoader />
-      
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import AboutBtn from "./buttons/aboutbtn";
-import BlogBtn from "./buttons/blogbtn";
 import ContactBtn from "./buttons/contactbtn";
 import ProjectsBtn from "./buttons/projectbtn";
 import ResumeBtn from "./buttons/resumebtn";

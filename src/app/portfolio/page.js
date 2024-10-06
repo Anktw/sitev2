@@ -7,8 +7,9 @@ export default function Home() {
         <HeadingHome text="Projects"/>
         <ProjectsPort/>
       </main>
-      <footer>
-  
+      <footer className="w-full justify-center content-center p-3 md:p-6">
+  <div className="flex justify-between">
+  </div>
       </footer>
     </div>
   );

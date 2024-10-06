@@ -58,9 +58,9 @@ export default function BlogsMain() {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center align-middle mt-2 md:mt-6 lg:mt-10 px-1 md:px-5 lg:px-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center align-middle mt-2 px-0 md:px-5 lg:px-8 md:mt-6 lg:mt-10">
         {blogs.map((blog) => (
-          <div key={blog.id} className="border border-foreground rounded-3xl">
+          <div key={blog.id} className="border border-foreground rounded-3xl ">
             <div className="relative flex flex-col p-5 md:p-10">
               <h2 className="text-xl font-bold my-1">{blog.title}</h2>
               <p className="text-lg md:text-xl my-2 opacity-80">

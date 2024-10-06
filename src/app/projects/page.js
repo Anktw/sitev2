@@ -1,8 +1,9 @@
 import Projects from "../components/projects";
 export default function ProjectPage() {
   return (
-    <div>
+    <main className="px-0 md:px-5 lg:px-8">
       <Projects />
-    </div>
+
+    </main>
   );
 }

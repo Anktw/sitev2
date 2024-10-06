@@ -49,8 +49,8 @@ const HeaderComp = () => {
 
   return (
     <header className={`fixed top-0 w-full shadow-md z-30 transition-transform duration-500 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
-      <div className="backdrop-blur-xl">
-        <div className="w-full overflow-hidden container mx-auto flex justify-between items-center p-4">
+
+        <div className="backdrop-blur-xl flex justify-between items-center p-4">
           {/* Logo */}
           <div className="text-2xl md:text-3xl lg:text-4xl animate-fadeInLeft font-protestGuerrilla left-0">
             <Link
@@ -67,7 +67,7 @@ const HeaderComp = () => {
               href="/projects"
               className={`text-lg hover:opacity-80 transition-all 300 ${
                 pathname === "/projects"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -77,7 +77,7 @@ const HeaderComp = () => {
               href="/portfolio"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/portfolio"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -87,7 +87,7 @@ const HeaderComp = () => {
               href="/resume"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/resume"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -97,7 +97,7 @@ const HeaderComp = () => {
               href="/blog"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/blog"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -107,7 +107,7 @@ const HeaderComp = () => {
               href="/about"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/about"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -117,7 +117,7 @@ const HeaderComp = () => {
               href="/contact"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/contact"
-                  ? "text-xl cursor-auto hover:opacity-100"
+                  ? " cursor-auto hover:opacity-100"
                   : ""
               }`}
             >
@@ -215,27 +215,24 @@ const HeaderComp = () => {
               toggleMenu();
             }}
             aria-label="Menu"
-          >
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-6 h-5">
-              <span
-                className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
-                  isOpen ? "rotate-45" : "-translate-y-2"
-                }`}
-              ></span>
-              <span
-                className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
-                  isOpen ? "opacity-0" : "opacity-100"
-                }`}
-              ></span>
-              <span
-                className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
-                  isOpen ? "-rotate-45" : "translate-y-2"
-                }`}
-              ></span>
-            </div>
+          ><span
+          className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
+            isOpen ? "rotate-45" : "-translate-y-2"
+          }`}
+        ></span>
+        <span
+          className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
+            isOpen ? "opacity-0" : "opacity-100"
+          }`}
+        ></span>
+        <span
+          className={`absolute h-0.5 w-6 bg-foreground transform transition-all duration-300 ease-in-out ${
+            isOpen ? "-rotate-45" : "translate-y-2"
+          }`}
+        ></span>
           </button>
         </div>
-      </div>
+   
 
       {/* Mobile Navigation */}
       <div
@@ -257,7 +254,7 @@ const HeaderComp = () => {
             href="/projects"
             className={`text-lg hover:opacity-80 ${
               pathname === "/projects"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
@@ -267,7 +264,7 @@ const HeaderComp = () => {
             href="/portfolio"
             className={`text-lg hover:opacity-80 ${
               pathname === "/portfolio"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
@@ -277,7 +274,7 @@ const HeaderComp = () => {
             href="/resume"
             className={`text-lg hover:opacity-80 ${
               pathname === "/resume"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
@@ -287,7 +284,7 @@ const HeaderComp = () => {
             href="/blog"
             className={`text-lg hover:opacity-80 ${
               pathname === "/blog"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
@@ -297,7 +294,7 @@ const HeaderComp = () => {
             href="/about"
             className={`text-lg hover:opacity-80 ${
               pathname === "/about"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
@@ -307,7 +304,7 @@ const HeaderComp = () => {
             href="/contact"
             className={`text-lg hover:opacity-80 ${
               pathname === "/contact"
-                ? "text-xl cursor-auto hover:opacity-100"
+                ? " cursor-auto hover:opacity-100"
                 : ""
             }`}
           >
