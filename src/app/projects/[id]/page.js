@@ -82,10 +82,10 @@ export default function ProjectsPage({ params }) {
       <div className="animate-fadeInLeft">
           <div className="flex mt-2 md:mt-4 lg:mt-6 justify-center">
           <HeadingBiggest text={project.title} /></div>
-          <div className="flex opacity-90 justify-center font animate-fadeInDown font-mono ">
+          <div className="flex mb-5 md:mb-6 lg:mb-8 opacity-90 justify-center font animate-fadeInDown font-mono ">
             {project.description}
           </div>
-          <div className="flex gap-6">
+          <div className="flex justify-evenly mb-5 md:mb-7 lg:mb-10">
             <div className="inline mt-2 md:mt-4">
               <Button1
                 text="Live Link"
@@ -153,37 +153,35 @@ export default function ProjectsPage({ params }) {
               </div>
             )}
           </div>
-          <div className="object-cover">
+          <div className="object-cover my-2 md:my-4 lg:my-6">
             <Image src={project.image} height={600} width={900} />
           </div>
-          <div className="text-3xl md:tex-4xl lg:text:5xl">{`Why use ${project.title}?`}</div>
-          <div className="display grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold my-4 animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">{`Why use ${project.title}?`}</div>
+          <div className="display grid grid-cols-2 md:grid-cols-3 gap-4 mt-2 md:mt-4 lg:mt-8 px-6 md:px-8 lg:px-12">
             {project.whyuse1 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
-            ) : null}
+              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse1}`}</div>) : null}
             {project.whyuse2 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
+              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse2}`}</div>
             ) : null}
             {project.whyuse3 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
+              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse3}`}</div>
             ) : null}
             {project.whyuse4 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
+              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse4}`}</div>
             ) : null}
             {project.whyuse5 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
+              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse5}`}</div>
             ) : null}
             {project.whyuse6 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
+              <div className="border border-foreground justify-between font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse6}`}</div>
             ) : null}
-            {project.whyuse7 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl">{` ${project.whyuse1}`}</div>
-            ) : null}
+            
           </div>
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">Technologies Used</div>
           <HorizontalScroll>
-            <div className="flex justify-center align-middle items-center gap-4">
+            <div className="flex items-center mx-auto space-x-3 md:space-x-6 lg:space-x-8">
               {project.techStack.map((category, index) => (
-                <div key={index} className="flex">
+                <div key={index} className="flex items-center">
                   {category == "Javascript" && (
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -568,7 +566,10 @@ export default function ProjectsPage({ params }) {
               ))}
             </div>
           </HorizontalScroll>
-        
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">Any Suggestions on this project?</div>
+          <div>
+            
+          </div>
       </div>
     </main>
   );
