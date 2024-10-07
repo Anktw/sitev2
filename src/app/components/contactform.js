@@ -15,21 +15,26 @@ export default function ContactForm() {
 
     setStatus("Sending...");
 
-    const response = await fetch("/api/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.success) {
-      setStatus("Message sent!");
-      setFormData({ name: "", email: "", message: "" });
-    } else {
-      setStatus("Failed to send. Please try again.");
+      if (result.success) {
+        setStatus("Message sent!");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus(""), 5000);
+      } else {
+        setStatus("Failed to send. Please try again.");
+      }
+    } catch (error) {
+      setStatus("Failed to send. Please check your connection.");
     }
   };
 
@@ -74,9 +79,14 @@ export default function ContactForm() {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition"
+          disabled={status === "Sending..."}
+          className={`w-full py-2 rounded-md transition ${
+            status === "Sending..."
+              ? "bg-gray-500 cursor-not-allowed"
+              : "bg-blue-600 hover:bg-blue-700 text-white"
+          }`}
         >
-          Send
+          {status === "Sending..." ? "Sending..." : "Send"}
         </button>
       </form>
       {status && <p className="mt-4 text-white">{status}</p>}
