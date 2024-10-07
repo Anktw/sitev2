@@ -2,6 +2,10 @@
   {
     "id": 1,
     "title": "Project 1",
+    "whatis1": "alkjisdhfihhdsijfj",
+    "whatis2": "hfiuhfsadiuhifus",
+    "whatis3":  "jahiudfhiuh",
+    "whatis4": "hfhishfish",
     "whyuse1": "It has aljfosdajfoisa",
     "whyuse2": "It has aljfosdajfoisa",
     "whyuse3": "It has aljfosdajfoisa",
@@ -14,15 +18,27 @@
     "download": "/",
     "filetype": "Apk",
     "techStack": [
-      "MERN",
       "Javascript",
       "React",
       "Java",
       "Tailwind",
-      "Vite"
+      "Vite",
+      "Angular",
+      "Flutter",
+      "Docker"
+
     ],
     "livelink": "/",
-    "github": "/"
+    "github": "/",
+    "jspercentage": "50",
+    "reactpercentage": "10",
+    "javapercentage": "5",
+    "tailwindpercentage": "5",
+    "vitepercentage":"5",
+    "angularpercentage":"5",
+    "flutterpercentage": "10",
+    "dockerpercentage":"10"
+    
   },
   {
     "id": 2,
@@ -36,7 +52,7 @@
     "title": "Project 3",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
     "description": "Title 3",
-    "techStack": ["JavaScript", "HTML", "CSS"]
+    "techStack": ["Javascript", "HTML", "CSS"]
   },
   {
     "id": 4,

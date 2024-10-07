@@ -65,9 +65,9 @@ const HeaderComp = () => {
           <nav className="hidden md:flex space-x-0 md:space-x-3 lg:space-x-6 items-center animate-fadeInDown">
             <Link
               href="/projects"
-              className={`text-lg hover:opacity-80 transition-all 300 ${
+              className={`text-lg hover:opacity-80 transition-all duration-500 ${
                 pathname === "/projects"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -77,7 +77,7 @@ const HeaderComp = () => {
               href="/portfolio"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/portfolio"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -87,7 +87,7 @@ const HeaderComp = () => {
               href="/resume"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/resume"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -97,7 +97,7 @@ const HeaderComp = () => {
               href="/blog"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/blog"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -107,7 +107,7 @@ const HeaderComp = () => {
               href="/about"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/about"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -117,7 +117,7 @@ const HeaderComp = () => {
               href="/contact"
               className={`text-lg hover:opacity-80 ${
                 pathname === "/contact"
-                  ? " cursor-auto hover:opacity-100"
+                  ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
               }`}
             >
@@ -254,7 +254,7 @@ const HeaderComp = () => {
             href="/projects"
             className={`text-lg hover:opacity-80 ${
               pathname === "/projects"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >
@@ -264,7 +264,7 @@ const HeaderComp = () => {
             href="/portfolio"
             className={`text-lg hover:opacity-80 ${
               pathname === "/portfolio"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >
@@ -274,7 +274,7 @@ const HeaderComp = () => {
             href="/resume"
             className={`text-lg hover:opacity-80 ${
               pathname === "/resume"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >
@@ -284,7 +284,7 @@ const HeaderComp = () => {
             href="/blog"
             className={`text-lg hover:opacity-80 ${
               pathname === "/blog"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >
@@ -294,7 +294,7 @@ const HeaderComp = () => {
             href="/about"
             className={`text-lg hover:opacity-80 ${
               pathname === "/about"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >
@@ -304,7 +304,7 @@ const HeaderComp = () => {
             href="/contact"
             className={`text-lg hover:opacity-80 ${
               pathname === "/contact"
-                ? " cursor-auto hover:opacity-100"
+                ? " cursor-auto opacity-80 hover:opacity-80"
                 : ""
             }`}
           >

@@ -38,10 +38,9 @@ export default function ProjectsMain() {
 
 
   return (
-    <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10">
-      
+    <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10 animate-fadeInUp">
       {/* Projects Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8 animate-fadeInLeft">
         {projects.map((project) => (
           <div
             key={project.id}

@@ -94,11 +94,11 @@ export default function ProjectsPort() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105"
+            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105 animate-fadeInUp"
           >
             <div className="aspect-w-16 aspect-h-9 ">
               <Image
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-full object-cover rounded-xl animate-fadeInRight"
                 src={project.image}
                 alt={project.title}
                 width={1600}
@@ -107,8 +107,8 @@ export default function ProjectsPort() {
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-bold">{project.title}</h3>
-              <p className="text-sm mt-2">{project.description}</p>
+              <h3 className="text-lg font-bold animate-fadeInLeft">{project.title}</h3>
+              <p className="text-sm mt-2 animate-fadeInLeft">{project.description}</p>
             </div>
           </div>
         ))}

@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 import { useTheme } from "@/app/context/Themescontext";
 import HeadingBiggest from "@/app/components/headings/headingbiggest";
 import LoadingBar from "@/app/components/loader";
-import HorizontalScroll from "@/app/components/hrscroll";
 import Image from "next/image";
 import Button1 from "@/app/components/buttons/button1";
+import CircularProgressBar  from "@/app/components/percentageprogressbar";
 
 export default function ProjectsPage({ params }) {
   const [project, setProject] = useState(null);
@@ -78,45 +78,68 @@ export default function ProjectsPage({ params }) {
   }
 
   return (
-    <main className="flex flex-row justify-center animate-fadeInDown">
-      <div className="animate-fadeInLeft">
-          <div className="flex mt-2 md:mt-4 lg:mt-6 justify-center">
-          <HeadingBiggest text={project.title} /></div>
-          <div className="flex mb-5 md:mb-6 lg:mb-8 opacity-90 justify-center font animate-fadeInDown font-mono ">
-            {project.description}
+    <main className="min-h-screen flex items-center justify-center animate-fadeInDown p-4 lg:p-8">
+      <div className=" max-w-7xl mx-auto animate-fadeInLeft">
+        <div className="flex mt-2 md:mt-4 lg:mt-6 justify-center">
+          <HeadingBiggest text={project.title} />
+        </div>
+        <div className="flex mb-5 md:mb-6 lg:mb-8 opacity-90 justify-center font animate-fadeInDown font-bold">
+          {project.description}
+        </div>
+        <div className="flex flex-col sm:flex-row justify-evenly items-center mb-7 space-y-4 sm:space-y-0">
+          <div className="inline mt-2 md:mt-4">
+            <Button1
+              text="Live Link"
+              href={`${project.livelink}`}
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  className={`transform transition-transform duration-300 group-hover:scale-110 -rotate-45 group-hover:rotate-0 ${
+                    isThemeOn
+                      ? "fill-black group-hover:fill-white"
+                      : "fill-white group-hover:fill-black"
+                  }`}
+                >
+                  <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
+                </svg>
+              }
+            />
           </div>
-          <div className="flex justify-evenly mb-5 md:mb-7 lg:mb-10">
-            <div className="inline mt-2 md:mt-4">
-              <Button1
-                text="Live Link"
-                href={`${project.livelink}`}
-                icon={
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="24px"
-                    viewBox="0 -960 960 960"
-                    width="24px"
-                    className={`transform transition-transform duration-300 group-hover:scale-110 -rotate-45 group-hover:rotate-0 ${
-                      isThemeOn
-                        ? "fill-black group-hover:fill-white"
-                        : "fill-white group-hover:fill-black"
-                    }`}
-                  >
-                    <path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z" />
-                  </svg>
-                }
-              />
-            </div>
 
+          <div className="inline mt-2 md:mt-4">
+            <Button1
+              text="Github Repo"
+              href={`${project.github}`}
+              icon={
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  className={` ${
+                    isThemeOn
+                      ? "fill-black group-hover:fill-white"
+                      : "fill-white group-hover:fill-black"
+                  }`}
+                >
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+              }
+            />
+          </div>
+          {project.download && (
             <div className="inline mt-2 md:mt-4">
               <Button1
-                text="Github Repo"
+                text={`Direct Download this ${project.filetype}`}
                 href={`${project.github}`}
                 icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="24px"
-                    viewBox="0 0 24 24"
+                    viewBox="0 -960 960 960"
                     width="24px"
                     className={` ${
                       isThemeOn
@@ -124,99 +147,123 @@ export default function ProjectsPage({ params }) {
                         : "fill-white group-hover:fill-black"
                     }`}
                   >
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    <path d="M280-280h400v-80H280v80Zm200-120 160-160-56-56-64 62v-166h-80v166l-64-62-56 56 160 160Zm0 320q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
                   </svg>
                 }
               />
             </div>
-            {project.download && (
-              <div className="inline mt-2 md:mt-4">
-                <Button1
-                  text={`Direct Download this ${project.filetype}`}
-                  href={`${project.github}`}
-                  icon={
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="24px"
-                      viewBox="0 -960 960 960"
-                      width="24px"
-                      className={` ${
-                        isThemeOn
-                          ? "fill-black group-hover:fill-white"
-                          : "fill-white group-hover:fill-black"
-                      }`}
-                    >
-                      <path d="M280-280h400v-80H280v80Zm200-120 160-160-56-56-64 62v-166h-80v166l-64-62-56 56 160 160Zm0 320q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
-                    </svg>
-                  }
-                />
-              </div>
-            )}
-          </div>
-          <div className="object-cover my-2 md:my-4 lg:my-6">
-            <Image src={project.image} height={600} width={900} />
-          </div>
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold my-4 animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">{`Why use ${project.title}?`}</div>
-          <div className="display grid grid-cols-2 md:grid-cols-3 gap-4 mt-2 md:mt-4 lg:mt-8 px-6 md:px-8 lg:px-12">
-            {project.whyuse1 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse1}`}</div>) : null}
-            {project.whyuse2 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse2}`}</div>
-            ) : null}
-            {project.whyuse3 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse3}`}</div>
-            ) : null}
-            {project.whyuse4 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse4}`}</div>
-            ) : null}
-            {project.whyuse5 ? (
-              <div className="border border-foreground justify-center font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse5}`}</div>
-            ) : null}
-            {project.whyuse6 ? (
-              <div className="border border-foreground justify-between font-bold flex rounded-xl p-2 md:p-4 lg:p-6">{` ${project.whyuse6}`}</div>
-            ) : null}
-            
-          </div>
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">Technologies Used</div>
-          <HorizontalScroll>
-            <div className="flex items-center mx-auto space-x-3 md:space-x-6 lg:space-x-8">
-              {project.techStack.map((category, index) => (
-                <div key={index} className="flex items-center">
-                  {category == "Javascript" && (
+          )}
+        </div>
+        <div className="object-cover flex my-2 md:my-4 lg:my-6 justify-center">
+          <Image src={project.image} height={600} width={900} alt={project.title} className="rounded-2xl" />
+        </div>
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold my-4 animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">{`What is  ${project.title}?`}</div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-4 lg:mt-8 px-4 lg:px-12">
+          {project.whatis1 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis1}`}</div>
+          ) : null}
+          {project.whatis2 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis2}`}</div>
+          ) : null}
+          {project.whatis3 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis3}`}</div>
+          ) : null}
+          {project.whatis3 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis4}`}</div>
+          ) : null}
+          {project.whatis5 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis5}`}</div>
+          ) : null}
+          {project.whatis6 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whatis6}`}</div>
+          ) : null}
+        </div>
+
+
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold my-4 animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">{`Why use ${project.title}?`}</div>
+        <div className="display grid grid-cols-2 md:grid-cols-3 gap-4 mt-2 md:mt-4 lg:mt-8 px-6 md:px-8 lg:px-12">
+          {project.whyuse1 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse1}`}</div>
+          ) : null}
+          {project.whyuse2 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse2}`}</div>
+          ) : null}
+          {project.whyuse3 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse3}`}</div>
+          ) : null}
+          {project.whyuse4 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse4}`}</div>
+          ) : null}
+          {project.whyuse5 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse5}`}</div>
+          ) : null}
+          {project.whyuse6 ? (
+            <div className="border border-foreground justify-center font-bold flex rounded-xl p-4 text-center">{` ${project.whyuse6}`}</div>
+          ) : null}
+        </div>
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">
+          Technologies Used
+        </div>
+        <div></div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto my-4 lg:my-12 items-center">
+            {project.techStack.map((category, index) => (
+              <div key={index} className="flex flex-col items-center space-y-6  p-4 backdrop-blur-sm rounded-[32px] shadow-[35px_0_0_rgba(145,192,255,0),inset_-7px_-7px_16px_0px_rgba(145,192,255,0.6),inset_0px_11px_28px_0px_rgb(255,255,255)]">
+                {category == "Javascript" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="120"
                       viewBox="0 -960 960 960"
                       width="120"
-                      className={` ${
-                        isThemeOn ? "fill-black " : "fill-white "
-                      }`}
+                      className={`${isThemeOn ? "fill-black" : "fill-white"}`}
                     >
                       <path d="M300-360q-25 0-42.5-17.5T240-420v-40h60v40h60v-180h60v180q0 25-17.5 42.5T360-360h-60Zm220 0q-17 0-28.5-11.5T480-400v-40h60v20h80v-40H520q-17 0-28.5-11.5T480-500v-60q0-17 11.5-28.5T520-600h120q17 0 28.5 11.5T680-560v40h-60v-20h-80v40h100q17 0 28.5 11.5T680-460v60q0 17-11.5 28.5T640-360H520Z" />
-                    </svg>
-                  )}
+                    </svg></div>
 
-                  {category == "React" && (
+                      <div className=""><CircularProgressBar percentage={project.jspercentage} />
+                    
+                  </div></div>
+                )}
+
+                {category == "React" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/icons8-react-a-javascript-library-for-building-user-interfaces-96.png"
                       width={100}
                       height={100}
-                    />
-                  )}
+                      alt="React logo"
+                    /></div>
+                    <CircularProgressBar  percentage={project.reactpercentage} />
+                  </div>
+                )}
 
-                  {category == "Tailwind" && (
+                {category == "Tailwind" && (
+                   <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/icons8-tailwind-css-48.png"
                       width={50}
                       height={50}
-                    />
-                  )}
+                      alt="tailwind logo"
+                    /></div>
+                    <div className="">
+                    <CircularProgressBar  percentage={project.tailwindpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Vite" && (
-                    <Image src="/icons/vitelogo.svg" width={50} height={50} />
-                  )}
+                {category == "Vite" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
+                    <Image src="/icons/vitelogo.svg" width={50} height={50} alt="Vite logo" /></div>
+                    <div className=""><CircularProgressBar  percentage={project.vitepercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Vue" && (
+                {category == "Vue" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       class="logo"
                       viewBox="0 0 128 128"
@@ -234,26 +281,40 @@ export default function ProjectsPage({ params }) {
                         d="M78.8,10L64,35.4L49.2,10H25.6L64,76l38.4-66H78.8z"
                         data-v-df6d64fc=""
                       ></path>
-                    </svg>
-                  )}
+                    </svg>{" "}</div>
+                    <div className=""><CircularProgressBar  percentage={project.vuepercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Typescript" && (
+                {category == "Typescript" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/icons8-typescript-48.png"
                       width={50}
                       height={50}
-                    />
-                  )}
+                      alt="Typescript logo"
+                    /></div>
+                    <div className=""><CircularProgressBar  percentage={project.tspercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Angular" && (
+                {category == "Angular" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/shield-large.svg"
                       width={50}
                       height={50}
-                    />
-                  )}
+                      alt="Angular Logo"
+                    /></div>
+                    <div className=""><CircularProgressBar  percentage={project.angularpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Next js" && (
+                {category == "Next js" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="120"
@@ -297,10 +358,14 @@ export default function ProjectsPage({ params }) {
                         d="M387.691 54.5338C387.544 53.1251 386.898 52.0254 385.773 51.2438C384.638 50.4531 383.172 50.0623 381.373 50.0623C380.11 50.0623 379.022 50.2532 378.118 50.6258C377.214 51.0075 376.513 51.5164 376.033 52.1617C375.554 52.807 375.314 53.5432 375.295 54.3703C375.295 55.061 375.461 55.6608 375.784 56.1607C376.107 56.6696 376.54 57.0968 377.103 57.4422C377.656 57.7966 378.274 58.0874 378.948 58.3237C379.63 58.56 380.313 58.76 380.995 58.9236L384.14 59.6961C385.404 59.9869 386.631 60.3778 387.802 60.8776C388.973 61.3684 390.034 61.9955 390.965 62.7498C391.897 63.5042 392.635 64.413 393.179 65.4764C393.723 66.5397 394 67.7848 394 69.2208C394 71.1566 393.502 72.8562 392.496 74.3285C391.491 75.7917 390.043 76.9369 388.143 77.764C386.252 78.582 383.965 79 381.272 79C378.671 79 376.402 78.6002 374.493 77.8004C372.575 77.0097 371.08 75.8463 370.001 74.3194C368.922 72.7926 368.341 70.9294 368.258 68.7391H374.235C374.318 69.8842 374.687 70.8386 375.314 71.6111C375.95 72.3745 376.78 72.938 377.795 73.3197C378.819 73.6923 379.962 73.8832 381.226 73.8832C382.545 73.8832 383.707 73.6832 384.712 73.2924C385.708 72.9016 386.492 72.3564 387.055 71.6475C387.627 70.9476 387.913 70.1206 387.922 69.1754C387.913 68.312 387.654 67.5939 387.156 67.0304C386.649 66.467 385.948 65.9944 385.053 65.6127C384.15 65.231 383.098 64.8856 381.899 64.5857L378.081 63.6223C375.323 62.9225 373.137 61.8592 371.541 60.4323C369.937 59.0054 369.143 57.115 369.143 54.7429C369.143 52.798 369.678 51.0894 370.758 49.6261C371.827 48.1629 373.294 47.0268 375.148 46.2179C377.011 45.4 379.114 45 381.456 45C383.836 45 385.92 45.4 387.719 46.2179C389.517 47.0268 390.929 48.1538 391.952 49.5897C392.976 51.0257 393.511 52.6707 393.539 54.5338H387.691Z"
                         fill="var(--geist-foreground)"
                       ></path>
-                    </svg>
-                  )}
+                    </svg>{" "}</div>
+                    <div className=""><CircularProgressBar  percentage={project.nextpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Remix js" && (
+                {category == "Remix js" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       x-comp="Wordmark"
                       height="24"
@@ -413,72 +478,116 @@ export default function ProjectsPage({ params }) {
                           ></stop>
                         </linearGradient>
                       </defs>
-                    </svg>
-                  )}
+                    </svg></div>
+                    <div className=""><CircularProgressBar  percentage={project.remixpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "React Native" && (
+                {category == "React Native" && (
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/header_logo.svg"
                       width={100}
                       height={100}
-                    />
-                  )}
+                      alt="React Native logo"
+                    /></div>
+                    <div className=""><CircularProgressBar  percentage={project.reactnativenpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Flutter" && (
-                    <Image src="/icons/favicon.ico" width={50} height={50} />
-                  )}
+                {category == "Flutter" && (
+                  
+                  <div className="flex flex-col items-center">
+                    <div className="min-h-[150px] flex items-center justify-center">
+                    <Image src="/icons/favicon.ico" width={50} height={50} alt="Flutter logo" /></div>
+                    <div className=""><CircularProgressBar  percentage={project.flutterpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Electron js" && (
-                    <Image
+                {category == "Electron js" && (
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center"><Image
                       src="/icons/electronlogo.svg"
                       width={100}
                       height={100}
-                    />
-                  )}
+                      alt="Electron js logo"
+                    /></div>
+                    <div className=""><CircularProgressBar  percentage={project.electronpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Python" && (
+                {category == "Python" && (
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/python-logo@2x.png"
                       width={200}
                       height={200}
-                    />
-                  )}
+                      alt="Python logo"
+                    /></div>
+                    <div className=""><CircularProgressBar  percentage={project.pythonpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Java" && (
+                {category == "Java" && (
+
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
                     <Image
                       src="/icons/Java_programming_language_logo.svg.png"
                       width={50}
                       height={50}
-                    />
-                  )}
+                      alt="Java logo"
+                    /></div>
+                    <div className="">
+                    <CircularProgressBar  percentage={project.javapercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Mysql" && (
-                    <Image src="/icons/r.png" width={80} height={80} />
-                  )}
+                {category == "Mysql" && (
+                  <div className="flex flex-col items-center">
+                    
+                    
+                  <div className="min-h-[150px] flex items-center justify-center"><Image src="/icons/r.png" width={80} height={80} alt="Mysql logo" />
+                    </div><div className=""><CircularProgressBar  percentage={project.mysqlpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "PostgreSQL" && (
-                    <Image src="/icons/elephant.png" width={80} height={80} />
-                  )}
+                {category == "PostgreSQL" && (
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
+                    <Image src="/icons/elephant.png" width={80} height={80} alt="PostgreSQL Logo" />
+                    </div><div className=""><CircularProgressBar  percentage={project.postgrepercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Docker" && (
-                    <Image src="/icons/OIP.png" width={100} height={100} />
-                  )}
+                {category == "Docker" && (
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
+                    <Image src="/icons/OIP.png" width={100} height={100} alt="Docker logo" />
+                    </div><div className=""><CircularProgressBar  percentage={project.dockerpercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Firebase" && (
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="120"
-                      viewBox="0 -960 960 960"
-                      width="120"
-                      className={` ${
-                        isThemeOn ? "fill-black " : "fill-white "
-                      }`}
-                    >
-                      {/* Firebase path */}
-                    </svg>
-                  )}
+                {category == "Firebase" && (
+                  
+                  <div className="min-h-[150px] flex items-center justify-center">
+                  <div className="flex flex-col items-center">
+                    <Image src="/icons/lockup.svg" width={100} height={100} alt="Firebase logo" />
+                    </div><div className=""><CircularProgressBar  percentage={project.firebasepercentage} />
+                  </div></div>
+                )}
 
-                  {category == "MongoDB" && (
+                {category == "MongoDB" && (
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       height="150"
@@ -524,10 +633,16 @@ export default function ProjectsPage({ params }) {
                         d="M1082.35 224.327C1080.37 223.244 1078.88 221.669 1077.69 219.799C1076.6 217.831 1076 215.764 1076 213.5C1076 211.236 1076.6 209.071 1077.69 207.201C1078.78 205.232 1080.37 203.756 1082.35 202.673C1084.34 201.591 1086.52 201 1089 201C1091.48 201 1093.66 201.591 1095.65 202.673C1097.63 203.756 1099.12 205.331 1100.31 207.201C1101.4 209.169 1102 211.236 1102 213.5C1102 215.764 1101.4 217.929 1100.31 219.799C1099.22 221.768 1097.63 223.244 1095.65 224.327C1093.66 225.409 1091.48 226 1089 226C1086.62 226 1084.34 225.409 1082.35 224.327ZM1094.56 222.85C1096.24 221.965 1097.44 220.587 1098.43 219.012C1099.32 217.339 1099.82 215.469 1099.82 213.402C1099.82 211.335 1099.32 209.465 1098.43 207.791C1097.53 206.118 1096.24 204.839 1094.56 203.953C1092.87 203.067 1091.08 202.575 1089 202.575C1086.92 202.575 1085.13 203.067 1083.44 203.953C1081.76 204.839 1080.56 206.217 1079.57 207.791C1078.68 209.465 1078.18 211.335 1078.18 213.402C1078.18 215.469 1078.68 217.339 1079.57 219.012C1080.47 220.685 1081.76 221.965 1083.44 222.85C1085.13 223.736 1086.92 224.228 1089 224.228C1091.08 224.228 1092.97 223.835 1094.56 222.85ZM1083.64 219.406V218.52L1083.84 218.421H1084.44C1084.63 218.421 1084.83 218.323 1084.93 218.224C1085.13 218.028 1085.13 217.929 1085.13 217.732V208.579C1085.13 208.382 1085.03 208.185 1084.93 208.087C1084.73 207.89 1084.63 207.89 1084.44 207.89H1083.84L1083.64 207.791V206.906L1083.84 206.807H1089C1090.49 206.807 1091.58 207.102 1092.47 207.791C1093.37 208.48 1093.76 209.366 1093.76 210.547C1093.76 211.433 1093.47 212.319 1092.77 212.909C1092.08 213.598 1091.28 213.992 1090.29 214.091L1091.48 214.484L1093.76 218.126C1093.96 218.421 1094.16 218.52 1094.46 218.52H1095.05L1095.15 218.618V219.504L1095.05 219.602H1091.98L1091.78 219.504L1088.6 214.189H1087.81V217.732C1087.81 217.929 1087.91 218.126 1088.01 218.224C1088.21 218.421 1088.31 218.421 1088.5 218.421H1089.1L1089.3 218.52V219.406L1089.1 219.504H1083.84L1083.64 219.406ZM1088.7 213.008C1089.5 213.008 1090.19 212.811 1090.59 212.319C1090.98 211.925 1091.28 211.236 1091.28 210.449C1091.28 209.661 1091.08 209.071 1090.69 208.579C1090.29 208.087 1089.69 207.89 1089 207.89H1088.6C1088.4 207.89 1088.21 207.988 1088.11 208.087C1087.91 208.283 1087.91 208.382 1087.91 208.579V213.008H1088.7Z"
                         fill="currentColor"
                       />
-                    </svg>
-                  )}
+                    </svg></div>
+                    <div className=""><CircularProgressBar  percentage={project.mongopercentage} />
+                  </div></div>
+                )}
 
-                  {category == "Kotlin" && (
+                {category == "Kotlin" && (
+
+                  <div className="flex flex-col items-center">
+                    
+                  <div className="min-h-[150px] flex items-center justify-center">
                     <svg
                       width="98"
                       height="22"
@@ -560,16 +675,18 @@ export default function ProjectsPage({ params }) {
                           <stop offset="1" stop-color="#7F52FF"></stop>
                         </radialGradient>
                       </defs>
-                    </svg>
-                  )}
-                </div>
-              ))}
-            </div>
-          </HorizontalScroll>
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">Any Suggestions on this project?</div>
-          <div>
-            
+                    </svg></div>
+                    <div className=""><CircularProgressBar  percentage={project.kotlinpercentage} />
+                  </div></div>
+                )}
+              </div>
+            ))}
           </div>
+        
+        <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">
+          Any Suggestions on this project?
+        </div>
+        <div></div>
       </div>
     </main>
   );
