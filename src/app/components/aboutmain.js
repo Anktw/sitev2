@@ -6,7 +6,7 @@ export default function AboutMain() {
       <div className="w-20 h-20 bg-white rounded-lg mx-auto"></div>
       <span className="font-bold text-white text-center text-xl mt-4">About Me</span>
       <p className="font-light text-white text-center text-sm my-4">
-        I’m Walter, a multidisciplinary designer who focuses on telling my clients’ stories visually, through enjoyable and meaningful experiences. I specialize in responsive websites and functional user interfaces.
+        u
       </p>
       <div className="mt-4 flex justify-center gap-4">
         <a href="#" className="text-white transition-colors duration-400 hover:text-red-500">
