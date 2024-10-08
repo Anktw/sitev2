@@ -382,9 +382,9 @@ const AboutMain = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row items-center">
               <ContactForm />
 
-              <div className="grid grid-cols-3 gap-4 md:gap-20 md:grid animate-fadeInDown items-center p-2 m-2 md:p-4 md:m-4 w-full">
-                <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">LinkedIn</p>
+              <div className="grid grid-cols-3 gap-4 md:gap-20 md:grid animate-fadeInDown items-center p-2 m-2 md:p-4 md:m-4 w-full align-middle">
+                <div className="flex flex-col items-center justify-center align-middle">
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">LinkedIn</p>
                   <Link
                     href="https://www.linkedin.com/in/unkit"
                     target="_blank"
@@ -417,7 +417,7 @@ const AboutMain = () => {
                   </Link>
                 </div>
                 <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">Twitter/X</p>
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">Twitter/X</p>
                   <Link
                     href="https://x.com/Unkittiwari"
                     target="_blank"
@@ -427,7 +427,7 @@ const AboutMain = () => {
                     <svg
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-6 w-6 ${
+                      className={`h-10 w-8 ${
                         isThemeOn ? "fill-black" : "fill-white"
                       }`}
                       viewBox="0 0 24 24"
@@ -437,7 +437,7 @@ const AboutMain = () => {
                   </Link>
                 </div>
                 <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">Instagram</p>
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">Instagram</p>
                   <Link
                     href="https://www.instagram.com/ankttiwari7"
                     target="_blank"
@@ -501,7 +501,7 @@ const AboutMain = () => {
                   </Link>
                 </div>
                 <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">Gmail</p>
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">Gmail</p>
                   <Link
                     href="mailto:at792226@gmail.com"
                     target="_blank"
@@ -538,7 +538,7 @@ const AboutMain = () => {
                   </Link>
                 </div>
                 <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">Protonmail</p>
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">Protonmail</p>
                   <Link
                     href="mailto:ankittiwariproton1@proton.me"
                     target="_blank"
@@ -564,7 +564,7 @@ const AboutMain = () => {
                   </Link>
                 </div>
                 <div className="items-center flex flex-col">
-                  <p className="text-md font-semibold md:text-lg">Telegram</p>
+                  <p className="text-md font-semibold md:text-lg p-2 my-2">Telegram</p>
                   <Link
                     href="https://t.me/ankitism"
                     target="_blank"
