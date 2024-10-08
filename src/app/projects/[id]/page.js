@@ -204,7 +204,7 @@ export default function ProjectsPage({ params }) {
         <div className="text-3xl md:text-4xl lg:text-5xl font-bold animate-fadeInLeft mt-8 md:mt-10 lg:mt-12">
           Technologies Used
         </div>
-        <div></div>
+        
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto my-4 lg:my-12 items-center">
             {project.techStack.map((category, index) => (
               <div key={index} className="flex flex-col items-center space-y-6  p-4 backdrop-blur-sm rounded-[32px] shadow-[35px_0_0_rgba(145,192,255,0),inset_-7px_-7px_16px_0px_rgba(145,192,255,0.6),inset_0px_11px_28px_0px_rgb(255,255,255)]">
@@ -312,7 +312,7 @@ export default function ProjectsPage({ params }) {
                   </div></div>
                 )}
 
-                {category == "Next js" && (
+                {category == "Next" && (
                   <div className="flex flex-col items-center">
                     <div className="min-h-[150px] flex items-center justify-center">
                     <svg
@@ -363,7 +363,7 @@ export default function ProjectsPage({ params }) {
                   </div></div>
                 )}
 
-                {category == "Remix js" && (
+                {category == "Remix" && (
                   <div className="flex flex-col items-center">
                     <div className="min-h-[150px] flex items-center justify-center">
                     <svg
@@ -505,7 +505,7 @@ export default function ProjectsPage({ params }) {
                   </div></div>
                 )}
 
-                {category == "Electron js" && (
+                {category == "Electron" && (
                   <div className="flex flex-col items-center">
                     
                   <div className="min-h-[150px] flex items-center justify-center"><Image
@@ -548,7 +548,7 @@ export default function ProjectsPage({ params }) {
                   </div></div>
                 )}
 
-                {category == "Mysql" && (
+                {category == "MySQL" && (
                   <div className="flex flex-col items-center">
                     
                     

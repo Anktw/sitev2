@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
+import { useTheme } from "../context/Themescontext";
+import LoadingBar from "./loader";
 
 export default function ContactForm() {
+  const { isThemeOn } = useTheme();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,39 +42,47 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="max-w-md mx-auto bg-gray-900 p-8 rounded-md">
-      <h2 className="text-2xl font-semibold text-white mb-4">Contact Us</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="max-w-md mx-auto p-8 ">
+      <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="name" className="block text-gray-300">You?</label>
+          <label htmlFor="name" className="block">
+            You? (optional)
+          </label>
           <input
             type="text"
             id="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-600"
-            placeholder="Your name or alias"
-            required
+            className="w-full p-2 rounded-xl bg-background text-foregorund border border-foreground"
+            placeholder="Name"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block text-gray-300">Email (optional)</label>
+          <label htmlFor="email" className="block text-foregorund my-2">
+            Your Email? (optional)
+          </label>
           <input
             type="email"
             id="email"
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-600"
-            placeholder="Your email address"
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
+            className="w-full p-2 rounded-xl bg-background text-foregorund border border-foreground"
+            placeholder="Your email"
           />
         </div>
         <div>
-          <label htmlFor="message" className="block text-gray-300">Write Message</label>
+          <label htmlFor="message" className="block text-foreground my-2">
+            Message*
+          </label>
           <textarea
             id="message"
             value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-            className="w-full p-2 rounded-md bg-gray-800 text-white border border-gray-600"
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
+            className="w-full p-2 rounded-md bg-background text-foreground border border-foreground"
             placeholder="Your message"
             rows="4"
             required
@@ -80,16 +91,37 @@ export default function ContactForm() {
         <button
           type="submit"
           disabled={status === "Sending..."}
-          className={`w-full py-2 rounded-md transition ${
+          className={` p-2 rounded-full transition group ${
             status === "Sending..."
-              ? "bg-gray-500 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700 text-white"
+              ? "bg-background cursor-not-allowed"
+              : "bg-background hover:bg-foreground hover:text-background text-foreground rounded border-2"
           }`}
         >
-          {status === "Sending..." ? "Sending..." : "Send"}
+          {status === "Sending..." ? (
+            <span style={{ display: "flex", alignItems: "center" }}>
+              <LoadingBar />
+            </span>
+          ) : (
+            <span style={{ display: "flex", alignItems: "center" }}>
+              Send
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                className={`transform transition-transform duration-500 group-hover:translate-x-1 group-hover:scale-105 mx-1 ${
+                  isThemeOn
+                    ? "fill-black group-hover:fill-white"
+                    : "fill-white group-hover:fill-black"
+                }`}
+              >
+                <path d="M120-160v-640l760 320-760 320Zm80-120 474-200-474-200v140l240 60-240 60v140Zm0 0v-400 400Z" />
+              </svg>
+            </span>
+          )}
         </button>
+        {status && <p className={` transition-all ease-out animate-fadeInLeft my-4 py-4 ${status ? 'animate-fadeInDown' : 'animate-fadeInUp'} p-5 m-3`}>{status}</p>}
       </form>
-      {status && <p className="mt-4 text-white">{status}</p>}
     </div>
   );
 }
