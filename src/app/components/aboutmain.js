@@ -328,8 +328,8 @@ const AboutMain = () => {
 
       <div className="w-full">
         {activeTab === "Education" && (
-          <div className="p-4 border border-foreground text-foreground rounded-lg">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center">
+          <div className="p-4 border border-foreground text-foreground rounded-lg mx-3 md:mx-5 animate-fadeInUp">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center animate-fadeInLeft">
               Education
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -345,21 +345,21 @@ const AboutMain = () => {
                 <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
               </svg>
             </h3>
-            <p className="text-xl md:text-2xl lg:text-3xl font-protestGuerrilla my-3">
+            <p className="text-xl md:text-2xl lg:text-3xl font-protestGuerrilla my-3 animate-fadeInLeft">
               2022-2026
             </p>
-            <p className="text-lg md:text-xl lg:text-2xl font-semibold">
+            <p className="text-lg md:text-xl lg:text-2xl font-semibold animate-fadeInRight">
               Bachelor of Technology
             </p>
-            <p className="text-xl">
-              S.I.E.T. Nilokheri, Karnal Haryana afw Kurukshetra University,
+            <p className="text-xl animate-fadeInRight">
+              S.I.E.T. Nilokheri, Karnal, Haryana afw Kurukshetra University,
               Kurukshetra
             </p>
           </div>
         )}
         {activeTab === "Work Experience" && (
-          <div className="p-4 border border-foreground text-foreground rounded-lg">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center">
+          <div className="p-4 border border-foreground text-foreground rounded-lg mx-3 md:mx-5 animate-fadeInUp">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center animate-fadeInLeft">
               Contact Me
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -375,11 +375,11 @@ const AboutMain = () => {
                 <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
               </svg>
             </h3>
-            <p className="text-xl my-3">
+            <p className="text-xl my-3 animate-fadeInLeft">
               Feel free to contact me through any means; I will respond as soon
               as possible.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row items-center animate-fadeInUp">
               <ContactForm />
 
               <div className="grid grid-cols-3 gap-4 md:gap-20 md:grid animate-fadeInDown items-center p-2 m-2 md:p-4 md:m-4 w-full align-middle">
@@ -427,7 +427,7 @@ const AboutMain = () => {
                     <svg
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-10 w-8 ${
+                      className={`h-10 w-7 ${
                         isThemeOn ? "fill-black" : "fill-white"
                       }`}
                       viewBox="0 0 24 24"
@@ -613,8 +613,8 @@ const AboutMain = () => {
           </div>
         )}
         {activeTab === "Tech Stacks" && (
-          <div className="p-4 border border-foreground text-foreground rounded-lg">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center">
+          <div className="p-4 border border-foreground text-foreground rounded-lg mx-3 md:mx-5 animate-fadeInUp">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center animate-fadeInLeft">
               Technologies Worked With
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -632,11 +632,11 @@ const AboutMain = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mx-auto my-4 lg:my-12 items-center">
               {techList.map((tech, index) => (
-                <div key={index} className="flex flex-col items-center space-y-6  p-4 backdrop-blur-sm rounded-[32px] shadow-[35px_0_0_rgba(145,192,255,0),inset_-7px_-7px_16px_0px_rgba(145,192,255,0.6),inset_0px_11px_28px_0px_rgb(255,255,255)]">
+                <div key={index} className="flex flex-col items-center space-y-6  p-4 backdrop-blur-sm rounded-[32px] shadow-[35px_0_0_rgba(145,192,255,0),inset_-7px_-7px_16px_0px_rgba(145,192,255,0.6),inset_0px_11px_28px_0px_rgb(255,255,255)] animate-fadeInDown">
                 {svgMapping[tech] && (
                   
                   typeof svgMapping[tech] === 'string' ? (
-                    <div className=" min-h-[150px] object-cover flex items-center justify-center">
+                    <div className=" min-h-[150px] object-cover flex items-center justify-center animate-fadeInRight">
                     <Image
                 src={svgMapping[tech]}
                 alt={`${tech} logo`}
@@ -644,12 +644,12 @@ const AboutMain = () => {
                 height={100}
               /></div>
                   ) : (
-                    <span className="min-h-[150px] flex items-center justify-center">
+                    <span className="min-h-[150px] flex items-center justify-center animate-fadeInUp">
                       {svgMapping[tech]}
                     </span>
                   )
                 )}
-                <div className="font-bold text-lg md:text-xl">
+                <div className="font-bold text-lg md:text-xl animate-fadeInUp">
                 {tech}</div>
               </div>
               ))}
