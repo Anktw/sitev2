@@ -296,7 +296,7 @@ const AboutMain = () => {
       <div className="flex space-x-4 mb-6">
         <button
           onClick={() => setActiveTab("Education")}
-          className={`px-6 py-2 rounded-lg ${
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${
             activeTab === "Education"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"
@@ -306,7 +306,7 @@ const AboutMain = () => {
         </button>
         <button
           onClick={() => setActiveTab("Work Experience")}
-          className={`px-6 py-2 rounded-lg ${
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${
             activeTab === "Work Experience"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"
@@ -316,7 +316,7 @@ const AboutMain = () => {
         </button>
         <button
           onClick={() => setActiveTab("Tech Stacks")}
-          className={`px-6 py-2 rounded-lg ${
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${
             activeTab === "Tech Stacks"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"

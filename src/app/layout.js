@@ -2,6 +2,7 @@ import HeaderComp from "./components/header";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./context/Themescontext";
+import { Footer } from "./components/footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,8 +19,9 @@ const protestGuerrilla = localFont({
   variable: "--font-protestGuerrilla",
 });
 
+
 export const metadata = {
-  title: "Ankit Tiwari's Portfolio",
+  title: "Ankit Tiwari",
 };
 
 export default function RootLayout({ children }) {
@@ -31,6 +33,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider>
         <HeaderComp/>
         {children}
+        <Footer/>
         </ThemeProvider>
       </body>
     </html>
