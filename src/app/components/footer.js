@@ -52,7 +52,7 @@ export function Footer() {
               Vercel
             </Link>
             .
-            <div className="flex items-center justify-between w-full px-2 md:px-4">
+            <div className="flex items-center justify-between w-full px-6">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 height="120"
@@ -77,7 +77,6 @@ export function Footer() {
                   fill="var(--geist-foreground)"
                 ></path>
                 <path
-                  clip-rule="evenodd"
                   d="M80.907 79.339L17.0151 0H0V79.3059H13.6121V16.9516L63.8067 79.339H80.907Z"
                   fill="var(--geist-foreground)"
                 ></path>
