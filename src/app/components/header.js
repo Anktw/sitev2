@@ -65,7 +65,7 @@ const HeaderComp = () => {
           <nav className="hidden md:flex space-x-0 md:space-x-3 lg:space-x-6 items-center animate-fadeInDown">
             <Link
               href="/projects"
-              className={`text-lg hover:opacity-80 transition-all duration-500 ${
+              className={`text-lg hover:opacity-80 ${
                 pathname === "/projects"
                   ? " cursor-auto opacity-80 hover:opacity-80"
                   : ""
