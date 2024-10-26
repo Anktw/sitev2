@@ -312,7 +312,7 @@ const AboutMain = () => {
       <div className="w-full">
         {activeTab === "Education" && (
           <div className="p-4 border border-foreground text-foreground rounded-lg mx-3 md:mx-5 animate-fadeInUp">
-            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center animate-fadeInLeft">
+            <div className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2 flex gap-3 align-middle items-center animate-fadeInLeft">
               Education
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -327,7 +327,7 @@ const AboutMain = () => {
               >
                 <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
               </svg>
-            </h3>
+            </div>
             <p className="text-xl md:text-2xl lg:text-3xl font-protestGuerrilla my-3 animate-fadeInLeft">
               2022-2026
             </p>

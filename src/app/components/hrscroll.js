@@ -42,7 +42,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Left Arrow */}
       {showLeftArrow && (
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-transparent"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10 bg-transparent" aria-label="Scroll button"
           onClick={scrollLeft}
         >
           <svg
@@ -72,7 +72,7 @@ const HorizontalScroll = ({ children }) => {
       {/* Right Arrow */}
       {showRightArrow && (
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" aria-label="Scroll button"
           onClick={scrollRight}
         >
           <svg
@@ -93,5 +93,4 @@ const HorizontalScroll = ({ children }) => {
     </div>
   );
 };
-
 export default HorizontalScroll;

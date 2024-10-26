@@ -21,16 +21,16 @@ export default async function ProjectsMain() {
           >
             <div className="p-2 md:p-4">
               <Image
-                className="w-full h-full object-cover rounded-xl"
+                className="w-full h-auto object-cover rounded-xl"
                 src={project.image}
                 alt={project.title}
-                width={1600}
-                height={900}
+                width={800}
+                height={450}
                 priority={true}
               />
             </div>
             <div className="p-4">
-              <h3 className="text-lg font-bold">{project.title}</h3>
+              <div className="text-lg font-bold">{project.title}</div>
               <p className="text-sm mt-2">{project.description}</p>
             </div>
           </div>
