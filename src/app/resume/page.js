@@ -8,7 +8,6 @@ export default function Resume() {
       <HeadingMain text="Resume"/>
       <div className="bg-background min-h-screen">
         <HeadingBiggest text="Under construction"/>
-
       </div>
     </main>
   );

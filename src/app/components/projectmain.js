@@ -41,9 +41,9 @@ export default function ProjectsMain() {
             key={project.id}
             className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105"
           >
-            <div className="aspect-w-16 aspect-h-9 ">
+            <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
               <Image
-                className="w-full h-full object-cover rounded-xl"
+                className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"
                 src={project.image}
                 alt={project.title}
                 width={1600}
@@ -51,6 +51,7 @@ export default function ProjectsMain() {
                 priority={true}
               />
             </div>
+
             <div className="p-4">
               <h3 className="text-lg font-bold">{project.title}</h3>
               <p className="text-sm mt-2">{project.description}</p>
