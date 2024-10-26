@@ -39,7 +39,7 @@ export default async function ProjectsMain() {
               </div>
               <p className="text-sm mt-2">{project.description}</p>
               <div className="flex gap-2 items-center justify-between my-2">
-                <a href={project.livelink}>
+                <a href={project.livelink} target="_blank">
                   <span className="inline-flex gap-2 justify-center items-center border-foreground border-2 cursor-pointer bg-background text-foreground px-2 py-1 text-sm font-semibold rounded-lg group hover:bg-foreground hover:text-background motion-reduce:transition-all">
                     Live link
                     <svg
@@ -55,7 +55,7 @@ export default async function ProjectsMain() {
                   </span>
                 </a>
                 {project.github && (
-                  <a href={project.github}>
+                  <a href={project.github} target="_blank">
                     <span className="inline-flex gap-2 justify-center items-center border-foreground border-2 cursor-pointer bg-background text-foreground px-2 py-1 text-sm font-semibold rounded-lg group hover:bg-foreground hover:text-background motion-reduce:transition-all">
                       Source Code{" "}
                       <svg
