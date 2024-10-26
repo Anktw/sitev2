@@ -15,10 +15,9 @@ const geistMono = localFont({
   weight: "100 900",
 });
 const protestGuerrilla = localFont({
-  src:"./fonts/ProtestGuerrilla.ttf",
+  src: "./fonts/ProtestGuerrilla.ttf",
   variable: "--font-protestGuerrilla",
 });
-
 
 export const metadata = {
   title: "Ankit Tiwari",
@@ -31,9 +30,9 @@ export default function RootLayout({ children }) {
         className={`mt-16 md:mt-28 lg:mt-24 ${geistSans.variable} ${geistMono.variable} antialiased `}
       >
         <ThemeProvider>
-        <HeaderComp/>
-        {children}
-        <Footer/>
+          <HeaderComp />
+          {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>

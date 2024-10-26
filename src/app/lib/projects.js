@@ -1,7 +1,7 @@
 export async function getProjects(tech = "Recent") {
     try {
       const response = await fetch(
-        'http://localhost:3000/api/projects',
+        'https://unkit.vercel.app/api/projects',
         {
           next: {
             revalidate: 3600 
