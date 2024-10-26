@@ -1,13 +1,9 @@
 "use client";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Link from "next/link";
-import { useTheme } from "../context/Themescontext";
-import HeadingHome from "./headings/headinghome";
 
 export default function ProjectsMain() {
   const [projects, setProjects] = useState([]);
-  const { isThemeOn } = useTheme();
 
   const fetchProjects = async (tech = "Recent") => {
     try {
@@ -35,7 +31,6 @@ export default function ProjectsMain() {
   useEffect(() => {
     fetchProjects();
   }, []);
-
 
   return (
     <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10 animate-fadeInUp">

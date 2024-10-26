@@ -1,12 +1,9 @@
-"use client";
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
 import GoToTopButton from "./gototopbutton";
-import { useTheme } from "../context/Themescontext";
 
 export function Footer() {
-  const { isThemeOn } = useTheme();
   return (
     <div className="relative bottom-0 mt-5 md:mt-28 lg:mt-36">
       <div className="grid max-w-screen-xl grid-cols-1 lg:grid-cols-3 gap-10 pt-10 mx-auto mt-7 md:mt-10 border-t px-5">
@@ -58,7 +55,7 @@ export function Footer() {
                 height="120"
                 viewBox="0 0 394 79"
                 width="120"
-                className={` ${isThemeOn ? "fill-black " : "fill-white "}`}
+                fill="currentColor"
               >
                 <path
                   d="M261.919 0.0330722H330.547V12.7H303.323V79.339H289.71V12.7H261.919V0.0330722Z"

@@ -25,5 +25,4 @@ const ProjectLoader = () => {
     </div>
   );
 };
-
 export default ProjectLoader;

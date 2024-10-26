@@ -2,7 +2,6 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import HeadingMain from "./headings/headingmain";
-
 export default function Projects() {
   const [projects, setProjects] = useState([]);
   const [selectedTech, setSelectedTech] = useState("All");
