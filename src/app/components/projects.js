@@ -15,10 +15,8 @@ export default function Projects() {
         if (response.ok) {
           const data = await response.json();
 
-
           const sortedProjects = data.sort((a, b) => b.id - a.id);
           setProjects(sortedProjects);
-
 
           const techs = new Set();
           data.forEach((project) => {
@@ -61,7 +59,7 @@ export default function Projects() {
 
   return (
     <div className="">
-      <HeadingMain text="Projects"/>
+      <HeadingMain text="Projects" />
 
       {/* Filter Buttons */}
       <div className="mb-4">

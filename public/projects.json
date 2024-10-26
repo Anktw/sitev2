@@ -1,12 +1,41 @@
 [
   {
     "id": 1,
-    "title": "Project 1",
+    "title": "CampusConnect",
+    "marketingline": "Connect, Compete, and Stay Informed",
+    "description": "Campus community in a dynamic social platform",
+    "largedescription": "CampusConnect is designed exclusively for students to enhance their campus experience. It brings together features like leaderboards for friendly competition, event management to stay updated on campus activities, and a comprehensive hub for all college related information.",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "heading2": "Social Media like User Interface and Functionalities",
+    "description2": "CampusConnect incorporates a user interface and features that closely resemble popular social media platforms, fostering seamless interaction and engagement among students.",
+    "download": "",
+    "filetype": "Apk",
+    "livelink": "/",
+    "github": "/",
+    "whyuse1": "Centralized Hub for Campus Activities",
+    "whyuse2": "Competitive Leaderboards",
+    "whyuse3": "Seamless Social Media Experience",
+    "whyuse4": "Skill Recognition",
+    "whyuse5": "Event Management and Participation",
+    "whyuse6": "Accessible Anytime, Anywhere",
+    "desc1":"CampusConnect simplifies access to college events, resources, and discussions in one platform.",
+    "desc2":"Students can showcase skills in sports, coding, and more, ranked in real-time leaderboards.",
+    "desc3":"It provides a social platform for sharing posts, engaging with peers, and staying updated.",
+    "desc4":"CampusConnect highlights student achievements, motivating them to participate actively in campus life.",
+    "desc5":"The app enables easy creation, joining, and tracking of campus events.",
+    "desc6":"With mobile-first design, students can access all features and resources on-the-go.",
+    "working": "The CampusConnect Leaderboard collects data from various aspects of a student's college journey—such as academic scores, participation in extracurricular activities, and contributions to sustainability or community service. Each category is assigned a weightage, and students accumulate points based on their performance. The system updates the rankings in real-time, allowing students to see their position and progress compared to their peers. It motivates students to enhance their skills across multiple domains, with top performers being highlighted for recognition.",
+    "techStack": ["Javascript","React","Tailwind","Next","MongoDB"]
+  },
+  {
+    "id": 2,
+    "title": "project2",
     "whatis1": "alkjisdhfihhdsijfj",
     "whatis2": "hfiuhfsadiuhifus",
-    "whatis3":  "jahiudfhiuh",
+    "whatis3": "jahiudfhiuh",
     "whatis4": "hfhishfish",
     "whyuse1": "It has aljfosdajfoisa",
+    
     "whyuse2": "It has aljfosdajfoisa",
     "whyuse3": "It has aljfosdajfoisa",
     "whyuse4": "It has aljfosdajfoisa",
@@ -14,8 +43,8 @@
     "whyuse6": "It has aljfosdajfoisa",
     "whyuse7": "It has aljfosdajfoisa",
     "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "description 1",
-    "download": "/",
+    "description": "Campus community in a dynamic social platform",
+    "download": "",
     "filetype": "Apk",
     "techStack": [
       "Javascript",
@@ -25,8 +54,11 @@
       "Vite",
       "Angular",
       "Flutter",
-      "Docker","Next","Remix","MongoDB","Kotlin"
-
+      "Docker",
+      "Next",
+      "Remix",
+      "MongoDB",
+      "Kotlin"
     ],
     "livelink": "/",
     "github": "/",
@@ -34,31 +66,9 @@
     "reactpercentage": "10",
     "javapercentage": "5",
     "tailwindpercentage": "5",
-    "vitepercentage":"5",
-    "angularpercentage":"5",
+    "vitepercentage": "5",
+    "angularpercentage": "5",
     "flutterpercentage": "10",
-    "dockerpercentage":"10"
-    
-  },
-  {
-    "id": 2,
-    "title": "Project 2",
-    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "Title 2",
-    "techStack": ["MongoDB"]
-  },
-  {
-    "id": 3,
-    "title": "Project 3",
-    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "Title 3",
-    "techStack": ["Javascript"]
-  },
-  {
-    "id": 4,
-    "title": "project 4",
-    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
-    "description": "title 4",
-    "techStack": ["Javascript"]
+    "dockerpercentage": "10"
   }
 ]
