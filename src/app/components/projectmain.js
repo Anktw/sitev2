@@ -33,11 +33,11 @@ export default function ProjectsMain() {
   }, []);
 
   return (
-    <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10 animate-fadeInUp">
+    <div className="px-0 md:px-5 lg:px-8 mt-2 md:mt-6 lg:mt-10">
       {/* Projects Container */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 lg:gap-6 animate-fadeInLeft">
         {projects.map((project) => (
-          <div key={project.id} className="p-1 rounded-md cursor-pointer">
+          <div key={project.id} className="p-3 rounded-md cursor-pointer">
             <div className="relative w-full" style={{ paddingTop: "56.25%" }}>
               <Image
                 className="absolute top-0 left-0 w-full h-full object-cover rounded-xl"

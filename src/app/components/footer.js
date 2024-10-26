@@ -103,6 +103,7 @@ export function Footer() {
                 width={48}
                 height={48}
                 className="object-cover"
+                alt="Tailwing css Logo"
               />
             </div>
           </div>

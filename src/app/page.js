@@ -21,3 +21,7 @@ export default function Home() {
     </div>
   );
 }
+export const metadata = {
+  title: "Homepage | Ankit Tiwari",
+  description: "Homepage of Ankit Tiwari.",
+};
