@@ -19,7 +19,7 @@ export default async function ProjectsMain() {
             key={project.id}
             className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105"
           >
-            <div className="aspect-w-16 aspect-h-9">
+            <div className="p-2 md:p-4">
               <Image
                 className="w-full h-full object-cover rounded-xl"
                 src={project.image}
