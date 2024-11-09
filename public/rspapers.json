@@ -1,50 +1,50 @@
 [
-    {
-        "id": 1,
-        "title": "Research Paper Title 1",
-        "description": "Description 1",
-        "link": "/research/paper1",
-        "date": "03-October-2024",
-        "categoryStack": ["Philosophy"]
-    },
-    {
-        "id": 2,
-        "title": "Research Paper Title 2",
-        "description": "Description 2",
-        "link": "/research/paper2",
-        "date": "03-October-2024",
-        "categoryStack": ["Philosophy","Technology"]
-    },
-    {
-        "id": 3,
-        "title": "Research Paper Title 3",
-        "description": "Description 3",
-        "link": "/research/paper3",
-        "date": "03-October-2024",
-        "categoryStack": ["Technology"]
-    },
-    {
-        "id": 4,
-        "title": "Research Paper Title 4",
-        "description": "Description 4",
-        "link": "/research/paper4",
-        "date": "03-October-2024",
-        "categoryStack": ["Philosophy"]
-    },
-    {
-        "id": 5,
-        "title": "Research Paper Title 5",
-        "description": "Description 5",
-        "link": "/research/paper5",
-        "date": "03-October-2024",
-        "categoryStack": ["Philosophy","Technology"]
-    },
-    {
-        "id": 6,
-        "title": "Research Paper Title 6",
-        "description": "Description 6",
-        "link": "/research/paper6",
-        "date": "03-October-2024",
-        "categoryStack": ["Philosophy","Technology"]
-    }
+  {
+    "id": 1,
+    "title": "Research Paper Title 1",
+    "description": "Description 1",
+    "link": "/research/paper1",
+    "date": "03-October-2024",
+    "categoryStack": ["Philosophy"]
+  },
+  {
+    "id": 2,
+    "title": "Research Paper Title 2",
+    "description": "Description 2",
+    "link": "/research/paper2",
+    "date": "03-October-2024",
+    "categoryStack": ["Philosophy", "Technology"]
+  },
+  {
+    "id": 3,
+    "title": "Research Paper Title 3",
+    "description": "Description 3",
+    "link": "/research/paper3",
+    "date": "03-October-2024",
+    "categoryStack": ["Technology"]
+  },
+  {
+    "id": 4,
+    "title": "Research Paper Title 4",
+    "description": "Description 4",
+    "link": "/research/paper4",
+    "date": "03-October-2024",
+    "categoryStack": ["Philosophy"]
+  },
+  {
+    "id": 5,
+    "title": "Research Paper Title 5",
+    "description": "Description 5",
+    "link": "/research/paper5",
+    "date": "03-October-2024",
+    "categoryStack": ["Philosophy", "Technology"]
+  },
+  {
+    "id": 6,
+    "title": "Research Paper Title 6",
+    "description": "Description 6",
+    "link": "/research/paper6",
+    "date": "03-October-2024",
+    "categoryStack": ["Philosophy", "Technology"]
+  }
 ]

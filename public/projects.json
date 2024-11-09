@@ -25,12 +25,7 @@
     "desc5": "Customize your form’s look with themes that match your brand or style.",
     "desc6": "Easily export data to CSV or view analytics directly in ModernForms.",
     "working": "ModernForms's drag-and-drop builder allows users to create forms effortlessly, selecting from various field types like text, multiple choice, checkboxes, and more. Users can apply themes to personalize forms, add conditional logic for enhanced control, and view submissions in real-time. All data can be exported for further analysis, making ModernForms ideal for surveys, feedback forms, and applications.",
-    "techStack": [
-      "Next",
-      "React",
-      "Tailwind",
-      "MongoDB"
-    ]
+    "techStack": ["Next", "React", "Tailwind", "MongoDB"]
   },
   {
     "id": 5,
@@ -38,7 +33,7 @@
     "marketingline": "Experience Your Site's Performance Across Different Network Speeds",
     "description": "Simulate your website’s load time across 5G, 4G, 3G, and 2G speeds to enhance user experience.",
     "largedescription": "SiteSimulation is designed to help developers and website owners understand the performance of their sites across various network speeds. By simulating load times on 5G, 4G, 3G, and 2G, SiteSimulation enables users to experience their site as users on slower networks would, providing insights into necessary optimizations for better accessibility and user experience.",
-    "image": "/images/SiteSimulation.png",
+    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
     "heading2": "Network Speed Simulation for Improved Performance Insights",
     "description2": "Gain a realistic view of how your website performs under different network conditions.",
     "download": "",
@@ -58,10 +53,8 @@
     "desc5": "Access a clear view of speed performance metrics for effective improvements.",
     "desc6": "Test any site URL instantly for fast, actionable insights.",
     "working": "SiteSimulation allows users to input a website URL and select a network speed for simulation (5G, 4G, 3G, or 2G). It then emulates the load time and displays performance metrics, loading indicators, and possible bottlenecks in real-time. Developers can see the visual representation of loading and pinpoint areas for optimization to enhance user experience across all network conditions.",
-    "techStack": ["Next.js", "Node.js", "Tailwind CSS", "Puppeteer", "React", "Socket.IO"]
-  }
-,  
-
+    "techStack": ["Next", "Tailwind", "React"]
+  },
   {
     "id": 12,
     "title": "ServerSideApp",
@@ -124,7 +117,7 @@
     "marketingline": "Streamline Your Website's Load Time with Custom Loaders",
     "description": "Generate personalized loaders for your website components effortlessly.",
     "largedescription": "LoaderGenerator is designed for web developers and designers who want to enhance their users' experience by providing loading indicators for each component on their websites. By simply uploading your site URL, you can receive tailored loaders that fit your design aesthetics and improve perceived performance.",
-    "image": "/images/Featured-image-AI-image-generators-by-Midjourney.webp",
+    "image": "/images/LoaderGenerator.jpg",
     "heading2": "Customizable Loaders for Every Component",
     "description2": "Easily integrate personalized loaders that align with your site's branding and user experience goals.",
     "download": "",
