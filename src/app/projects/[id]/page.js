@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import { useTheme } from "@/app/context/Themescontext";
-import LoadingBar from "@/app/components/loader";
 import Image from "next/image";
-import Button1 from "@/app/components/buttons/button1";
+import { useTheme } from "../../context/Themescontext";
+import LoadingBar from "../../components/loader";
+import Button1 from "../../components/buttons/button1";
 
 export default function ProjectsPage({ params }) {
   const [project, setProject] = useState(null);
