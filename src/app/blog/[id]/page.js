@@ -1,9 +1,9 @@
 "use client";
-import HeadingBiggest from "@/app/components/headings/headingbiggest";
 import { useState, useEffect } from "react";
-import { useTheme } from "@/app/context/Themescontext";
-import Button1 from "@/app/components/buttons/button1";
-import LoadingBar from "@/app/components/loader";
+import HeadingBiggest from "../../components/headings/headingbiggest";
+import { useTheme } from "../../context/Themescontext";
+import LoadingBar from "../../components/loader";
+import Button1 from "../../components/buttons/button1";
 
 export default function BlogPage({ params }) {
   const [blog, setBlog] = useState(null);
