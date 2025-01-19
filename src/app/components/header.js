@@ -60,7 +60,6 @@ const HeaderComp = () => {
               Ankit Tiwari
             </Link>
           </div>
-
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-0 md:space-x-3 lg:space-x-6 items-center animate-fadeInDown">
             <Link
