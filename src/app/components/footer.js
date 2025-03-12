@@ -21,8 +21,7 @@ export function Footer() {
           <div className="w-full mt-4 opacity-75 leading-7">
             This site is entirely built using two primary variables:{" "}
             <span className="font-mono opacity-100">#fff</span> (white) and{" "}
-            <span className="font-mono opacity-100">#000</span> (black). The
-            design revolves around the manipulation of these two core colors.
+            <span className="font-mono opacity-100">#000</span> (black). The design revolves around the manipulation of these two core colors. This was also my first project using Next.js, serving as a learning experience.
           </div>
         </div>
         <div className="w-full">

@@ -260,6 +260,18 @@ export default function ProjectsPage({ params }) {
                 </div>
               </div>
             )}
+            {category == "FastAPI" && (
+              <div className="flex flex-col items-center">
+                <div className="min-h-[150px] flex items-center justify-center">
+                <Image
+                    src="/icons/logo-teal.png"
+                    width={200}
+                    height={200}
+                    alt="FastAPI logo"
+                  />
+                </div>
+              </div>
+            )}
 
             {category == "Tailwind" && (
               <div className="flex flex-col items-center">
@@ -524,9 +536,9 @@ export default function ProjectsPage({ params }) {
               <div className="flex flex-col items-center">
                 <div className="min-h-[150px] flex items-center justify-center">
                   <Image
-                    src="/icons/favicon.ico"
-                    width={50}
-                    height={50}
+                    src="/icons/flutter logo.svg"
+                    width={150}
+                    height={150}
                     alt="Flutter logo"
                   />
                 </div>
