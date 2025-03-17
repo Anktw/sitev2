@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { useTheme } from "../../context/Themescontext";
 import LoadingBar from "../../components/loader";
-import Button1 from "../../components/buttons/button1";
+import Button1 from "../../components/ui/buttons/button1";
 
 export default function ProjectsPage({ params }) {
   const [project, setProject] = useState(null);

@@ -1,5 +1,5 @@
 import ProjectsMain from "./components/projectmain";
-import HeadingHome from "./components/headings/headinghome";
+import HeadingHome from "./components/ui/headings/headinghome";
 import GoToBtnHome from "./components/gotobtnshome";
 import BlogsMain from "./components/blogmain";
 import TopBtnsHome from "./components/hometopbtn";

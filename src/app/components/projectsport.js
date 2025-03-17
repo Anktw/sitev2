@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Button1 from "./buttons/button1";
+import Button1 from "./ui/buttons/button1";
 import HorizontalScroll from "./hrscroll";
 
 export default function ProjectsPort() {

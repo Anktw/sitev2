@@ -4,7 +4,6 @@ import { useTheme } from "../context/Themescontext";
 import ContactForm from "./contactform";
 import Link from "next/link";
 import Image from "next/image";
-
 const AboutMain = () => {
   const [techList, setTechList] = useState([]);
   const [activeTab, setActiveTab] = useState("Education");
@@ -658,5 +657,4 @@ const AboutMain = () => {
     </div>
   );
 };
-
 export default AboutMain;

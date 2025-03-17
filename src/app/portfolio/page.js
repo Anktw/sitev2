@@ -1,5 +1,5 @@
 import AboutMain from "../components/aboutmain";
-import HeadingHome from "../components/headings/headinghome";
+import HeadingHome from "../components/ui/headings/headinghome";
 import ProjectsPort from "../components/projectsport";
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
-import AboutBtn from "./buttons/aboutbtn";
-import ContactBtn from "./buttons/contactbtn";
-import ProjectsBtn from "./buttons/projectbtn";
-import ResumeBtn from "./buttons/resumebtn";
+import AboutBtn from "./ui/buttons/aboutbtn";
+import ContactBtn from "./ui/buttons/contactbtn";
+import ProjectsBtn from "./ui/buttons/projectbtn";
+import ResumeBtn from "./ui/buttons/resumebtn";
 import HorizontalScroll from "./hrscroll";
 
 export default function GoToBtnHome() {

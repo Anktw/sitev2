@@ -1,4 +1,4 @@
-import PortBtn from "./buttons/portbtn";
+import PortBtn from "./ui/buttons/portbtn";
 import HorizontalScroll from "./hrscroll";
 
 export default function TopBtnsHome(){

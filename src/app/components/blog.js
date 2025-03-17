@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import Button1 from "./buttons/button1";
+import Button1 from "./ui/buttons/button1";
 import { useTheme } from "../context/Themescontext";
 import HorizontalScroll from "./hrscroll";
-import HeadingMain from "./headings/headingmain";
+import HeadingMain from "./ui/headings/headingmain";
 
 export default function Blogs() {
   const { isThemeOn } = useTheme();
@@ -102,7 +102,7 @@ export default function Blogs() {
               <div className="inline my-2">
                 <Button1
                   text="Read"
-                  href={`/blog/${blogs[0].id}`}
+                  href={`/blogs/${blogs[0].id}`}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@ export default function Blogs() {
                   <div className="inline mt-2">
                     <Button1
                       text="Read"
-                      href={`/blog/${blog.id}`}
+                      href={`/blogs/${blog.id}`}
                       icon={
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +197,7 @@ export default function Blogs() {
                 <div className="inline mt-2">
                   <Button1
                     text="Read"
-                    href={`/blog/${blog.id}`}
+                    href={`/blogs/${blog.id}`}
                     icon={
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

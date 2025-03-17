@@ -1,5 +1,5 @@
 import AboutMain from "../components/aboutmain";
-import HeadingMain from "../components/headings/headingmain";
+import HeadingMain from "../components/ui/headings/headingmain";
 
 export default function About() {
   return (

@@ -1,4 +1,4 @@
-import HeadingMain from "../components/headings/headingmain";
+import HeadingMain from "../components/ui/headings/headingmain";
 import ContactForm from "../components/contactform";
 import Link from "next/link";
 export default function Contact() {

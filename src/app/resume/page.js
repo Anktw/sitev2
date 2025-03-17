@@ -1,5 +1,5 @@
-import HeadingBiggest from "../components/headings/headingbiggest";
-import HeadingMain from "../components/headings/headingmain";
+import HeadingBiggest from "../components/ui/headings/headingbiggest";
+import HeadingMain from "../components/ui/headings/headingmain";
 import ResumeComp from "../components/resume";
 
 export default function Resume() {
