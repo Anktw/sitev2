@@ -1,4 +1,4 @@
-import ProjectsMain from "./components/projectmain";
+import ProjectsMain from "./components/projects/projectmain";
 import HeadingHome from "./components/ui/headings/headinghome";
 import GoToBtnHome from "./components/gotobtnshome";
 import BlogsMain from "./components/blogmain";

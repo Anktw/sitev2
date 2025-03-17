@@ -55,7 +55,6 @@ export default function BlogsMain() {
         });
     }
   };
-
   return (
     <div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center align-middle mt-2 px-0 md:px-5 lg:px-8 md:mt-6 lg:mt-10">
@@ -70,7 +69,7 @@ export default function BlogsMain() {
               <div className="inline mt-2 md:mt-4">
                 <Button1
                   text="Read"
-                  href={`/blog/${blog.id}`}
+                  href={`/blogs/${blog.id}`}
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
