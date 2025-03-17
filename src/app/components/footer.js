@@ -108,7 +108,7 @@ export function Footer() {
           </div>
         </div>
         <div className="w-full grid grid-cols-2 md:grid-cols-3 gap-4">
-          {["Portfolio", "Projects", "Resume", "Blog", "About", "Contact"].map(
+          {["Portfolio", "Projects", "Resume", "Blogs", "About", "Contact"].map(
             (link) => (
               <Link
                 key={link}

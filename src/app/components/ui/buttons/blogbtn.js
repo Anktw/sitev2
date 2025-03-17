@@ -4,7 +4,7 @@ export default function BlogBtn(){
         <div className="group inline">
         <Button1
           text="Go to my Blog page"
-          href="/blog"
+          href="/blogs"
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
