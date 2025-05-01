@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getProjects } from "../../lib/projects";
+import { getProjects } from "../../../lib/projects";
 import LoadingBar from "../loader";
 import Link from "next/link";
 
