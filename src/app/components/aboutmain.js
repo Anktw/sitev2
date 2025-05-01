@@ -9,6 +9,7 @@ const AboutMain = () => {
   const [activeTab, setActiveTab] = useState("Education");
   const { isThemeOn } = useTheme();
   const svgMapping = {
+    C: "/icons/c.png",
     Javascript: "/icons/icons8-javascript.svg",
     React:
       "/icons/icons8-react-a-javascript-library-for-building-user-interfaces-96.png",
@@ -158,14 +159,38 @@ const AboutMain = () => {
       </svg>
     ),
     "React Native": "/icons/header_logo.svg",
-    Flutter: "/icons/favicon.ico",
+    Flutter: "/icons/flutter logo.svg",
     Electron: "/icons/electronlogo.svg",
     Python: "/icons/python-logo@2x.png",
     Java: "/icons/Java_programming_language_logo.svg.png",
     MySQL: "/icons/r.png",
     PostgreSQL: "/icons/elephant.png",
     Docker: "/icons/OIP.png",
+    FastAPI: "/icons/logo-teal.png",
     Firebase: "/icons/lockup.svg",
+    Golang: (
+      <svg
+        height="78"
+        viewBox="0 0 207 78"
+        width="207"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+      >
+        <g fill="currentColor" fill-rule="evenodd">
+          <path d="m16.2 24.1c-.4 0-.5-.2-.3-.5l2.1-2.7c.2-.3.7-.5 1.1-.5h35.7c.4 0 .5.3.3.6l-1.7 2.6c-.2.3-.7.6-1 .6z" />
+          <path d="m1.1 33.3c-.4 0-.5-.2-.3-.5l2.1-2.7c.2-.3.7-.5 1.1-.5h45.6c.4 0 .6.3.5.6l-.8 2.4c-.1.4-.5.6-.9.6z" />
+          <path d="m25.3 42.5c-.4 0-.5-.3-.3-.6l1.4-2.5c.2-.3.6-.6 1-.6h20c.4 0 .6.3.6.7l-.2 2.4c0 .4-.4.7-.7.7z" />
+          <g transform="translate(55)">
+            <path d="m74.1 22.3c-6.3 1.6-10.6 2.8-16.8 4.4-1.5.4-1.6.5-2.9-1-1.5-1.7-2.6-2.8-4.7-3.8-6.3-3.1-12.4-2.2-18.1 1.5-6.8 4.4-10.3 10.9-10.2 19 .1 8 5.6 14.6 13.5 15.7 6.8.9 12.5-1.5 17-6.6.9-1.1 1.7-2.3 2.7-3.7-3.6 0-8.1 0-19.3 0-2.1 0-2.6-1.3-1.9-3 1.3-3.1 3.7-8.3 5.1-10.9.3-.6 1-1.6 2.5-1.6h36.4c-.2 2.7-.2 5.4-.6 8.1-1.1 7.2-3.8 13.8-8.2 19.6-7.2 9.5-16.6 15.4-28.5 17-9.8 1.3-18.9-.6-26.9-6.6-7.4-5.6-11.6-13-12.7-22.2-1.3-10.9 1.9-20.7 8.5-29.3 7.1-9.3 16.5-15.2 28-17.3 9.4-1.7 18.4-.6 26.5 4.9 5.3 3.5 9.1 8.3 11.6 14.1.6.9.2 1.4-1 1.7z" />
+            <path
+              d="m107.2 77.6c-9.1-.2-17.4-2.8-24.4-8.8-5.9-5.1-9.6-11.6-10.8-19.3-1.8-11.3 1.3-21.3 8.1-30.2 7.3-9.6 16.1-14.6 28-16.7 10.2-1.8 19.8-.8 28.5 5.1 7.9 5.4 12.8 12.7 14.1 22.3 1.7 13.5-2.2 24.5-11.5 33.9-6.6 6.7-14.7 10.9-24 12.8-2.7.5-5.4.6-8 .9zm23.8-40.4c-.1-1.3-.1-2.3-.3-3.3-1.8-9.9-10.9-15.5-20.4-13.3-9.3 2.1-15.3 8-17.5 17.4-1.8 7.8 2 15.7 9.2 18.9 5.5 2.4 11 2.1 16.3-.6 7.9-4.1 12.2-10.5 12.7-19.1z"
+              fill-rule="nonzero"
+            />
+          </g>
+        </g>
+      </svg>
+
+    ),
     MongoDB: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -247,6 +272,29 @@ const AboutMain = () => {
         </defs>
       </svg>
     ),
+    Redis: (
+      <svg
+        width="85"
+        height="27"
+        viewBox="0 0 85 27"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g clip-path="url(#clip0_1878_297)">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M75.2909 13.8125C75.2909 10.8448 77.4892 9.12284 80.2371 9.12284C82.2888 9.12284 84.1207 10.1121 85 12.5668C84.7435 13.8125 83.2047 15.2047 82.5453 15.4246C81.9957 14.2522 81.3728 13.556 80.7866 13.556C80.0539 13.556 80.0172 14.069 80.0172 14.7284C80.0172 15.1955 80.151 15.8834 80.3119 16.7112C80.5549 17.9615 80.8599 19.5309 80.8599 21.1401C80.8599 24.0711 78.8082 26.2328 75.6573 26.2328C72.7721 26.2328 71.1778 24.3414 70.4665 21.3198C68.5818 24.6972 65.8257 26.2328 63.7134 26.2328C60.411 26.2328 59.6338 23.7919 59.7121 21.3161C58.3852 23.6612 55.831 26.2328 53.3815 26.2328C50.8809 26.2328 49.9976 24.0563 50.2002 21.5215C48.702 24.3122 45.9919 26.2328 43.3793 26.2328C40.5442 26.2328 39.141 23.9806 39.5951 21.189C37.6878 23.5333 34.1374 26.2328 30.4461 26.2328C26.2373 26.2328 24.4053 23.9632 24.1882 21.1193C22.1568 24.375 19.4187 26.3427 16.1573 26.3427C11.4493 26.3427 9.76537 22.1561 9.52032 18.7315C7.77547 21.0681 5.81377 23.4923 3.40733 26.1961C3.15086 26.4526 2.93103 26.5991 2.67457 26.5991C1.8319 26.5991 0.109914 22.8621 0 21.4698C0.723099 20.3478 5.28119 15.3398 8.95093 11.3079C10.2409 9.89066 11.4211 8.594 12.2863 7.6291C10.0389 8.30726 7.72169 9.65975 4.79957 11.7608C4.28664 12.1272 2.85776 8.7931 2.8944 6.22845C6.26509 3.73707 11.3944 2.16164 15.5345 2.16164C21.3233 2.16164 24.6573 5.38578 24.6573 9.8556C24.6573 13.5927 21.5431 17.6961 17 17.8427C14.6377 17.904 13.1237 16.578 12.3494 14.9405C12.4419 17.473 13.7587 20.5905 17.2931 20.5905C21.1462 20.5905 22.9965 18.2646 25.7559 14.7958C25.9352 14.5704 26.1183 14.3403 26.306 14.1056C28.6509 11.2112 31.3621 8.64655 35.319 8.64655C37.7371 8.64655 39.3858 10.1487 39.3858 12.4203C39.3858 15.1681 36.1616 18.9784 31.6552 18.9784C30.8855 18.9784 30.1839 18.877 29.5917 18.6766C29.5768 18.7921 29.5668 18.9058 29.5668 19.0151C29.5668 20.2974 30.0431 21.0668 32.1315 21.0668C35.2091 21.0668 38.1034 19.2349 41.6207 14.9483C45.0647 10.7349 47.6659 8.90302 50.4138 8.90302C52.2687 8.90302 53.6765 9.90832 54.2969 11.6014C57.9796 6.28253 61.1038 2.51388 63.75 0C66.3513 1.09914 68.2198 3.26078 67.7069 3.70043C65.7651 5.45905 59.2802 12.5302 56.7155 16.7435C56.056 17.8427 55.4332 19.0517 55.4332 19.6379C55.4332 20.1875 55.7629 20.3707 56.1293 20.3707C57.8898 20.3707 61.4176 16.2147 64.4645 12.6253C65.6026 11.2845 66.6736 10.0228 67.5603 9.08621C69.6121 9.92888 71.7004 11.7241 71.1875 12.347C68.4763 15.5711 66.4246 18.2091 66.4246 19.7112C66.4246 20.1142 66.5711 20.3707 67.1207 20.3707C68.1466 20.3707 69.0991 19.4547 70.6746 17.5129C71.0043 17.1099 71.4073 17.1099 71.6638 17.7328C72.3599 19.4181 73.3858 20.3341 74.1918 20.3341C75.1444 20.3341 75.6207 19.4914 75.6207 18.2091C75.6207 17.3327 75.5137 16.3138 75.4217 15.4365C75.3521 14.7733 75.2909 14.191 75.2909 13.8125ZM16.194 13.3362C18.1358 13.3362 20.2608 12.2737 20.2608 10.1121C20.2608 8.80024 19.4466 7.59084 17.2708 7.22257C17.156 7.40192 17.042 7.58017 16.9287 7.75739C15.8231 9.4858 14.7804 11.116 13.7281 12.7095C14.3586 13.0636 15.156 13.3362 16.194 13.3362ZM35.8319 13.9957C35.8319 13.4095 35.4655 13.0065 34.8793 13.0065C33.4094 13.0065 31.1923 15.0693 30.149 17.0613C30.5341 17.2101 30.9862 17.2931 31.472 17.2931C34.0733 17.2931 35.8319 15.3147 35.8319 13.9957ZM45.4677 19.3082C45.4677 19.9677 45.834 20.4073 46.6034 20.4073C48.9849 20.4073 51.9526 16.0841 51.9526 14.3254C51.9526 13.5927 51.5496 13.153 50.8901 13.153C48.7285 13.153 45.4677 17.2565 45.4677 19.3082ZM76.0599 6.08207C75.2172 7.47431 73.9349 9.04974 73.4586 9.52603C71.2603 8.61008 69.2086 6.77819 69.5017 6.26525C70.3077 4.83638 71.6267 3.29758 72.103 2.82129C74.3012 3.73724 76.353 5.60577 76.0599 6.08207Z"
+            fill="#FF4438"
+          />
+        </g>
+        <defs>
+          <clipPath id="clip0_1878_297">
+            <rect width="85" height="26.5991" fill="white" />
+          </clipPath>
+        </defs>
+      </svg>
+    ),
   };
 
   useEffect(() => {
@@ -278,31 +326,28 @@ const AboutMain = () => {
       <div className="flex space-x-4 mb-6">
         <button
           onClick={() => setActiveTab("Education")}
-          className={`p-2 md:px-6 md:py-2 rounded-lg ${
-            activeTab === "Education"
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${activeTab === "Education"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"
-          } transition-all duration-300`}
+            } transition-all duration-300`}
         >
           Education
         </button>
         <button
           onClick={() => setActiveTab("Work Experience")}
-          className={`p-2 md:px-6 md:py-2 rounded-lg ${
-            activeTab === "Work Experience"
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${activeTab === "Work Experience"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"
-          } transition-all duration-300`}
+            } transition-all duration-300`}
         >
           Contact
         </button>
         <button
           onClick={() => setActiveTab("Tech Stacks")}
-          className={`p-2 md:px-6 md:py-2 rounded-lg ${
-            activeTab === "Tech Stacks"
+          className={`p-2 md:px-6 md:py-2 rounded-lg ${activeTab === "Tech Stacks"
               ? "bg-foreground text-background border border-foreground opacity-80"
               : "border border-foreground text-foreground"
-          } transition-all duration-300`}
+            } transition-all duration-300`}
         >
           Tech Stacks
         </button>
@@ -318,11 +363,10 @@ const AboutMain = () => {
                 height="24px"
                 viewBox="0 -960 960 960"
                 width="24px"
-                className={`transform transition-transform duration-300 group-hover:scale-110 ${
-                  isThemeOn
+                className={`transform transition-transform duration-300 group-hover:scale-110 ${isThemeOn
                     ? "fill-black group-hover:fill-white"
                     : "fill-white group-hover:fill-black"
-                }`}
+                  }`}
               >
                 <path d="M480-120 200-272v-240L40-600l440-240 440 240v320h-80v-276l-80 44v240L480-120Zm0-332 274-148-274-148-274 148 274 148Zm0 241 200-108v-151L480-360 280-470v151l200 108Zm0-241Zm0 90Zm0 0Z" />
               </svg>
@@ -348,11 +392,10 @@ const AboutMain = () => {
                 height="24px"
                 viewBox="0 -960 960 960"
                 width="24px"
-                className={`transform transition-transform duration-300 group-hover:scale-110 ${
-                  isThemeOn
+                className={`transform transition-transform duration-300 group-hover:scale-110 ${isThemeOn
                     ? "fill-black group-hover:fill-white"
                     : "fill-white group-hover:fill-black"
-                }`}
+                  }`}
               >
                 <path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z" />
               </svg>
@@ -413,9 +456,8 @@ const AboutMain = () => {
                     <svg
                       role="img"
                       xmlns="http://www.w3.org/2000/svg"
-                      className={`h-10 w-7 ${
-                        isThemeOn ? "fill-black" : "fill-white"
-                      }`}
+                      className={`h-10 w-7 ${isThemeOn ? "fill-black" : "fill-white"
+                        }`}
                       viewBox="0 0 24 24"
                     >
                       <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z" />
@@ -615,11 +657,10 @@ const AboutMain = () => {
                 height="48px"
                 viewBox="0 -960 960 960"
                 width="48px"
-                className={`transform transition-transform duration-300 group-hover:scale-110 ${
-                  isThemeOn
+                className={`transform transition-transform duration-300 group-hover:scale-110 ${isThemeOn
                     ? "fill-black group-hover:fill-white"
                     : "fill-white group-hover:fill-black"
-                }`}
+                  }`}
               >
                 <path d="M320-160q-33 0-56.5-23.5T240-240v-120h120v-90q-35-2-66.5-15.5T236-506v-44h-46L60-680q36-46 89-65t107-19q27 0 52.5 4t51.5 15v-55h480v520q0 50-35 85t-85 35H320Zm120-200h240v80q0 17 11.5 28.5T720-240q17 0 28.5-11.5T760-280v-440H440v24l240 240v56h-56L510-514l-8 8q-14 14-29.5 25T440-464v104ZM224-630h92v86q12 8 25 11t27 3q23 0 41.5-7t36.5-25l8-8-56-56q-29-29-65-43.5T256-684q-20 0-38 3t-36 9l42 42Zm376 350H320v40h286q-3-9-4.5-19t-1.5-21Zm-280 40v-40 40Z" />
               </svg>

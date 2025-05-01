@@ -37,7 +37,7 @@ export default async function ProjectsMain() {
                 {" "}
                 <Link href={`/projects/${project.id}`}>{project.title}</Link>
               </div>
-              <p className="text-sm mt-2">{project.description}</p>
+              <p className="text-sm mt-2">{project.marketingline}</p>
               <div className="flex gap-2 items-center justify-between my-2">
                 <a href={project.livelink} target="_blank">
                   <span className=" text-wrap inline-flex gap-2 justify-center items-center border-foreground border-2 cursor-pointer bg-background text-foreground px-2 py-1 text-sm font-semibold rounded-lg group hover:bg-foreground hover:text-background motion-reduce:transition-all">

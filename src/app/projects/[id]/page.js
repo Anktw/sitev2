@@ -26,13 +26,13 @@ export default function ProjectsPage({ params }) {
   }, [params.id]);
   const content = project
     ? [
-        { title: project.whyuse1, description: project.desc1 },
-        { title: project.whyuse2, description: project.desc2 },
-        { title: project.whyuse3, description: project.desc3 },
-        { title: project.whyuse4, description: project.desc4 },
-        { title: project.whyuse5, description: project.desc5 },
-        { title: project.whyuse6, description: project.desc6 },
-      ]
+      { title: project.whyuse1, description: project.desc1 },
+      { title: project.whyuse2, description: project.desc2 },
+      { title: project.whyuse3, description: project.desc3 },
+      { title: project.whyuse4, description: project.desc4 },
+      { title: project.whyuse5, description: project.desc5 },
+      { title: project.whyuse6, description: project.desc6 },
+    ]
     : [];
   if (!project) {
     return (
@@ -46,9 +46,8 @@ export default function ProjectsPage({ params }) {
                 height="120px"
                 viewBox="0 -960 960 960"
                 width="120px"
-                className={`justify-center m-auto ${
-                  isThemeOn ? "fill-black" : "fill-white"
-                }`}
+                className={`justify-center m-auto ${isThemeOn ? "fill-black" : "fill-white"
+                  }`}
               >
                 <path d="M620-520q25 0 42.5-17.5T680-580q0-25-17.5-42.5T620-640q-25 0-42.5 17.5T560-580q0 25 17.5 42.5T620-520Zm-280 0q25 0 42.5-17.5T400-580q0-25-17.5-42.5T340-640q-25 0-42.5 17.5T280-580q0 25 17.5 42.5T340-520Zm140 100q-68 0-123.5 38.5T276-280h66q22-37 58.5-58.5T480-360q43 0 79.5 21.5T618-280h66q-25-63-80.5-101.5T480-420Zm0 340q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z" />
               </svg>
@@ -62,11 +61,10 @@ export default function ProjectsPage({ params }) {
                       height="48"
                       viewBox="0 -960 960 960"
                       width="48"
-                      className={` ${
-                        isThemeOn
+                      className={` ${isThemeOn
                           ? "fill-black group-hover:fill-white"
                           : "fill-white group-hover:fill-black"
-                      }`}
+                        }`}
                     >
                       <path d="M280-280h280v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Zm-80 480q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm0-560v560-560Z" />
                     </svg>
@@ -97,7 +95,7 @@ export default function ProjectsPage({ params }) {
           <span className="animate-fadeInDown mb-12 lg:max-w-[570px] text-2xl">
             {project.marketingline}
           </span>
-          <div className="flex justify-between px-2 md:px-5 items-baseline mb-7 space-y-4 sm:space-y-0">
+          <div className="flex flex-col md:flex-row justify-between px-2 md:px-5 items-stretch md:items-baseline mb-7 gap-4">
             <Button1
               text="Live Link"
               href={`${project.livelink}`}
@@ -131,7 +129,7 @@ export default function ProjectsPage({ params }) {
             {project.download && (
               <Button1
                 text={`Direct Download this ${project.filetype}`}
-                href={`${project.github}`}
+                href={`${project.download}`}
                 icon={
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -326,7 +324,7 @@ export default function ProjectsPage({ params }) {
 
             {category == "Typescript" && (
               <div className="flex flex-col items-center">
-                <div className="min-h-[150px] flex items-center justify-center">
+                <div className="min-h-[150px] min-w-[150px] flex items-center justify-center">
                   <Image
                     src="/icons/icons8-typescript-48.png"
                     width={50}
@@ -635,7 +633,7 @@ export default function ProjectsPage({ params }) {
                 </div>
               </div>
             )}
-            {category == "Go" && (
+            {category == "Golang" && (
               <div className="flex flex-col items-center">
                 <div className="min-h-[150px] flex items-center justify-center">
                   <svg

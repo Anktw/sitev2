@@ -111,7 +111,7 @@ export default function ProjectsPort() {
                   {project.title}
                 </h3>
                 <p className="text-sm mt-2 animate-fadeInLeft">
-                  {project.description}
+                  {project.marketingline}
                 </p>
                 <div className="flex gap-2 items-center justify-between my-2">
                   <a href={project.livelink} target="_blank">
