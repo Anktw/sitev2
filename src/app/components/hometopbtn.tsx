@@ -40,7 +40,7 @@ export default function TopBtnsHome() {
       <>
         Please create account to access all projects with full flow,
         It will be fun...
-        You only need one login to access all projects
+        You will be logged in all projects
       </>
     )}
       <HorizontalScroll>
