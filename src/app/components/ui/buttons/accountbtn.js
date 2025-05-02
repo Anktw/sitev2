@@ -4,7 +4,7 @@ export default function AccountBtn(){
         <div className="inline">
         <Button1
           text="Manage your account"
-          href="https://unkit.site/user/dashboard"
+          href="https://accounts.unkit.site/user/dashboard"
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
