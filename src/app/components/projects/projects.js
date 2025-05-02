@@ -82,11 +82,11 @@ export default function Projects() {
       </div>
 
       {/* Projects Container */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 lg:gap-8 ">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="p-1 rounded-md transition-transform duration-500 transform hover:scale-100 md:hover:scale-100 lg:hover:scale-105 animate-fadeInUp"
+            className="p-1 rounded-md cursor-pointer transition-transform duration-500 transform lg:hover:scale-105 animate-fadeInUp"
           >
             <div className="aspect-w-16 aspect-h-9 animate-fadeInRight">
             <Link href={`/projects/${project.id}`}>
