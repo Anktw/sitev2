@@ -5,6 +5,9 @@ import { fetchWithAuth } from "../../utils/fetchWithAuth";
 import { useEffect, useState } from "react";
 import LogInBtn from "./ui/buttons/loginbtn"
 import SignUpBtn from "./ui/buttons/signupbtn"
+import AccountBtn from "./ui/buttons/accountbtn"
+
+
 type User = {
   email: string
   username: string
@@ -35,7 +38,7 @@ export default function TopBtnsHome() {
     <div>{loading ? (
       <span>Checking...</span>
     ) : user ? (
-      <span>Welcome Back</span>
+      <span>Hello {user.username}</span>
     ) : (
       <>
         Please create account to access all projects with full flow,
@@ -49,7 +52,7 @@ export default function TopBtnsHome() {
             {loading ? (
               <span>Loading...</span>
             ) : user ? (
-              <span>Hello, {user.username}</span>
+              <span><AccountBtn/></span>
             ) : (
               <>
                 <LogInBtn />
