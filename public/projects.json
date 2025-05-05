@@ -120,7 +120,6 @@
       "Python"
     ]
   },
-  
   {
     "id": 23,
     "title": "CampusConnect",
@@ -156,7 +155,6 @@
       "Javascript"
     ]
   },
-  
   {
     "id": 24,
     "title": "CertificateGenerator",
@@ -291,7 +289,7 @@
     "title": "Backend",
     "marketingline": "Backend API for User Management and Authentication using FastAPI, JWT, and OAuth",
     "description": "A secure and scalable backend built with FastAPI, utilizing JWT, OAuth 2.0, and Argon2 for modern authentication workflows. Includes Redis-based OTP handling, PostgreSQL with SQLAlchemy ORM, and email services via SMTP.",
-    "largedescription": "This project is a comprehensive user authentication and management system built with FastAPI. It features JWT-based authentication, secure password hashing with Argon2, OTP verification using Redis, and social login integration using OAuth 2.0 (Google and GitHub). The system leverages SQLAlchemy for structured database operations with PostgreSQL, Pydantic for validation, and includes a modular structure for maintainability. Email-based flows like registration confirmation and password reset are powered by SMTP and HTML templates. Asynchronous operations, robust error handling, and a clean architecture with dependency injection ensure high performance and reliability.",
+    "largedescription": "This backend project delivers secure user authentication and management using FastAPI. It supports JWT-based login, Argon2 password hashing, OTP verification with Redis, and social login via OAuth 2.0 for Google and GitHub. SQLAlchemy and PostgreSQL provide robust data storage, while Pydantic ensures data validation. The modular codebase includes async operations, email notifications for registration and password resets, and a clean architecture for maintainability and performance.",
     "image": "/images/29.png",
     "heading2": "Robust and Secure User Authentication API",
     "description2": "A FastAPI-based backend system supporting secure login, registration, social auth, OTP verification, and admin control with modern best practices.",
