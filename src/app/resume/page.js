@@ -1,5 +1,8 @@
 import HeadingBiggest from "../components/ui/headings/headingbiggest";
 import ResumeComp from "../components/resume"
+import Button1 from "../components/ui/buttons/button1";
+
+
 export const metadata = {
   title: "Resume of Ankit Tiwari",
   description: "Resume of Ankit Tiwari.",
@@ -10,13 +13,12 @@ export default function Resume() {
     <main className="container mx-auto px-4 py-12 md:px-6">
       <div className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <HeadingBiggest text="Resume"/>
-        <a
-          href="/Ankit_Tiwari_Resume.pdf"
+        <Button1
+          href="resume.pdf"
           download
-          className="inline-flex items-center gap-2 rounded-md bg-slate-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-slate-700 dark:bg-slate-100 dark:text-slate-900 dark:hover:bg-slate-200"
+          text={"Download PDF"}
         >
-          Download PDF
-        </a>
+        </Button1>
       </div>
 
       <div className="rounded-lg border bg-background shadow-sm">
