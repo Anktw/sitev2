@@ -4,6 +4,7 @@ import GoToBtnHome from "./components/gotobtnshome";
 import BlogsMain from "./components/blogmain";
 import TopBtnsHome from "./components/hometopbtn";
 import AboutMain from "./components/aboutmain";
+import CertificatePage from "./components/certificates"
 export default function Home() {
   return (
     <div>
@@ -15,7 +16,9 @@ export default function Home() {
         <HeadingHome text="Recent Blogs" />
         <BlogsMain />
         <HeadingHome text="About me"/>
-        <AboutMain/>
+        <AboutMain/><div className="my-8 md:my-10"></div>
+        <HeadingHome text="Recent Certificates"/>
+        <CertificatePage/>
       </main>
       <footer></footer>
     </div>
