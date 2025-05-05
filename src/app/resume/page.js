@@ -1,5 +1,4 @@
 import HeadingBiggest from "../components/ui/headings/headingbiggest";
-import ResumeComp from "../components/resume"
 import Button1 from "../components/ui/buttons/button1";
 
 
@@ -14,15 +13,14 @@ export default function Resume() {
       <div className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         <HeadingBiggest text="Resume"/>
         <Button1
-          href="resume.pdf"
+          href="/resume.pdf"
           download
           text={"Download PDF"}
         >
         </Button1>
       </div>
-
       <div className="rounded-lg border bg-background shadow-sm">
-        <ResumeComp/>
+        Will add feature to view resume pdf in browser
       </div>
     </main>
   );
