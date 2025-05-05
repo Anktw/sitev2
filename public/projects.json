@@ -283,37 +283,5 @@
       "Tailwind",
       "Typescript"
     ]
-  },
-  {
-    "id": 29,
-    "title": "Backend",
-    "marketingline": "Backend API for User Management and Authentication using FastAPI, JWT, and OAuth",
-    "description": "A secure and scalable backend built with FastAPI, utilizing JWT, OAuth 2.0, and Argon2 for modern authentication workflows. Includes Redis-based OTP handling, PostgreSQL with SQLAlchemy ORM, and email services via SMTP.",
-    "largedescription": "This backend project delivers secure user authentication and management using FastAPI. It supports JWT-based login, Argon2 password hashing, OTP verification with Redis, and social login via OAuth 2.0 for Google and GitHub. SQLAlchemy and PostgreSQL provide robust data storage, while Pydantic ensures data validation. The modular codebase includes async operations, email notifications for registration and password resets, and a clean architecture for maintainability and performance.",
-    "image": "/images/29.png",
-    "heading2": "Robust and Secure User Authentication API",
-    "description2": "A FastAPI-based backend system supporting secure login, registration, social auth, OTP verification, and admin control with modern best practices.",
-    "github": "https://github.com/anktw/backend",
-    "livelink": "https://accounts.unkit.site",
-    "whyuse1": "Secure Password Hashing with Argon2",
-    "whyuse2": "JWT-based Stateless Authentication with Refresh Tokens",
-    "whyuse3": "OAuth 2.0 Integration for Google and GitHub Logins",
-    "whyuse4": "OTP Verification System with Redis",
-    "whyuse5": "Clean Codebase with Async, DI, and Pydantic Settings",
-    "whyuse6": "Comprehensive Email Workflows via SMTP & Templates",
-    "desc1": "Implements user registration with OTP email verification and Argon2-hashed passwords.",
-    "desc2": "Supports secure login with JWT tokens and refresh tokens for session persistence.",
-    "desc3": "Integrates Google and GitHub social login using OAuth 2.0 standards.",
-    "desc4": "Uses Redis to store OTPs and temporary registration data securely and efficiently.",
-    "desc5": "Includes role-based access control with dedicated routes for admin users.",
-    "desc6": "Handles password resets and user notifications using SMTP and styled HTML email templates.",
-    "working": "The backend handles user operations via REST APIs built with FastAPI. It uses Redis for temporary data like OTPs, SQLAlchemy with PostgreSQL for persistent storage, and JWT/OAuth for authentication. Emails are sent for verification, password reset, and account events. The system is structured with async services, DI, and Pydantic validation to ensure maintainability and performance.",
-    "techStack": [
-      "FastAPI",
-      "PostgreSQL",
-      "Redis",
-      "Python",
-      "Docker"
-    ]
   }
 ]
