@@ -11,16 +11,16 @@ export default function Resume() {
   return (
     <main className="container mx-auto px-4 py-12 md:px-6">
       <div className="mb-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <HeadingBiggest text="Resume"/>
+        <HeadingBiggest text="Resume" />
+
+      </div>
+      <div className="rounded-lg p-10 flex items-center justify-center bg-background shadow-sm">
         <Button1
           href="/resume.pdf"
           download
           text={"Download PDF"}
         >
         </Button1>
-      </div>
-      <div className="rounded-lg border bg-background shadow-sm">
-        Will add feature to view resume pdf in browser
       </div>
     </main>
   );
