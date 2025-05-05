@@ -16,9 +16,9 @@ export default function Home() {
         <HeadingHome text="Recent Blogs" />
         <BlogsMain />
         <HeadingHome text="About me"/>
-        <AboutMain/><div className="my-8 md:my-10"></div>
-        <HeadingHome text="Recent Certificates"/>
-        <CertificatePage/>
+        <AboutMain/>{/*<div className="my-8 md:my-10"></div>
+        //<HeadingHome text="Recent Certificates"/>
+        //<CertificatePage/>*/}
       </main>
       <footer></footer>
     </div>
