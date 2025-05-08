@@ -86,10 +86,10 @@ export default function TopBtnsHome() {
       {loading ? (
         cachedUsername ? (
           <span className="font-semibold">Hello {cachedUsername}</span>
-        ) : null
+        ) : <div>loading...</div>
       ) : user ? (
         <span className="font-semibold">Hello {user.username}</span>
-      ) : null}
+      ) : <div>loading...</div>}
 
       <HorizontalScroll>
         <div className="flex gap-5 mx-4 md:mx-3 animate-fadeInLeft ">
