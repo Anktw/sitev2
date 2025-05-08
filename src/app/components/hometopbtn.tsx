@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import LogInBtn from "./ui/buttons/loginbtn"
 import SignUpBtn from "./ui/buttons/signupbtn"
 import AccountBtn from "./ui/buttons/accountbtn"
+import LoadingBar from "./loader";
 
 
 type User = {
@@ -18,15 +19,24 @@ type User = {
 export default function TopBtnsHome() {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
+  const [cachedUsername, setCachedUsername] = useState<string | null>(null)
 
   useEffect(() => {
+    const cached = localStorage.getItem("cachedUsername")
+    if (cached) {
+      setCachedUsername(cached)
+    }
+
     async function load() {
       try {
         const res = await fetchWithAuth("/api/user/me")
-        if (!res.ok) throw new Error("Not authorized")
+        if (!res.ok) {
+          setCachedUsername(null)
+          setUser(null)
+          return
+        }
         const data = await res.json()
         setUser(data)
-      } catch {
       } finally {
         setLoading(false)
       }
@@ -37,13 +47,13 @@ export default function TopBtnsHome() {
   return (
     <div>{loading ? (
       <span>Checking...</span>
-    ) : user ? (
+    ) : cachedUsername ?(
       <span>Hello {user.username}</span>
-    ) : (
+    )  : (
       <>
-        Please create account to access all projects with full flow,
+        -{'>'}Please create account to access all projects with full flow,
         It will be fun...
-        You will be logged in all projects
+        -{'>'}You will be logged in all projects
       </>
     )}
       <HorizontalScroll>
