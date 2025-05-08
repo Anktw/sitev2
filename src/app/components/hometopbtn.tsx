@@ -96,12 +96,12 @@ export default function TopBtnsHome() {
           <PortBtn />
           {loading ? (
             cachedUsername ? (
-              <AccountBtn label="Manage my account" />
+              <AccountBtn />
             ) : (
               <span>Loading...</span>
             )
           ) : user ? (
-            <AccountBtn label="Manage my account" />
+            <AccountBtn/>
           ) : (
             <>
               <LogInBtn />
