@@ -15,8 +15,19 @@ type User = {
 }
 
 export default function TopBtnsHome() {
-  const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [user, setUser] = useState<User | null>(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("user");
+      return stored ? JSON.parse(stored) : null;
+    }
+    return null;
+  });
+  const [loading, setLoading] = useState(() => {
+    if (typeof window !== "undefined") {
+      return !localStorage.getItem("user");
+    }
+    return true;
+  });
   const [cachedUsername, setCachedUsername] = useState<string | null>(null)
   const maxRetries = 3;
   const retryDelay = 2000; // 2 seconds
