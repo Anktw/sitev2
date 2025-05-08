@@ -29,10 +29,13 @@ export default function TopBtnsHome() {
     return true;
   });
   const [cachedUsername, setCachedUsername] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false);
   const maxRetries = 3;
   const retryDelay = 2000; // 2 seconds
 
   useEffect(() => {
+    setMounted(true);
+
     const cached = localStorage.getItem("cachedUsername")
     if (cached) {
       setCachedUsername(cached)
@@ -66,37 +69,43 @@ export default function TopBtnsHome() {
     }
     load()
     return () => { cancelled = true }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  if (!mounted) {
+    return (
+      <div style={{ minHeight: 60 }}>
+        {/* Skeleton or placeholder */}
+        <span>Loading...</span>
+      </div>
+    );
+  }
 
   return (
     <div>
+      {/* Greeting above the buttons */}
       {loading ? (
         cachedUsername ? (
-          <span>Hello {cachedUsername}</span>
-        ) : (
-          <span>Checking...</span>
-        )
+          <span className="font-semibold">Hello {cachedUsername}</span>
+        ) : null
       ) : user ? (
-        <span>Hello {user.username}</span>
-      ) : (
-        <>
-          Please log in to access all projects with full flow,
-          It will be fun...
-          You will be logged in all projects
-        </>
-      )}
+        <span className="font-semibold">Hello {user.username}</span>
+      ) : null}
+
       <HorizontalScroll>
         <div className="flex gap-5 mx-4 md:mx-3 animate-fadeInLeft ">
           <PortBtn />
           {loading ? (
-            <span>Loading...</span>
+            cachedUsername ? (
+              <AccountBtn label="Manage my account" />
+            ) : (
+              <span>Loading...</span>
+            )
           ) : user ? (
-            <span><AccountBtn/></span>
+            <AccountBtn label="Manage my account" />
           ) : (
             <>
               <LogInBtn />
-              <SignUpBtn/>
+              <SignUpBtn />
             </>
           )}
         </div>
