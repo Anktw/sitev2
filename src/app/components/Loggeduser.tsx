@@ -1,6 +1,11 @@
 import { useState, useEffect } from "react";
 import { fetchWithAuth } from "../../utils/fetchWithAuth";
 import AccountBtn from "./ui/buttons/accountbtn";
+import LogInBtn from "./ui/buttons/loginbtn";
+import SignUpBtn from "./ui/buttons/signupbtn"
+
+
+
 type User = {
   email: string
   username: string
@@ -79,7 +84,7 @@ export default function LoggedUser(){
         ) : <div>loading...</div>
       ) : user ? (
         <span className="font-semibold"><AccountBtn/></span>
-      ) : <div>loading...</div>}
+      ) : <div><LogInBtn/><SignUpBtn/></div>}
     </div>
   )
 }
