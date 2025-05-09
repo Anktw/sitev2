@@ -80,11 +80,11 @@ export default function LoggedUser(){
     <div>
         {loading ? (
         cachedUsername ? (
-          <span className="font-semibold">hello {user.username}</span>
+          <span className="font-semibold"><AccountBtn/></span>
         ) : <div>loading...</div>
       ) : user ? (
         <span className="font-semibold"><AccountBtn/></span>
-      ) : <div><LogInBtn/><SignUpBtn/></div>}
+      ) : <div className="flex flex-row gap-4"><LogInBtn/><SignUpBtn/></div>}
     </div>
   )
 }
