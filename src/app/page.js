@@ -4,26 +4,41 @@ import GoToBtnHome from "./components/gotobtnshome";
 import BlogsMain from "./components/blogmain";
 import TopBtnsHome from "./components/hometopbtn";
 import AboutMain from "./components/aboutmain";
-import CertificatePage from "./components/certificates"
-export default function Home() {
+import CertificatesComp from "./components/certificates";
+import CertificatesBtn from "./components/ui/buttons/Certificatebtn";
+import fs from "fs";
+import path from "path";
+
+async function getRecentCertificates() {
+  const filePath = path.join(process.cwd(), "public", "certificates.json");
+  const data = fs.readFileSync(filePath, "utf-8");
+  const certs = JSON.parse(data);
+  return certs.sort((a, b) => b.id - a.id).slice(0, 3);
+}
+
+export default async function Home() {
+  const recentCertificates = await getRecentCertificates();
   return (
     <div>
       <main className="px-2 md:px-3 lg:px-5 m-1 md:m-4 ">
-        <TopBtnsHome/>
-        <HeadingHome text="Recent Projects"/>
+        <TopBtnsHome />
+        <HeadingHome text="Recent Projects" />
         <ProjectsMain />
         <GoToBtnHome />
         <HeadingHome text="Recent Blogs" />
         <BlogsMain />
-        <HeadingHome text="About me"/>
-        <AboutMain/>{/*<div className="my-8 md:my-10"></div>
-        //<HeadingHome text="Recent Certificates"/>
-        //<CertificatePage/>*/}
+        <HeadingHome text="About me" />
+        <AboutMain />
+        <HeadingHome text="Recent Certificates" />
+        <CertificatesComp certificates={recentCertificates} />
+        <div className="flex justify-center m-4">
+          <CertificatesBtn />
+        </div>
       </main>
-      <footer></footer>
     </div>
   );
 }
+
 export const metadata = {
   title: "Homepage | Ankit Tiwari",
   description: "Homepage of Ankit Tiwari.",
