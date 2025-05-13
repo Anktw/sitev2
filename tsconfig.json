@@ -20,14 +20,19 @@
       {
         "name": "next"
       }
-    ]
+    ],
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/lib/crypto.js", "src/app/components/hometopbtn.js", "src/app/resume/page.js", "src/app/components/resume.js"  ],
+    "**/*.tsx",
+    "src/lib/crypto.js",
+    "src/app/components/hometopbtn.js",
+    "src/app/resume/page.js",
+    "src/app/components/resume.js"
+  ],
   "exclude": [
     "node_modules"
   ]

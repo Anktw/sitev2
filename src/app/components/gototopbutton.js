@@ -35,7 +35,7 @@ const GoToTopButton = () => {
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 20 20"
           fill="currentColor"
-          class="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 -rotate-45 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
+          className="inline-block h-4 w-4 shrink-0 transition-transform group-hover:-translate-y-1 -rotate-45 group-focus-visible:-translate-y-1 group-focus-visible:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px"
           aria-hidden="true"
         >
           <path

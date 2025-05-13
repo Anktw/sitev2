@@ -88,13 +88,13 @@ export default function Contact() {
                   r="44.899"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#fd5" />
-                  <stop offset=".328" stop-color="#ff543f" />
-                  <stop offset=".348" stop-color="#fc5245" />
-                  <stop offset=".504" stop-color="#e64771" />
-                  <stop offset=".643" stop-color="#d53e91" />
-                  <stop offset=".761" stop-color="#cc39a4" />
-                  <stop offset=".841" stop-color="#c837ab" />
+                  <stop offset="0" stopColor="#fd5" />
+                  <stop offset=".328" stopColor="#ff543f" />
+                  <stop offset=".348" stopColor="#fc5245" />
+                  <stop offset=".504" stopColor="#e64771" />
+                  <stop offset=".643" stopColor="#d53e91" />
+                  <stop offset=".761" stopColor="#cc39a4" />
+                  <stop offset=".841" stopColor="#c837ab" />
                 </radialGradient>
                 <path
                   fill="url(#yOrnnhliCrdS2gy~4tD8ma)"
@@ -108,8 +108,8 @@ export default function Contact() {
                   gradientTransform="matrix(1 0 0 .6663 0 1.849)"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#4168c9" />
-                  <stop offset=".999" stop-color="#4168c9" stop-opacity="0" />
+                  <stop offset="0" stopColor="#4168c9" />
+                  <stop offset=".999" stopColor="#4168c9" stopOpacity="0" />
                 </radialGradient>
                 <path
                   fill="url(#yOrnnhliCrdS2gy~4tD8mb)"
@@ -216,8 +216,8 @@ export default function Contact() {
                   y2="38.142"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop offset="0" stop-color="#33bef0" />
-                  <stop offset="1" stop-color="#0a85d9" />
+                  <stop offset="0" stopColor="#33bef0" />
+                  <stop offset="1" stopColor="#0a85d9" />
                 </linearGradient>
                 <path
                   fill="url(#BiF7D16UlC0RZ_VqXJHnXa)"
