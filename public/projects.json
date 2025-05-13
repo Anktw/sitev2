@@ -258,7 +258,7 @@
     "marketingline": "Full-Stack User Authentication System using Next.js and FastAPI",
     "description": "A complete user authentication system with a modern Next.js frontend and a secure FastAPI backend. Includes JWT, OAuth 2.0, Redis for OTPs, and full email verification flows.",
     "largedescription": "This project showcases a robust full-stack authentication solution. The frontend, built using Next.js, leverages SSR and SSG for performance and SEO, and implements secure authentication flows using cookies and API routes. The backend, developed with FastAPI, handles user management, JWT-based authentication, and social login via OAuth 2.0. Redis is used for managing OTP-based email verification. SQLAlchemy handles interactions with a PostgreSQL database. Email workflows use styled HTML templates sent via SMTP. The system also supports automatic token refresh, password resets, and session management, ensuring a seamless user experience.",
-    "image": "/images/28.png",
+    "image": "/images/28 copy.png",
     "heading2": "Modern Full-Stack Authentication with Next.js and FastAPI",
     "description2": "A production-ready full-stack user auth solution with social logins, OTP verification, and secure session management.",
     "github": "https://github.com/anktw/accounts",
