@@ -4,11 +4,11 @@ import { NextResponse } from 'next/server';
 import redis from '../../../utils/redis';
 
 const CACHE_KEY = 'projects:data';
-const CACHE_TTL = 60 * 60; // 1 hour in seconds
+const CACHE_TTL = 60 * 60; //1 hour
 
 export async function GET() {
   try {
-    // Try Redis cache first
+    //Reading from Redis first
     let jsonData = await redis.get(CACHE_KEY);
     if (jsonData) {
       return NextResponse.json(JSON.parse(jsonData));
@@ -21,7 +21,6 @@ export async function GET() {
 
     // Cache in Redis
     await redis.set(CACHE_KEY, jsonData, 'EX', CACHE_TTL);
-
     return NextResponse.json(data);
   } catch (error) {
     console.error('Error in API route:', error);
