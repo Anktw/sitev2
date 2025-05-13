@@ -53,7 +53,7 @@ export default function BlogPage({ params }) {
               <div className="flex m-auto justify-center">
                 <Button1
                   text="Something wrong? Go to Blog page"
-                  href="/blog"
+                  href="/blogs"
                   icon={
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
