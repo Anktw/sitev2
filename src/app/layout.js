@@ -22,6 +22,7 @@ const protestGuerrilla = localFont({
 
 export const metadata = {
   title: "Ankit Tiwari",
+  description: "A Layout page for Ankit Tiwari's portfolio",
 };
 
 export default function RootLayout({ children }) {
