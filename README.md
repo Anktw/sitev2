@@ -8,6 +8,7 @@ My Personal Portfolio Website built with Next.js
 - 🎨 Build using two color variables black(#000000) and white(#ffffff)(You can change it in the tailwind config)
 - 🔍 SEO optimized
 - 📝 Blog section
+![image](https://github.com/user-attachments/assets/124e5d95-a967-411d-81a3-5e92bb37c9ca)
 
 ## 🛠️ Tech Stack
 
