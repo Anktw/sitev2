@@ -1,13 +1,22 @@
-import Projects from "../components/projects/projects";
+import { getProjects } from "@/lib/projects"
+import ProjectsUnified from "@/components/ProjectsUnified"
+import LoadingBar from "@/components/loader"
+
 export const metadata = {
-  title: "Projects By Ankit Tiwari",
+  title: "Projects | Ankit Tiwari",
   description: "Projects of Ankit Tiwari.",
 }
 
-export default function ProjectPage() {
+export default async function ProjectPage() {
+  const projects = await getProjects("All")
+  
+  if (!projects || projects.length === 0) {
+    return <LoadingBar />
+  }
+
   return (
     <main className="px-0 md:px-5 lg:px-8">
-      <Projects />
+      <ProjectsUnified projects={projects} showFilter={true} showRecent={false} />
     </main>
-  );
+  )
 }

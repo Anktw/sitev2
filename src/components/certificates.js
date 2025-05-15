@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import CertificatesBtn from "./ui/buttons/Certificatebtn";
+import Image from "next/image"
+import Link from "next/link"
+
 export default function CertificatesComp({ certificates = [] }) {
   if (!certificates.length) {
     return (
       <div className="text-lg">No certificates found.</div>
-    );
+    )
   }
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 my-6 md:my-8 lg:my-10 animate-fadeInUp p-2 md:px-5 lg:px-8">
@@ -25,5 +25,5 @@ export default function CertificatesComp({ certificates = [] }) {
           </div>
         ))}
     </div>
-  );
+  )
 }

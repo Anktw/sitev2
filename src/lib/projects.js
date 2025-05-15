@@ -1,6 +1,5 @@
 export async function getProjects(tech = "Recent") {
     try {
-      // Using the environment variable
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`,
         {

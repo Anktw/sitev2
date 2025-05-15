@@ -1,8 +1,8 @@
-"use client";
-import { useTheme } from "../context/Themescontext";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+"use client"
+import { useTheme } from "../app/context/Themescontext"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 const webpages = [
   "Projects",
   "Portfolio",
@@ -18,30 +18,30 @@ const webpages = [
 
 const HeaderComp = () => {
   const pathname = usePathname();
-  const [isOpen, setIsOpen] = useState(false);
-  const { isThemeOn, toggleTheme } = useTheme();
-  const [prevScrollPos, setPrevScrollPos] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [isOpen, setIsOpen] = useState(false)
+  const { isThemeOn, toggleTheme } = useTheme()
+  const [prevScrollPos, setPrevScrollPos] = useState(0)
+  const [visible, setVisible] = useState(true)
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
-    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
-    setPrevScrollPos(currentScrollPos);
+    setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
+    setPrevScrollPos(currentScrollPos)
   };
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScrollPos]);
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [prevScrollPos])
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   const closeMenuOnScroll = () => {
     if (window.innerWidth < 768 && isOpen) {
-      setIsOpen(false);
+      setIsOpen(false)
     }
-  };
+  }
 
   const closeMenuOnResize = () => {
     if (window.innerWidth >= 768 && isOpen) {
@@ -258,6 +258,6 @@ const HeaderComp = () => {
         </nav>
       </div>
     </header>
-  );
-};
-export default HeaderComp;
+  )
+}
+export default HeaderComp

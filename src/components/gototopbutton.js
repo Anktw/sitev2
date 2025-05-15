@@ -1,31 +1,31 @@
-"use client";
-import { useEffect, useState } from "react";
+"use client"
+import { useEffect, useState } from "react"
 
 const GoToTopButton = () => {
-  const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 300) {
-        setShowButton(true);
+        setShowButton(true)
       } else {
-        setShowButton(false);
+        setShowButton(false)
       }
-    };
+    }
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll)
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
-    });
-  };
+      behavior: "smooth"
+    })
+  }
 
   return (
     showButton && (
@@ -44,7 +44,7 @@ const GoToTopButton = () => {
         </svg>
       </button>
     )
-  );
-};
+  )
+}
 
-export default GoToTopButton;
+export default GoToTopButton

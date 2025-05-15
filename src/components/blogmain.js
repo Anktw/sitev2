@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
-import Button1 from "./ui/buttons/button1";
-import { useTheme } from "../context/Themescontext";
-import BlogBtn from "./ui/buttons/blogbtn";
+import { useState, useEffect } from "react"
+import Button1 from "./ui/buttons/button1"
+import { useTheme } from "../app/context/Themescontext"
+import BlogBtn from "./ui/buttons/blogbtn"
 
 export default function BlogsMain() {
   const { isThemeOn } = useTheme();
@@ -13,22 +13,22 @@ export default function BlogsMain() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await fetch("/blogs.json");
+        const response = await fetch("/blogs.json")
         if (response.ok) {
-          const data = await response.json();
-          const recentBlogs = data.sort((a, b) => b.id - a.id).slice(0, 3);
-          setBlogs(recentBlogs);
+          const data = await response.json()
+          const recentBlogs = data.sort((a, b) => b.id - a.id).slice(0, 3)
+          setBlogs(recentBlogs)
 
-          const categories = new Set();
+          const categories = new Set()
           data.forEach((blog) => {
-            blog.categoryStack.forEach((category) => categories.add(category));
-          });
-          setCategoryList(["All", ...Array.from(categories)]);
+            blog.categoryStack.forEach((category) => categories.add(category))
+          })
+          setCategoryList(["All", ...Array.from(categories)])
         } else {
-          console.error("Failed to load Blogs.");
+          console.error("Failed to load Blogs.")
         }
       } catch (error) {
-        console.error("Error fetching Blogs:", error);
+        console.error("Error fetching Blogs:", error)
       }
     };
     fetchBlogs();
@@ -40,9 +40,9 @@ export default function BlogsMain() {
       fetch("/blogs.json")
         .then((response) => response.json())
         .then((data) => {
-          const sortedBlogs = data.sort((a, b) => b.id - a.id).slice(0, 3);
-          setBlogs(sortedBlogs);
-        });
+          const sortedBlogs = data.sort((a, b) => b.id - a.id).slice(0, 3)
+          setBlogs(sortedBlogs)
+        })
     } else {
       fetch("/blogs.json")
         .then((response) => response.json())
@@ -50,9 +50,9 @@ export default function BlogsMain() {
           const filtered = data
             .filter((blog) => blog.categoryStack.includes(category))
             .sort((a, b) => b.id - a.id)
-            .slice(0, 3);
-          setBlogs(filtered);
-        });
+            .slice(0, 3)
+          setBlogs(filtered)
+        })
     }
   };
   return (

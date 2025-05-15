@@ -1,7 +1,7 @@
 import { cookies } from "next/headers"
 import { decrypt } from "../../../../lib/crypto"
 import { NextResponse } from "next/server"
-import redis from '../../../../utils/redis'
+import redis from "../../../../utils/redis" // typescript files are not supporting default exports idk why
 
 const FAST_URL = process.env.FAST_URL!
 const USER_CACHE_TTL = 60 * 5 // 5 minutes

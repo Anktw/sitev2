@@ -1,7 +1,7 @@
-"use client";
-import { useState } from "react";
-import { useTheme } from "../context/Themescontext";
-import LoadingBar from "./loader";
+"use client"
+import { useState } from "react"
+import { useTheme } from "../app/context/Themescontext"
+import LoadingBar from "./loader"
 
 export default function ContactForm() {
   const { isThemeOn } = useTheme();
@@ -9,14 +9,14 @@ export default function ContactForm() {
     name: "",
     email: "",
     message: "",
-  });
+  })
 
-  const [status, setStatus] = useState("");
+  const [status, setStatus] = useState("")
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+    e.preventDefault()
 
-    setStatus("Sending...");
+    setStatus("Sending...")
 
     try {
       const response = await fetch("/api/send-email", {
@@ -25,22 +25,20 @@ export default function ContactForm() {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
+      })
+      const result = await response.json()
 
       if (result.success) {
-        setStatus("Message sent!");
-        setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setStatus(""), 5000);
+        setStatus("Message sent!")
+        setFormData({ name: "", email: "", message: "" })
+        setTimeout(() => setStatus(""), 5000)
       } else {
-        setStatus("Failed to send. Please try again.");
+        setStatus("Failed to send. Please try again.")
       }
     } catch (error) {
-      setStatus("Failed to send. Please check your connection.");
+      setStatus("Failed to send. Please check your connection.")
     }
-  };
-
+  }
   return (
     <div className="max-w-md mx-auto p-8 ">
       <form onSubmit={handleSubmit}>

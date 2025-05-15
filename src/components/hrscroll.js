@@ -1,41 +1,41 @@
-"use client";
-import React, { useRef, useState, useEffect } from "react";
-import { useTheme } from "../context/Themescontext";
+"use client"
+import React, { useRef, useState, useEffect } from "react"
+import { useTheme } from "../app/context/Themescontext"
 
 const HorizontalScroll = ({ children }) => {
-  const { isThemeOn } = useTheme();
-  const scrollRef = useRef(null);
-  const [showLeftArrow, setShowLeftArrow] = useState(false);
-  const [showRightArrow, setShowRightArrow] = useState(false);
+  const { isThemeOn } = useTheme()
+  const scrollRef = useRef(null)
+  const [showLeftArrow, setShowLeftArrow] = useState(false)
+  const [showRightArrow, setShowRightArrow] = useState(false)
 
   const checkScroll = () => {
-    if (!scrollRef.current) return;
-    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
-    setShowLeftArrow(scrollLeft > 0);
-    setShowRightArrow(scrollLeft < scrollWidth - clientWidth);
+    if (!scrollRef.current) return
+    const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current
+    setShowLeftArrow(scrollLeft > 0)
+    setShowRightArrow(scrollLeft < scrollWidth - clientWidth)
   };
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({ left: -200, behavior: "smooth" });
-  };
+    scrollRef.current.scrollBy({ left: -200, behavior: "smooth" })
+  }
 
   const scrollRight = () => {
-    scrollRef.current.scrollBy({ left: 200, behavior: "smooth" });
-  };
+    scrollRef.current.scrollBy({ left: 200, behavior: "smooth" })
+  }
 
   useEffect(() => {
-    const currentScroll = scrollRef.current;
-    checkScroll();
+    const currentScroll = scrollRef.current
+    checkScroll()
 
-    currentScroll.addEventListener("scroll", checkScroll);
+    currentScroll.addEventListener("scroll", checkScroll)
 
-    window.addEventListener("resize", checkScroll);
+    window.addEventListener("resize", checkScroll)
 
     return () => {
-      currentScroll.removeEventListener("scroll", checkScroll);
-      window.removeEventListener("resize", checkScroll);
-    };
-  }, []);
+      currentScroll.removeEventListener("scroll", checkScroll)
+      window.removeEventListener("resize", checkScroll)
+    }
+  }, [])
 
   return (
     <div className="relative">
@@ -91,6 +91,6 @@ const HorizontalScroll = ({ children }) => {
         </button>
       )}
     </div>
-  );
-};
-export default HorizontalScroll;
+  )
+}
+export default HorizontalScroll

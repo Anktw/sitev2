@@ -1,9 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
-import HeadingBiggest from "../../components/ui/headings/headingbiggest";
+import HeadingBiggest from "../../../components/ui/headings/headingbiggest";
 import { useTheme } from "../../context/Themescontext";
-import LoadingBar from "../../components/loader";
-import Button1 from "../../components/ui/buttons/button1";
+import LoadingBar from "../../../components/loader";
+import Button1 from "../../../components/ui/buttons/button1";
 
 async function fetchBlogData(id) {
   const response = await fetch("/blogs.json");

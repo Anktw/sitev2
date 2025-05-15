@@ -1,6 +1,12 @@
-import HeadingMain from "../components/ui/headings/headingmain";
-import ContactForm from "../components/contactform";
-import Link from "next/link";
+import HeadingMain from "@/components/ui/headings/headingmain"
+import ContactForm from "@/components/contactform"
+import Link from "next/link"
+
+export const metadata = {
+  title: "Contact | Ankit Tiwari",
+  description: "Contact to Ankit Tiwari.",
+}
+
 export default function Contact() {
   return (
     <main className="px-0 md:px-5 lg:px-8">
@@ -240,11 +246,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-      <p className="text-xl"></p>
     </main>
-  );
+  )
 }
-export const metadata = {
-  title: "Contact to Ankit Tiwari",
-  description: "Contact to Ankit Tiwari.",
-};

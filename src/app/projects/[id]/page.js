@@ -1,29 +1,29 @@
-"use client";
-import { useState, useEffect } from "react";
-import Image from "next/image";
-import { useTheme } from "../../context/Themescontext";
-import LoadingBar from "../../components/loader";
-import Button1 from "../../components/ui/buttons/button1";
+"use client"
+import { useState, useEffect } from "react"
+import Image from "next/image"
+import { useTheme } from "@/context/Themescontext"
+import LoadingBar from "@/components/loader"
+import Button1 from "@/components/ui/buttons/button1"
 
 export default function ProjectsPage({ params }) {
-  const [project, setProject] = useState(null);
-  const { isThemeOn } = useTheme();
-  const [showSecondDiv, setShowSecondDiv] = useState(false);
+  const [project, setProject] = useState(null)
+  const { isThemeOn } = useTheme()
+  const [showSecondDiv, setShowSecondDiv] = useState(false)
   useEffect(() => {
     const fetchProject = async () => {
-      const response = await fetch("/projects.json");
-      const projects = await response.json();
+      const response = await fetch("/projects.json")
+      const projects = await response.json()
       const foundProject = projects.find(
         (b) => b.id === parseInt(params.id, 10)
-      );
-      setProject(foundProject);
+      )
+      setProject(foundProject)
       const timer = setTimeout(() => {
-        setShowSecondDiv(true);
-      }, 100);
-      return () => clearTimeout(timer);
-    };
-    fetchProject();
-  }, [params.id]);
+        setShowSecondDiv(true)
+      }, 100)
+      return () => clearTimeout(timer)
+    }
+    fetchProject()
+  }, [params.id])
   const content = project
     ? [
       { title: project.whyuse1, description: project.desc1 },
@@ -33,7 +33,7 @@ export default function ProjectsPage({ params }) {
       { title: project.whyuse5, description: project.desc5 },
       { title: project.whyuse6, description: project.desc6 },
     ]
-    : [];
+    : []
   if (!project) {
     return (
       <div className="flex items-center justify-center h-screen">
