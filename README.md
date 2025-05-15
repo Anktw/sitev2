@@ -84,10 +84,6 @@ My Personal Portfolio Website built with Next.js
 3. Add your environment variables in the Vercel dashboard
 4. Deploy! 🚀
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 🙏 Acknowledgments
 
 - [Next.js Documentation](https://nextjs.org/docs)
