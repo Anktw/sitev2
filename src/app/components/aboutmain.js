@@ -1,14 +1,13 @@
-"use client"
-import { useState, useEffect } from "react"
-import { useTheme } from "../app/context/Themescontext"
-import ContactForm from "./contactform"
-import Link from "next/link"
-import Image from "next/image"
-
-const AboutComp = () => {
-  const [techList, setTechList] = useState([])
-  const [activeTab, setActiveTab] = useState("Education")
-  const { isThemeOn } = useTheme()
+"use client";
+import { useState, useEffect } from "react";
+import { useTheme } from "../context/Themescontext";
+import ContactForm from "./contactform";
+import Link from "next/link";
+import Image from "next/image";
+const AboutMain = () => {
+  const [techList, setTechList] = useState([]);
+  const [activeTab, setActiveTab] = useState("Education");
+  const { isThemeOn } = useTheme();
   const svgMapping = {
     C: "/icons/c.png",
     Javascript: "/icons/icons8-javascript.svg",
@@ -301,26 +300,26 @@ const AboutComp = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/projects.json")
+        const response = await fetch("/projects.json");
         if (response.ok) {
-          const data = await response.json()
+          const data = await response.json();
 
-          const techs = new Set()
+          const techs = new Set();
           data.forEach((project) => {
-            project.techStack.forEach((tech) => techs.add(tech))
-          })
+            project.techStack.forEach((tech) => techs.add(tech));
+          });
 
-          setTechList(Array.from(techs))
+          setTechList(Array.from(techs));
         } else {
-          console.error("Failed to load projects.")
+          console.error("Failed to load projects.");
         }
       } catch (error) {
-        console.error("Error fetching projects:", error)
+        console.error("Error fetching projects:", error);
       }
     };
 
-    fetchProjects()
-  }, [])
+    fetchProjects();
+  }, []);
 
   return (
     <div className="w-full flex flex-col items-center">
@@ -698,5 +697,5 @@ const AboutComp = () => {
       </div>
     </div>
   );
-}
-export default AboutComp;
+};
+export default AboutMain;

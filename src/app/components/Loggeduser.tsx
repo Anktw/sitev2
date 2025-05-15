@@ -1,14 +1,16 @@
-"use client"
-import { useState, useEffect } from "react"
-import { fetchWithAuth } from "../utils/fetchWithAuth" //typescipt file
-import AccountBtn from "./ui/buttons/accountbtn"
-import LogInBtn from "./ui/buttons/loginbtn"
+import { useState, useEffect } from "react";
+import { fetchWithAuth } from "../../utils/fetchWithAuth";
+import AccountBtn from "./ui/buttons/accountbtn";
+import LogInBtn from "./ui/buttons/loginbtn";
 import SignUpBtn from "./ui/buttons/signupbtn"
 
 
 
 type User = {
+  email: string
   username: string
+  first_name?: string
+  last_name?: string
 }
 
 export default function LoggedUser(){
@@ -72,7 +74,7 @@ export default function LoggedUser(){
       <div style={{ minHeight: 60 }}>
         <span>Loading...</span>
       </div>
-    )
+    );
   }
   return(
     <div>

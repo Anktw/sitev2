@@ -29,9 +29,9 @@
     "**/*.ts",
     "**/*.tsx",
     "src/lib/crypto.js",
-    "src/components/hometopbtn.js",
+    "src/app/components/hometopbtn.js",
     "src/app/resume/page.js",
-    "src/components/resume.js"
+    "src/app/components/resume.js"
   ],
   "exclude": [
     "node_modules"

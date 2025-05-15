@@ -1,8 +1,8 @@
-import HeaderComp from "../components/header";
+import HeaderComp from "./components/header";
 import localFont from "next/font/local";
 import "./globals.css";
 import { ThemeProvider } from "./context/Themescontext";
-import { Footer } from "../components/footer";
+import { Footer } from "./components/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const geistSans = localFont({
@@ -14,16 +14,16 @@ const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
-})
+});
 const protestGuerrilla = localFont({
   src: "./fonts/ProtestGuerrilla.ttf",
   variable: "--font-protestGuerrilla",
-})
+});
 
 export const metadata = {
   title: "Ankit Tiwari",
   description: "A Layout page for Ankit Tiwari's portfolio",
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -39,5 +39,5 @@ export default function RootLayout({ children }) {
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }
