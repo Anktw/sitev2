@@ -1,7 +1,7 @@
 "use client"
 import { useState, useEffect } from "react"
 import Image from "next/image"
-import { useTheme } from "@/context/Themescontext"
+import { useTheme } from "../../context/Themescontext"
 import LoadingBar from "@/components/loader"
 import Button1 from "@/components/ui/buttons/button1"
 
