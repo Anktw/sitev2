@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { fetchWithAuth } from "../../utils/fetchWithAuth";
+import { fetchWithAuth } from "@/utils/fetchWithAuth";
 import AccountBtn from "./ui/buttons/accountbtn";
 import LogInBtn from "./ui/buttons/loginbtn";
 import SignUpBtn from "./ui/buttons/signupbtn"

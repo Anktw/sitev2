@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import Button1 from "./ui/buttons/button1";
-import { useTheme } from "../context/Themescontext";
+import { useTheme } from "./context/Themescontext";
 import HorizontalScroll from "./hrscroll";
 import HeadingMain from "./ui/headings/headingmain";
 

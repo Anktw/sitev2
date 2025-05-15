@@ -1,68 +1,68 @@
 "use client";
-import Image from "next/image";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import Button1 from "../ui/buttons/button1";
-import HorizontalScroll from "../hrscroll";
+import Image from "next/image"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Button1 from "../ui/buttons/button1"
+import HorizontalScroll from "../hrscroll"
 
 export default function ProjectsPort() {
-  const [projects, setProjects] = useState([]);
-  const [selectedTech, setSelectedTech] = useState("Recent", "All");
-  const [techList, setTechList] = useState([]);
+  const [projects, setProjects] = useState([])
+  const [selectedTech, setSelectedTech] = useState("Recent", "All")
+  const [techList, setTechList] = useState([])
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("/projects.json");
+        const response = await fetch("/projects.json")
         if (response.ok) {
-          const data = await response.json();
+          const data = await response.json()
 
-          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3);
-          setProjects(sortedProjects);
+          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3)
+          setProjects(sortedProjects)
 
           const techs = new Set();
           data.forEach((project) => {
             project.techStack.forEach((tech) => techs.add(tech));
           });
 
-          setTechList(["Recent", "All", ...Array.from(techs)]);
+          setTechList(["Recent", "All", ...Array.from(techs)])
         } else {
-          console.error("Failed to load projects.");
+          console.error("Failed to load projects.")
         }
       } catch (error) {
-        console.error("Error fetching projects:", error);
+        console.error("Error fetching projects:", error)
       }
-    };
+    }
 
-    fetchProjects();
-  }, []);
+    fetchProjects()
+  }, [])
 
   const filterProjects = (tech) => {
-    setSelectedTech(tech);
+    setSelectedTech(tech)
 
     if (tech === "Recent") {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
-          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3);
-          setProjects(sortedProjects);
-        });
+          const sortedProjects = data.sort((a, b) => b.id - a.id).slice(0, 3)
+          setProjects(sortedProjects)
+        })
     } else if (tech === "All") {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
-          const sortedProjects = data.sort((a, b) => b.id - a.id);
-          setProjects(data);
-        });
+          const sortedProjects = data.sort((a, b) => b.id - a.id)
+          setProjects(data)
+        })
     } else {
       fetch("/projects.json")
         .then((response) => response.json())
         .then((data) => {
           const filtered = data.filter((project) =>
             project.techStack.includes(tech)
-          );
-          setProjects(filtered);
-        });
+          )
+          setProjects(filtered)
+        })
     }
   };
 

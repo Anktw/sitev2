@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React from 'react'
 
 const LoadingBar = () => {
   return (
@@ -38,6 +38,6 @@ const LoadingBar = () => {
       `}</style>
     </div>
   );
-};
+}
 
 export default LoadingBar;

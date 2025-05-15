@@ -1,13 +1,13 @@
 "use client";
 import { useState, useEffect } from "react";
-import HeadingBiggest from "../../components/ui/headings/headingbiggest";
-import { useTheme } from "../../context/Themescontext";
-import LoadingBar from "../../components/loader";
-import Button1 from "../../components/ui/buttons/button1";
+import HeadingBiggest from "@/components/ui/headings/headingbiggest";
+import { useTheme } from "@/components/context/Themescontext";
+import LoadingBar from "@/components/loader";
+import Button1 from "@/components/ui/buttons/button1";
 
 async function fetchBlogData(id) {
-  const response = await fetch("/blogs.json");
-  const blogs = await response.json();
+  const response = await fetch("/blogs.json")
+  const blogs = await response.json()
   return blogs.find((b) => b.id === parseInt(id, 10)) || null;
 }
 
@@ -18,18 +18,18 @@ export default function BlogPage({ params }) {
 
   useEffect(() => {
     async function loadBlog() {
-      const blogData = await fetchBlogData(params.id);
-      setBlog(blogData);
+      const blogData = await fetchBlogData(params.id)
+      setBlog(blogData)
     }
-    loadBlog();
-  }, [params.id]);
+    loadBlog()
+  }, [params.id])
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setShowSecondDiv(true);
-    }, 5000);
+      setShowSecondDiv(true)
+    }, 5000)
 
-    return () => clearTimeout(timer);
+    return () => clearTimeout(timer)
   }, []);
 
   if (!blog) {

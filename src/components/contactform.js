@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useTheme } from "../context/Themescontext";
+import { useTheme } from "./context/Themescontext";
 import LoadingBar from "./loader";
 
 export default function ContactForm() {

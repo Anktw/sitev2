@@ -1,8 +1,8 @@
 "use client";
-import { useState, useEffect } from "react";
-import Button1 from "./ui/buttons/button1";
-import { useTheme } from "../context/Themescontext";
-import BlogBtn from "./ui/buttons/blogbtn";
+import { useState, useEffect } from "react"
+import Button1 from "./ui/buttons/button1"
+import { useTheme } from "./context/Themescontext"
+import BlogBtn from "./ui/buttons/blogbtn"
 
 export default function BlogsMain() {
   const { isThemeOn } = useTheme();

@@ -1,6 +1,6 @@
 "use client";
-import React, { useRef, useState, useEffect } from "react";
-import { useTheme } from "../context/Themescontext";
+import React, { useRef, useState, useEffect } from "react"
+import { useTheme } from "./context/Themescontext"
 
 const HorizontalScroll = ({ children }) => {
   const { isThemeOn } = useTheme();

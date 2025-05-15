@@ -1,9 +1,9 @@
-import HeadingBiggest from "../components/ui/headings/headingbiggest";
-import Button1 from "../components/ui/buttons/button1";
+import HeadingBiggest from "@/components/ui/headings/headingbiggest"
+import Button1 from "@/components/ui/buttons/button1"
 
 
 export const metadata = {
-  title: "Resume of Ankit Tiwari",
+  title: "Resume | Ankit Tiwari",
   description: "Resume of Ankit Tiwari.",
 };
 

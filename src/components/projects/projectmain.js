@@ -1,12 +1,10 @@
-import Image from "next/image";
-import { getProjects } from "../../../lib/projects";
-import LoadingBar from "../loader";
-import Link from "next/link";
+import Image from "next/image"
+import { getProjects } from "@/lib/projects"
+import LoadingBar from "../loader"
+import Link from "next/link"
 
 export default async function ProjectsMain() {
   const projects = await getProjects();
-
-  console.log("Projects data:", projects);
 
   if (!projects || projects.length === 0) {
     return <LoadingBar />;

@@ -1,4 +1,5 @@
-import Projects from "../components/projects/projects";
+import Projects from "@/components/projects/projects"
+
 export const metadata = {
   title: "Projects By Ankit Tiwari",
   description: "Projects of Ankit Tiwari.",

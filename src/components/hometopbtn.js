@@ -1,7 +1,7 @@
 "use client"
-import PortBtn from "./ui/buttons/portbtn";
-import HorizontalScroll from "./hrscroll";
-import LoggedUser from "./Loggeduser";
+import PortBtn from "./ui/buttons/portbtn"
+import HorizontalScroll from "./hrscroll"
+import LoggedUser from "./Loggeduser"
 
 export default function TopBtnsHome() {
 

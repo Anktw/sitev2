@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 const ProjectLoader = () => {
   return (
     <div className="px-0 md:px-5 lg:px-8">

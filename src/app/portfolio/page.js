@@ -1,6 +1,7 @@
-import AboutMain from "../components/aboutmain";
-import HeadingHome from "../components/ui/headings/headinghome";
-import ProjectsPort from "../components/projects/projectsport";
+import AboutMain from "@/components/about";
+import HeadingHome from "@/components/ui/headings/headinghome";
+import ProjectsPort from "@/components/projects/projectsport";
+
 export const metadata = {
   title: "Portfolio | Ankit Tiwari",
   description: "Portfolio of Ankit Tiwari.",

@@ -1,8 +1,8 @@
 "use client";
-import { useTheme } from "../context/Themescontext";
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTheme } from "./context/Themescontext"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import { usePathname } from "next/navigation"
 const webpages = [
   "Projects",
   "Portfolio",
@@ -259,5 +259,5 @@ const HeaderComp = () => {
       </div>
     </header>
   );
-};
+}
 export default HeaderComp;

@@ -1,13 +1,14 @@
 "use client";
-import { useState, useEffect } from "react";
-import { useTheme } from "../context/Themescontext";
-import ContactForm from "./contactform";
-import Link from "next/link";
-import Image from "next/image";
-const AboutMain = () => {
-  const [techList, setTechList] = useState([]);
-  const [activeTab, setActiveTab] = useState("Education");
-  const { isThemeOn } = useTheme();
+import { useState, useEffect } from "react"
+import { useTheme } from "./context/Themescontext"
+import ContactForm from "./contactform"
+import Link from "next/link"
+import Image from "next/image"
+
+const AboutComp = () => {
+  const [techList, setTechList] = useState([])
+  const [activeTab, setActiveTab] = useState("Education")
+  const { isThemeOn } = useTheme()
   const svgMapping = {
     C: "/icons/c.png",
     Javascript: "/icons/icons8-javascript.svg",
@@ -697,5 +698,5 @@ const AboutMain = () => {
       </div>
     </div>
   );
-};
-export default AboutMain;
+}
+export default AboutComp
