@@ -11,7 +11,8 @@
     },
     {
         "id": 3,
-        "desc": "Python with Data Structures and Algorithms Pro+ Certificate and Internship",
-        "img": "/images/Python_with_Data_Structures_and_Algorithms_Pro+_Certificate_cum_Internship[1] conv 1.png"
+        "desc": "PyNext.js App Router Fundamentals",
+        "img": "/images/dashboard-app-certificate conv 1.png",
+        "link": "https://nextjs.org/learn/certificate?course=dashboard-app&user=54272&certId=dashboard-app-54272-1747678310417"
     }
 ]
