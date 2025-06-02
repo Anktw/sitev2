@@ -1,6 +1,6 @@
 # 🚀 Portfolio Website
 
-My Old Personal Portfolio Website built with Next.js
+My Personal Portfolio Website built with Next.js
 
 ## ✨ Features
 
